@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:txt="http://schemas.android.com/apk/src/satoshi.app.ideamosaic"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_mindmap"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/txt_mindmap_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/txt_mindmap_waitmassege"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_mindmap"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/button_mindmap_save"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:text="@string/buttontext_mindmap_save" />
+
+        <Button
+            android:id="@+id/button_mindmap_cancel"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:text="@string/buttontext_mindmap_cancel" />
+    </LinearLayout>
+
+</LinearLayout>

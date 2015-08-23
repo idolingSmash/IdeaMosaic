@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center|center_vertical|center_horizontal"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="250dip"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal|top" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:src="@drawable/morecolorful99" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/button_menu_idea"
+                android:layout_width="250dip"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:drawableLeft="@drawable/ideaflash"
+                android:text="@string/buttontext_menu_think" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0" >
+
+            <Button
+                android:id="@+id/button_menu_search"
+                android:layout_width="125dip"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/search"
+                android:text="@string/buttontext_menu_search" />
+
+            <Button
+                android:id="@+id/button_menu_mindmap"
+                android:layout_width="125dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0"
+                android:drawableLeft="@drawable/mindmap"
+                android:text="@string/buttontext_menu_mindmap" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0" >
+
+            <Button
+                android:id="@+id/button_menu_tutorial"
+                android:layout_width="125dip"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/tutorial"
+                android:text="@string/buttontext_menu_tutorial" />
+
+            <Button
+                android:id="@+id/button_menu_finish"
+                android:layout_width="125dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0"
+                android:drawableLeft="@drawable/exit"
+                android:text="@string/buttontext_menu_finish" />
+        </TableRow>
+    </TableLayout>
+
+</FrameLayout><!-- From: file:/Users/apple/StudioProjects/IdeaMosaic/app/src/main/res/layout/ideamosaic_menu.xml -->

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/apple/StudioProjects/IdeaMosaic/app/src/main/assets"><file name="IdeaMosaic.db" path="/Users/apple/StudioProjects/IdeaMosaic/app/src/main/assets/IdeaMosaic.db"/><file name="TriggerSerendipity.db" path="/Users/apple/StudioProjects/IdeaMosaic/app/src/main/assets/TriggerSerendipity.db"/></source></dataSet><dataSet config="debug"><source path="/Users/apple/StudioProjects/IdeaMosaic/app/src/debug/assets"/></dataSet></merger>

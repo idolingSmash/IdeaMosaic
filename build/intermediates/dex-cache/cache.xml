@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/apple/StudioProjects/IdeaMosaic/app/libs/GoogleAdMobAdsSdk-6.3.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fa07a90fdb1aeea8028400ac3e58e9209e75ae2b">
+        <dex dex="/Users/apple/StudioProjects/IdeaMosaic/app/build/intermediates/pre-dexed/debug/GoogleAdMobAdsSdk-6.3.0-011d99489cddee08bc1e1f5cdf7a657c8529231d.jar" />
+    </item>
+    <item
+        jar="/Users/apple/StudioProjects/IdeaMosaic/app/libs/Jama-1.0.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4e7b3b81770450a21b4295e27c2ccb802ab537e1">
+        <dex dex="/Users/apple/StudioProjects/IdeaMosaic/app/build/intermediates/pre-dexed/debug/Jama-1.0.3-ef6e5d1600e6fabd06f624b8d95efbc87228bdb6.jar" />
+    </item>
+    <item
+        jar="/Users/apple/StudioProjects/IdeaMosaic/app/libs/Utils.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c48d5c2204cda1cdd2d13d9cbab5760518d04316">
+        <dex dex="/Users/apple/StudioProjects/IdeaMosaic/app/build/intermediates/pre-dexed/debug/Utils-51243826bb83b96db36ea460f1ad4f703c46c5d9.jar" />
+    </item>
+
+</items>
