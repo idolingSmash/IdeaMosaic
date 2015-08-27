@@ -48,7 +48,6 @@ public class IdeaMosaicMenu extends Activity implements OnClickListener {
 	}
 
 //	private void Layout_addBarner() {
-//		// TODO 自動生成されたメソッド・スタブ
 //		// adView を作成する
 //		adView = new AdView(this, AdSize.BANNER, "a1513b3a75207b9");
 //		// 属性 android:id="@+id/mainLayout" が与えられているものとして

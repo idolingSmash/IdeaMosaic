@@ -24,7 +24,6 @@ public class IdeaMosaicContainUniqueItem extends CommonDBClass{
 	public IdeaMosaicContainUniqueItem(SQLiteDatabase db, Cursor c,
 			String str_Table, String[] str_Field, String[] str_Type) {
 		super(db, c, str_Table, str_Field, str_Type);
-		// TODO 自動生成されたコンストラクター・スタブ
 
 		this.db = db;
 		this.c= c;

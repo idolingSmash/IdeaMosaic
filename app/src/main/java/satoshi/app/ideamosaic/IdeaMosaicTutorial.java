@@ -31,7 +31,6 @@ public class IdeaMosaicTutorial extends Activity implements OnGestureListener, O
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO 自動生成されたメソッド・スタブ
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ideamosaic_tutorial);
 
