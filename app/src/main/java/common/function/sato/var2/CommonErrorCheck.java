@@ -2,32 +2,38 @@ package common.function.sato.var2;
 
 public class CommonErrorCheck {
 
+	private CommonErrorCheck(){
+
+	}
+
     /**
      * 文字列制限を行うメソッド
-     * @param str
-     * @param max
-     * @return
+     * @param str 文字列制限
+     * @param max 最大値
+     * @return boolean
      */
+	@SuppressWarnings("unused")
 	public static boolean isMaxLengthString(String str, int max){
+		boolean flag = false;
 
-		if(str.length() > max)
-			return true;
-		else
-			return false;
+		if(str.length() > max) {
+			flag = true;
+		}
+		return flag;
 
 	}
 
    /**
     * Nullであるかの判定を行うメソッド
-    * @param str
-    * @return
+    * @param str 文字列
+    * @return boolean
     */
    public static boolean isNullString(String str){
-
-   	if(str.trim() == "" || str.length() == 0)
-   		return true;
-   	else
-   		return false;
+		boolean flag = false;
+		if(str.trim().equals("") || str.length() == 0) {
+			flag = true;
+		}
+   		return flag;
 
    }
 
@@ -40,14 +46,13 @@ public class CommonErrorCheck {
 	 * 				  ~	  ~
 	 * 		str_src = "ABC		str_word = "\""		→　False
 	 * 				  ~	  ~
-	 * @return
+	 * @return boolean
 	 */
+	@SuppressWarnings("unused")
 	public static Boolean isBothEndsChar(String str_src, String str_word){
-		Boolean bool = true;
+		boolean bool = false;
 		if(str_src.indexOf(str_word) == 0 && str_src.lastIndexOf(str_word) == (str_src.length() - 1)){
 			bool = true;
-		}else{
-			bool = false;
 		}
 		return bool;
 	}

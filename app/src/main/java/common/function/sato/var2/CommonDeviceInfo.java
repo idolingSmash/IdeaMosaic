@@ -20,8 +20,9 @@ public class CommonDeviceInfo {
 
 	/**
 	 * コンストラクタ
-	 * @param activity
+	 * @param activity アクティビティ
 	 */
+	@SuppressWarnings("unused")
 	public CommonDeviceInfo(Activity activity) {
 		this.avtivity = activity;
 		this.windowManeger = (WindowManager)this.avtivity.getSystemService(Context.WINDOW_SERVICE);
@@ -29,43 +30,49 @@ public class CommonDeviceInfo {
 		this.sdkVersion = Build.VERSION.SDK_INT;
 	}
 
+	@SuppressWarnings("unused")
 	public int getSDKVersion(){
 		return this.sdkVersion;
 	}
 
 	/**
 	 * 画面サイズの幅を取得するメソッド
-	 * @return
+	 * @return screen width
 	 */
+	@SuppressWarnings("unused")
 	public int getWindowWidth(){
 
-		int windowWidth = 0;
+		int windowWidth;
 		Point windowEdgePoint = new Point();
 
-		if( 12 < this.sdkVersion){
-			disp.getSize(windowEdgePoint);
-			windowWidth = windowEdgePoint.x;
-		}else{
-			windowWidth = this.disp.getWidth();
-		}
+		disp.getSize(windowEdgePoint);
+		windowWidth = windowEdgePoint.x;
+
 		return windowWidth;
 	}
 
 	/**
 	 * 画面サイズの高さを取得するメソッド
-	 * @return
+	 * @return screen height
 	 */
 	public int getWindowHeight(){
-		int windowHeight = 0;
+		int windowHeight;
 		Point windowEdgePoint = new Point();
 
-		if( 12 < this.sdkVersion){
-			disp.getSize(windowEdgePoint);
-			windowHeight = windowEdgePoint.y;
-		}else{
-			windowHeight = this.disp.getHeight();
-		}
+		disp.getSize(windowEdgePoint);
+		windowHeight = windowEdgePoint.y;
 
 		return windowHeight;
 	}
+
+	@SuppressWarnings("unused")
+	public WindowManager getWindowManeger() {
+		return windowManeger;
+	}
+
+	@SuppressWarnings("unused")
+	public Activity getAvtivity() {
+		return avtivity;
+	}
+
 }

@@ -12,8 +12,8 @@ public class CommonAlartDiagram extends AlertDialog.Builder{
 
 	/**
 	 * コンストラクタ（EditTextがある場合）
-	 * @param context
-	 * @param et_Text
+	 * @param context コンテクスト
+	 * @param et_Text テキスト
 	 */
 	public CommonAlartDiagram(Context context, EditText et_Text, int int_Index_ID) {
 		super(context);
@@ -29,23 +29,23 @@ public class CommonAlartDiagram extends AlertDialog.Builder{
 	 * 1>入力した文字列が未入力
 	 * 2>入力した文字列が既にDB内に存在する
 	 *
-	 * @return
+	 * @return flag
 	 */
 	public ErrorCheckFlag isErrorCheck(CommonDBClass DBInstance, String db_IDname, CommonWhereQuerySentence where_query){
 
 		ErrorCheckFlag check_flag = new ErrorCheckFlag();
 
 		//未入力判定
-		if(isEditTextNullString() == true){
+		if(isEditTextNullString()){
 			CommonToastComment.NullString(context);
 		}else{
 			//空テーブル判定
-			if(DBInstance.isZeroCountQuery() == true){
+			if(DBInstance.isZeroCountQuery()){
 				check_flag.setTable_ID(1);
 				check_flag.setCheck_flag(true);
 				CommonToastComment.AddItem(context, et_Text.getText().toString());
 			}else{
-				if(DBInstance.isZeroCountQueryWithWhereQuery(where_query) == true){
+				if(DBInstance.isZeroCountQueryWithWhereQuery(where_query)){
 					//欠番のIndexを挿入
 					check_flag.setTable_ID(DBInstance.getMissingNo(db_IDname, DBInstance.getMaximumID(db_IDname, int_Index_ID)));
 
@@ -66,26 +66,24 @@ public class CommonAlartDiagram extends AlertDialog.Builder{
 	 * 1>入力した文字列が未入力
 	 * 2>入力した文字列が既にDB内に存在する
 	 *
-	 * @return
+	 * @return フラグ
 	 */
 	public ErrorCheckFlag isErrorCheckWithoutMessage(CommonDBClass DBInstance, String db_IDname, CommonWhereQuerySentence where_query){
 
 		ErrorCheckFlag check_flag = new ErrorCheckFlag();
 
 		//未入力判定
-		if(isEditTextNullString() == true){
-		}else{
+		if(!isEditTextNullString()){
 			//空テーブル判定
-			if(DBInstance.isZeroCountQuery() == true){
+			if(DBInstance.isZeroCountQuery()){
 				check_flag.setTable_ID(1);
 				check_flag.setCheck_flag(true);
 			}else{
-				if(DBInstance.isZeroCountQueryWithWhereQuery(where_query) == true){
+				if(DBInstance.isZeroCountQueryWithWhereQuery(where_query)){
 					//欠番のIndexを挿入
 					check_flag.setTable_ID(DBInstance.getMissingNo(db_IDname, DBInstance.getMaximumID(db_IDname, int_Index_ID)));
 
 					check_flag.setCheck_flag(true);
-				}else{
 				}
 			}
 		}
@@ -95,13 +93,14 @@ public class CommonAlartDiagram extends AlertDialog.Builder{
 
 	/**
 	 * エディットボックスがNullであるかチェックするメソッド
-	 * @return
+	 * @return flag
 	 */
 	public boolean isEditTextNullString(){
-		if(CommonErrorCheck.isNullString(et_Text.getText().toString()) == true){
-			return true;
+		boolean flag = false;
+		if(CommonErrorCheck.isNullString(et_Text.getText().toString())){
+			flag = true;
 		}
-		return false;
+		return flag;
 	}
 
 	public class ErrorCheckFlag{
@@ -109,19 +108,7 @@ public class CommonAlartDiagram extends AlertDialog.Builder{
 		private boolean check_flag;
 		private int table_ID;
 
-		/**
-		 * コンストラクタ
-		 * @param check_flag
-		 * @param table_ID
-		 */
-		public ErrorCheckFlag(boolean check_flag, int table_ID) {
-			super();
-			this.check_flag = check_flag;
-			this.table_ID = table_ID;
-		}
-
 		public ErrorCheckFlag() {
-			// TODO 自動生成されたコンストラクター・スタブ
 			this.check_flag = false;
 			this.table_ID = 1;
 		}

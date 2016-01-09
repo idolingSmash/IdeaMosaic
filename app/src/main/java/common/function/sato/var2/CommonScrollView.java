@@ -4,12 +4,10 @@ package common.function.sato.var2;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.PointF;
-import android.util.AttributeSet;
 import android.util.FloatMath;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -20,7 +18,6 @@ public class CommonScrollView extends View{
 	//元の画像
 	public Bitmap mSrcBitmap;
 	private Resources mSrcRes;
-	private int initWidth = 1000;
 	private int initHeight = 1000;
 
 	//表示用(View)資源
@@ -53,8 +50,8 @@ public class CommonScrollView extends View{
 	private int touchMode = NONE;
 
 	private float[] values = new float[9];	 /** MatrixのgetValues用 */
-	private Matrix matrixRate = new Matrix();    /** マトリックス */
-	private PointF zoomPoint = new PointF();    /** ズーム時の座標 */
+//	private Matrix matrixRate = new Matrix();    /** マトリックス */
+//	private PointF zoomPoint = new PointF();    /** ズーム時の座標 */
 
 	private static float MIN_WIDTH = 0;
 	private static float MIN_HEIGHT = 0;
@@ -65,8 +62,8 @@ public class CommonScrollView extends View{
 
 	/**
 	 * コンストラクタ
-	 * @param context
-	 * @param attrs
+	 * @param context	コンテクスト
+	 * @param image	画像データ
 	 */
 	public CommonScrollView(Context context, Bitmap image) {
 		super(context);
@@ -83,6 +80,7 @@ public class CommonScrollView extends View{
 		super(context);
 		setFocusable(true);
 		this.mContext = context;
+		int initWidth = 1000;
 		this.mSrcBitmap = Bitmap.createBitmap(initWidth, initHeight, Bitmap.Config.ARGB_8888);
 		for(int x = 0;x < initWidth;x++)
 			for(int y = 0;y < initHeight;y++)
@@ -214,8 +212,7 @@ public class CommonScrollView extends View{
 
 	/**
 	 * 二点間の移動量を計算
-	 * @param x
-	 * @param y
+	 * @param e モーションイベント
 	 * @return
 	 */
 	private float getZoomDistance(MotionEvent e) {
@@ -245,8 +242,8 @@ public class CommonScrollView extends View{
 
 	/**
 	 * 中間点を求める
-	 * @param e
-	 * @param p
+	 * @param e モーションイベント
+	 * @param p ポイント
 	 * @return
 	 */
 	private PointF getZoomMiddle(MotionEvent e, PointF p) {
@@ -260,7 +257,7 @@ public class CommonScrollView extends View{
 
 	/**
 	 * 画像を設定するメソッド
-	 * @param image
+	 * @param image 画像データ
 	 */
 	public void setImage(Bitmap image){
 		this.mSrcBitmap = image;

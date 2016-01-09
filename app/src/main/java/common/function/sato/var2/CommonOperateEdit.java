@@ -50,28 +50,28 @@ public class CommonOperateEdit {
 	public void FontColorOrengeInSelectButton(int int_operateEdit, Button btn_udt, Button btn_del){
 		setInt_operateEdit(int_operateEdit);
 		switch(int_operateEdit){
-		case Default:
-			btn_udt.setTextColor(Color.rgb(0,0,0));
-			btn_del.setTextColor(Color.rgb(0,0,0));
-			changeIntoDefaultFlag();
-			break;
-		case Update:
-			btn_udt.setTextColor(Color.rgb(200,100,0));
-			btn_del.setTextColor(Color.rgb(0,0,0));
-			changeIntoUpdateFlag();
-			break;
+			case Default:
+				btn_udt.setTextColor(Color.rgb(0,0,0));
+				btn_del.setTextColor(Color.rgb(0,0,0));
+				changeIntoDefaultFlag();
+				break;
+			case Update:
+				btn_udt.setTextColor(Color.rgb(200,100,0));
+				btn_del.setTextColor(Color.rgb(0,0,0));
+				changeIntoUpdateFlag();
+				break;
 
-		case Delete:
-			btn_udt.setTextColor(Color.rgb(0,0,0));
-			btn_del.setTextColor(Color.rgb(200,100,0));
-			changeIntoDeleteFlag();
-			break;
+			case Delete:
+				btn_udt.setTextColor(Color.rgb(0,0,0));
+				btn_del.setTextColor(Color.rgb(200,100,0));
+				changeIntoDeleteFlag();
+				break;
 
-		default:
-			btn_udt.setTextColor(Color.rgb(0,0,0));
-			btn_del.setTextColor(Color.rgb(0,0,0));
-			changeIntoDefaultFlag();
-			break;
+			default:
+				btn_udt.setTextColor(Color.rgb(0,0,0));
+				btn_del.setTextColor(Color.rgb(0,0,0));
+				changeIntoDefaultFlag();
+				break;
 		}
 	}
 
@@ -79,11 +79,12 @@ public class CommonOperateEdit {
 	 *
 	 * ボタン用のフラグ
 	 *
-	 * @param i
+	 * @param int_operateEdit フラグ
 	 * デフォルト:1
 	 * 修正:2
 	 * 削除:3
 	 */
+/*
 
 	public void EditThreeFlag(int int_operateEdit){
 		switch(int_operateEdit){
@@ -97,6 +98,7 @@ public class CommonOperateEdit {
 		break;
 		}
 	}
+*/
 
 	/**
 	 * フラグをdefault型にするメソッド
@@ -122,9 +124,11 @@ public class CommonOperateEdit {
 	/**
 	 * @return int_operateEdit
 	 */
+/*
 	public int getInt_operateEdit() {
 		return int_operateEdit;
 	}
+*/
 
 	/**
 	 * @param int_operateEdit セットする int_operateEdit
@@ -139,38 +143,19 @@ public class CommonOperateEdit {
 
 	/**
 	 * フラグを判定するメソッド
-	 * @param int_operateEdit
-	 * @return
+	 * @param int_operateEdit フラグ
+	 * @return editできるか判定
 	 */
-	public boolean isEditFlag(int int_operateEdit){
-
-		if(int_operateEdit < 1 && 3 < int_operateEdit ){
-			return false;
-		}else{
-
-			switch(int_operateEdit){
+	public boolean isEditFlag(int int_operateEdit) {
+		switch (int_operateEdit) {
 			case 1:
-				if(this.bool_add == true && this.bool_update == false && this.bool_delete == false){
-					return true;
-				}else{
-					return false;
-				}
+				return this.bool_add && !this.bool_update && !this.bool_delete;
 			case 2:
-				if(this.bool_add == false && this.bool_update == true && this.bool_delete == false){
-					return true;
-				}else{
-					return false;
-				}
+				return !this.bool_add && this.bool_update && !this.bool_delete;
 			case 3:
-				if(this.bool_add == false && this.bool_update == false && this.bool_delete == true){
-					return true;
-				}else{
-					return false;
-				}
+				return !this.bool_add && !this.bool_update && this.bool_delete;
 			default:
 				return false;
-			}
 		}
 	}
-
 }

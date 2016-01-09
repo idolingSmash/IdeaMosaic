@@ -7,11 +7,10 @@ public class CommonWhereQuerySentence {
 
 	/**
 	 * コンストラクタ
-	 * @param str_ColumnName
-	 * @param str_ColumnValue
+	 * @param str_ColumnName		カラム名
+	 * @param str_ColumnValue		値
 	 */
 	public CommonWhereQuerySentence(String str_ColumnName, String str_ColumnValue) {
-		super();
 		this.str_ColumnName = str_ColumnName;
 		this.str_ColumnValue = str_ColumnValue;
 	}
@@ -19,8 +18,6 @@ public class CommonWhereQuerySentence {
 
 	/***
 	 *　クエリ文(where)の作成
-	 * @param str_colName
-	 * @param str_colV
 	 * @return colName = 'str_colV'
 	 */
 
@@ -31,8 +28,7 @@ public class CommonWhereQuerySentence {
 		sb.append(str_ColumnValue);
 		sb.append("'");
 
-		String convertStr = new String(sb);
-		return convertStr;
+		return new String(sb);
 	}
 
 

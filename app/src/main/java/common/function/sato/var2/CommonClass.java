@@ -1,19 +1,9 @@
 package common.function.sato.var2;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.nio.channels.FileChannel;
 import java.util.Calendar;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.os.Environment;
 import android.text.InputFilter;
 import android.text.TextUtils;
 import android.widget.EditText;
@@ -24,8 +14,8 @@ public class CommonClass extends Activity{
 
 	/***
 	 *  数値から文字列型へ変換するメソッド
-	 * @param i
-	 * @return
+	 * @param i int型
+	 * @return String型
 	 */
 
 	public static String IntToString(int i){
@@ -40,10 +30,11 @@ public class CommonClass extends Activity{
 
 	/***
 	 *  ブール型から文字列型へ変換するメソッド
-	 * @param i
-	 * @return
+	 * @param b boolean
+	 * @return 文字列
 	 */
 
+/*
 	public static String BoolToString(boolean b){
 
 		final String str;
@@ -52,13 +43,14 @@ public class CommonClass extends Activity{
 
 		return str;
 	}
+*/
 
 
 
 	/**
 	 * null文字判定のメソッド
 	 * @param s 判定したい文字列
-	 * @return
+	 * @return bool
 	 */
 	public static boolean isNullOrZeroLength(String s) {
 	    return TextUtils.isEmpty(s);
@@ -67,11 +59,12 @@ public class CommonClass extends Activity{
 	/**
 	 * ひとつ前のアクティブティに戻るアラート表示メソッド
 	 * showReturnDialog作成
-	 * @param context
-	 * @param title
-	 * @param msg
+	 * @param context コンテキスト
+	 * @param title   タイトル
+	 * @param msg	  メッセージ
 	 */
 
+/*
 	public static void showReturnDialog(Context context, String title, String msg, final Activity act){
 
 		AlertDialog.Builder ad = new AlertDialog.Builder(context);
@@ -87,16 +80,18 @@ public class CommonClass extends Activity{
 		ad.create();
 		ad.show();
 	}
+*/
 
 
 	/**
 	 *
 	 * showDialog作成
-	 * @param context
-	 * @param title
-	 * @param msg
+	 * @param context コンテキスト
+	 * @param title   タイトル
+	 * @param msg	  メッセージ
 	 */
 
+/*
 	public static void showDialog(Context context, String title, String msg){
 
 		AlertDialog.Builder ad = new AlertDialog.Builder(context);
@@ -111,36 +106,40 @@ public class CommonClass extends Activity{
 		ad.create();
 		ad.show();
 	}
+*/
 
 
     /**
      * DBファイルをSDカードにコピーする
      * AndroidManifest.xmlにWRITE_EXTERNAL_STORAGEを設定すること
      *
-     * @param Context context メソッド呼び出し元(Activity等)のContext
-     * @param String dbName コピー元となるデータベースファイル名
+     * @param context メソッド呼び出し元(Activity等)のContext
+     * @param dbName コピー元となるデータベースファイル名
      * @return コピーに成功した場合true
      * @throws IOException なんかエラーが起きた場合にthrow
      */
-    public static boolean copyDb2Sd(Context context, String dbName) throws IOException {
+/*    public static boolean copyDb2Sd(Context context, String dbName) throws IOException {
 
         //保存先(SDカード)のディレクトリを確保
-        String pathSd = new StringBuilder()
-                            .append(Environment.getExternalStorageDirectory().getPath())
-                            .append("/")
-                            .append(context.getPackageName())
-                            .toString();
-        File filePathToSaved = new File(pathSd);
+		StringBuilder sb = new StringBuilder();
+		sb.append(Environment.getExternalStorageDirectory().getPath());
+		sb.append("/");
+		sb.append(context.getPackageName());
+		String pathSd = sb.toString();
+
+				File filePathToSaved = new File(pathSd);
         if (!filePathToSaved.exists() && !filePathToSaved.mkdirs()) {
             throw new IOException("FAILED_TO_CREATE_PATH_ON_SD");
         }
 
         final String fileDb = context.getDatabasePath(dbName).getPath();
-        final String fileSd = new StringBuilder()
-                                .append(pathSd)
-                                .append("/")
-                                .append(dbName)
-                                .toString();
+        sb = new StringBuilder();
+		sb.append(pathSd);
+		sb.append("/");
+		sb.append(dbName);
+
+		String fileSd = sb.toString();
+
         showDialog(context, "表示", "copy from(DB): "+fileDb);
         showDialog(context, "表示", "copy to(SD)  : "+fileSd);
 
@@ -153,17 +152,18 @@ public class CommonClass extends Activity{
         channelTarget.close();
 
         return true;
-    }
+    }*/
 
     /**
      * DBファイルをSDカードにコピーする
      * AndroidManifest.xmlにWRITE_EXTERNAL_STORAGEを設定すること
      *
-     * @param Context context メソッド呼び出し元(Activity等)のContext
-     * @param String dbName コピー元となるデータベースファイル名
+     * @param context メソッド呼び出し元(Activity等)のContext
+     * @param dbName コピー元となるデータベースファイル名
      * @return コピーに成功した場合true
      * @throws IOException なんかエラーが起きた場合にthrow
      */
+/*
     public static boolean copyAssets2DB(Context context, String dbName) throws IOException {
 
         String fileAssets = context.getAssets().open(dbName).toString();
@@ -182,6 +182,7 @@ public class CommonClass extends Activity{
 
         return true;
     }
+*/
 
     /***
      *

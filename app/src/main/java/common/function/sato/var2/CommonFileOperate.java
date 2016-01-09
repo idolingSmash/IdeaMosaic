@@ -8,24 +8,24 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+@SuppressWarnings("unused")
 public class CommonFileOperate {
 
 
 	/***
 	 *　読み込んだファイルからデータを配列として取得する
 	 * @param filename	ファイル名
-	 * @param format	文字コードの形式
-	 * @return
+	 * @param encode	文字コードの形式
+	 * @return read_line
 	 */
 	public static ArrayList<String> getReadFileContentsForArray(String filename, String encode){
 
-        BufferedReader br_CSV = null;
-        String read_line = "";
+        BufferedReader br_CSV;
+        String read_line;
         ArrayList<String> readline_store = new ArrayList<String>();
 
         //ファイルの読み込み
         try {
-
         	//
         	//いまのところWindouws-31j
         	br_CSV = new BufferedReader(new InputStreamReader(new FileInputStream(new File(filename)), encode));

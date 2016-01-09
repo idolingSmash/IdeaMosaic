@@ -11,6 +11,7 @@ public class CommonDBClass{
 	private static Cursor c;					//RecordSet
 	private static String str_Table;			//テーブル名
 	private static String[] str_Field;			//各種項目
+	@SuppressWarnings("unused")
 	private static String[] str_Type;			//各種タイプ
 
 
@@ -35,7 +36,7 @@ public class CommonDBClass{
 	 *
 	 * 検索件数が０件であるかチェックする(全件対象の時)
 	 *
-	 * @return
+	 * @return boolean
 	 */
 	public boolean isZeroCountQuery(){
 
@@ -56,13 +57,9 @@ public class CommonDBClass{
 	 *
 	 * 検索件数が０件であるかチェックする(検索対象がある場合)
 	 *
-	 * @param db					データベース
-	 * @param c						レコードセット
-	 * @param str_Table				テーブル名
-	 * @param str_Field				各項目（配列）
 	 * @param str_ColumnName		クエリ対象の項目
 	 * @param str_ColumnValue		クエリ対象の値
-	 * @return
+	 * @return boolean
 	 */
 	public boolean isZeroCountQueryWithWhereQuery(String str_ColumnName, String str_ColumnValue){
 
@@ -84,13 +81,8 @@ public class CommonDBClass{
 	 *
 	 * 検索件数が０件であるかチェックする(検索対象がある場合)
 	 *
-	 * @param db					データベース
-	 * @param c						レコードセット
-	 * @param str_Table				テーブル名
-	 * @param str_Field				各項目（配列）
-	 * @param str_ColumnName		クエリ対象の項目
-	 * @param str_ColumnValue		クエリ対象の値
-	 * @return
+	 * @param where_query where文
+	 * @return boolean
 	 */
 	public boolean isZeroCountQueryWithWhereQuery(CommonWhereQuerySentence where_query){
 
@@ -111,13 +103,9 @@ public class CommonDBClass{
 	 *
 	 * 検索件数が1件であるかチェックする(全件対象の時)
 	 *
-	 *
-	 * @param db					データベース
-	 * @param c						レコードセット
-	 * @param str_Table				テーブル名
-	 * @param str_Field				各項目（配列）
-	 * @return
+	 * @return boolean
 	 */
+	@SuppressWarnings("unused")
 	public boolean isOneCountQuery(){
 
 		//レコードセット
@@ -137,8 +125,11 @@ public class CommonDBClass{
 	 *
 	 * 検索件数が１件であるかチェックする(検索対象がある場合)
 	 *
-	 * @return
+	 * @param str_ColumnName カラム名
+	 * @param  str_ColumnValue 値
+	 * @return boolean
 	 */
+	@SuppressWarnings("unused")
 	public boolean isOneCountQueryWithWhereQuery(String str_ColumnName, String str_ColumnValue){
 
 		CommonWhereQuerySentence where_query = new CommonWhereQuerySentence(str_ColumnName, str_ColumnValue);
@@ -159,7 +150,7 @@ public class CommonDBClass{
 	 *
 	 * 検索件数が１件であるかチェックする(検索対象がある場合)
 	 *
-	 * @return
+	 * @return boolean
 	 */
 	public boolean isOneCountQueryWithWhereQuery(CommonWhereQuerySentence where_query){
 
@@ -183,81 +174,83 @@ public class CommonDBClass{
 	 * @param cv					コンテントバリュー
 	 * @param str_ColumnName		クエリ対象の項目
 	 * @param str_ColumnValue		クエリ対象の値
-	 * @return　成功:True　失敗:False
+	 * @return boolean
 	 */
-
+	@SuppressWarnings("unused")
 	public boolean isRecordUpdate(ContentValues cv, String str_ColumnName, String str_ColumnValue){
 
 		CommonWhereQuerySentence where_query = new CommonWhereQuerySentence(str_ColumnName, str_ColumnValue);
 
 		int int_upd = db.update(str_Table, cv, where_query.createSentence(), null);
-		if(int_upd != 0){
-			return true;
-		}else{
-			return false;
-		}
+		boolean flag = false;
 
+		if(int_upd != 0) {
+			flag = true;
+		}
+		return flag;
 	}
 
 	/***
 	 *　レコードを更新するメソッド
 	 *
 	 * @param cv					コンテントバリュー
-	 * @param str_ColumnName		クエリ対象の項目
-	 * @param str_ColumnValue		クエリ対象の値
-	 * @return　成功:True　失敗:False
+	 * @param where_query 			where文   
+	 * @return boolean
 	 */
 
 	public boolean isRecordUpdate(ContentValues cv, CommonWhereQuerySentence where_query){
 
 		int int_upd = db.update(str_Table, cv, where_query.createSentence(), null);
-		if(int_upd != 0){
-			return true;
-		}else{
-			return false;
+		boolean flag = false;
+
+		if (int_upd != 0) {
+			flag = true;
 		}
 
+		return flag;
 	}
 
 
 	/**
 	 *  レコードを削除するメソッド
 	 *
-	 * @return　成功:True　失敗:False
+	 * @param str_ColumnName カラム名
+	 * @param str_ColumnValue 値
+	 * @return boolean
 	 */
-	public boolean isRecordDelete(String str_ColumnName, String str_ColumnValue){
+	@SuppressWarnings("unused")
+	private boolean isRecordDelete(String str_ColumnName, String str_ColumnValue){
 
 		CommonWhereQuerySentence where_query = new CommonWhereQuerySentence(str_ColumnName, str_ColumnValue);
 
 		int int_del = db.delete(str_Table, where_query.createSentence(), null);
+		boolean flag = false;
+
 		if(int_del != 0){
-			return true;
-		}else{
-			return false;
+			flag = true;
 		}
+
+		return flag;
 	}
 
 
 	/**
 	 *  レコードを削除するメソッド
 	 *
-	 * @return　成功:True　失敗:False
+	 * @return boolean
 	 */
 	public boolean isRecordDelete(CommonWhereQuerySentence where_query){
 
 		int int_del = db.delete(str_Table, where_query.createSentence(), null);
-		if(int_del != 0){
-			return true;
-		}else{
-			return false;
-		}
+		return int_del != 0;
 	}
 
 
 	/**
 	 * 検索件数表示
-	 * @return
+	 * @return 検索件数(文字列)
 	 */
+	@SuppressWarnings("unused")
 	public String getDBAllCount(){
 		int int_count;
 		String str_count;
@@ -272,8 +265,9 @@ public class CommonDBClass{
 
 	/**
 	 * 検索件数表示
-	 * @return
+	 * @return 検索件数
 	 */
+	@SuppressWarnings("unused")
 	public String getDBCount(CommonWhereQuerySentence where_query){
 		int int_count;
 		String str_count;
@@ -288,10 +282,11 @@ public class CommonDBClass{
 
 	/**
 	 * 検索件数表示
-	 * @param str_ColumnName
-	 * @param str_ColumnValue
-	 * @return
+	 * @param str_ColumnName カラム名
+	 * @param str_ColumnValue 値
+	 * @return 検索件数(String)
 	 */
+	@SuppressWarnings("unused")
 	public String getDBCount(String str_ColumnName, String str_ColumnValue){
 		int int_count;
 		String str_count;
@@ -310,9 +305,9 @@ public class CommonDBClass{
 
 	/**
 	 * 一意のIndexを取得するメソッド
-	 * @param where_query
-	 * @param int_IndexCol
-	 * @return
+	 * @param where_query where文
+	 * @param int_IndexCol index
+	 * @return index
 	 */
 	public int getDBUniqueIndexId(CommonWhereQuerySentence where_query, int int_IndexCol){
 
@@ -333,10 +328,12 @@ public class CommonDBClass{
 
 	/**
 	 * 一意のIndexを取得するメソッド
-	 * @param where_query
-	 * @param int_IndexCol
-	 * @return
+	 * @param str_ColumnName カラム名
+	 * @param str_ColumnValue 値
+	 * @param int_IndexCol index
+	 * @return index
 	 */
+	@SuppressWarnings("unused")
 	public int getDBUniqueIndexId(String str_ColumnName, String str_ColumnValue, int int_IndexCol){
 
 		int index = 0;
@@ -359,11 +356,9 @@ public class CommonDBClass{
 
 	/***
 	 * テーブル作成のSQL文を生成
-	 * @param DBTableName		テーブル名
-	 * @param fieldNames	フィールド名（配列）
-	 * @param fieldTypes	項目のタイプ（配列）
-	 * @return
+	 * @return sql sentence
 	 */
+	@SuppressWarnings("unused")
 	public String createCreateTableQuerySentence(){
 
 		final StringBuilder convineStringBuilder = new StringBuilder();
@@ -392,10 +387,10 @@ public class CommonDBClass{
 
 	/***
 	 * テーブル作成のSQL文を生成
-	 * @param DBTableName		テーブル名
-	 * @param fieldNames	フィールド名（配列）
-	 * @param fieldTypes	項目のタイプ（配列）
-	 * @return
+	 * @param str_Table テーブル名
+	 * @param str_Field フィールド名（配列）
+	 * @param str_Type 項目のタイプ（配列）
+	 * @return sql sentence
 	 */
 	public static String createCreateTableQuerySentence(String str_Table, String[] str_Field, String[] str_Type){
 
@@ -425,8 +420,9 @@ public class CommonDBClass{
 
 	/**
 	 * テーブル削除のSQL文を生成
-	 * @return
+	 * @return sql sentence
 	 */
+	@SuppressWarnings("unused")
 	public String createDeleteTableQuerySentence(){
 
 		final StringBuilder convineStringBuilder = new StringBuilder();
@@ -441,8 +437,8 @@ public class CommonDBClass{
 
 	/**
 	 * テーブル削除のSQL文を生成
-	 * @param str_Table
-	 * @return
+	 * @param str_Table table name
+	 * @return sql sentence
 	 */
 	public static String createDeleteTableQuerySentence(String str_Table){
 
@@ -458,9 +454,9 @@ public class CommonDBClass{
 
 	/**
 	 * テーブル名生成のメソッド
-	 * @param str_src
-	 * @param str_ID
-	 * @return
+	 * @param str_src src
+	 * @param str_ID idname
+	 * @return sql sentence
 	 */
 	public static String createTableNamePlusID(String str_src, String str_ID){
 
@@ -478,8 +474,9 @@ public class CommonDBClass{
 
 	/***
 	 * IDの最大値を求める
-	 * @param str_IDName
-	 * @return
+	 * @param str_IDName IDname
+	 * @param int_IndexId index
+	 * @return sql sentence
 	 */
 	public int getMaximumID(String str_IDName, int int_IndexId){
 
@@ -504,13 +501,9 @@ public class CommonDBClass{
 	 * テーブルIDから欠番を探す
 	 * ただし、項目がunique（一意）であることが条件
 	 *
-	 * @param db
-	 * @param c
-	 * @param str_Table
-	 * @param str_Field
-	 * @param str_IDName
-	 * @param max
-	 * @return
+	 * @param str_IDName IDName
+	 * @param max 最大値
+	 * @return missing ID
 	 */
 	public int getMissingNo(String str_IDName, int max){
 
@@ -518,14 +511,14 @@ public class CommonDBClass{
 		int int_missno = 1;
 
 		for(int i = 1; i <= max ;i++){
-			if(this.isZeroCountQueryWithWhereQuery(str_IDName, String.valueOf(i)) == true){
+			if(this.isZeroCountQueryWithWhereQuery(str_IDName, String.valueOf(i))){
 				int_missno = i;
 				miss_flag = true;
 				break;
 			}
 		}
 
-		if(miss_flag == false){
+		if(!miss_flag){
 			int_missno = max + 1;
 		}
 
@@ -535,25 +528,19 @@ public class CommonDBClass{
 
 	/**
 	 * OrderBy文作成メソッド
-	 * @param str_colName
+	 * @param str_ColumnName カラム名
 	 * @return [columnName] desc
 	 */
+	@SuppressWarnings("unused")
 	public static String createOrderByDescQuerySentence(String str_ColumnName){
-
-		StringBuffer sb = new StringBuffer();
-		sb.append(str_ColumnName);
-		sb.append(" desc");
-
-		String convertStr = new String(sb);
-		return convertStr;
-
+		return str_ColumnName + " desc";
 	}
 
 	/**
 	 * 入力した文字をContentValuesに追加するメソッド
-	 * @param  table_values
-	 * @param  str_ColumnName
-	 * @param str_ColumnValue
+	 * @param  table_values テーブル値
+	 * @param  str_ColumnName カラム名
+	 * @param str_ColumnValue 値
 	 */
 	public void setDBValueInContentValues(ContentValues table_values, String str_ColumnName, String str_ColumnValue){
 		table_values.put(str_ColumnName, str_ColumnValue);
@@ -561,9 +548,8 @@ public class CommonDBClass{
 
 	/**
 	 * 入力した文字をContentValuesに追加するメソッド
-	 * @param  table_values
-	 * @param  str_ColumnName
-	 * @param str_ColumnValue
+	 * @param  table_values テーブル値
+	 * @param where_query where文
 	 */
 	public void setDBValueInContentValues(ContentValues table_values, CommonWhereQuerySentence where_query){
 		table_values.put(where_query.getStr_ColumnName(), where_query.getStr_ColumnValue());
@@ -573,9 +559,9 @@ public class CommonDBClass{
 
 	/**
 	 * IndexをContentValuesに追加するメソッド
-	 * @param  table_values
-	 * @param  str_ColumnName
-	 * @param table_Id
+	 * @param  table_values テーブル値
+	 * @param  str_ColumnName カラム名
+	 * @param table_Id テーブルID
 	 */
 	public void setDBIndexInContentValues(ContentValues table_values, String str_ColumnName, int table_Id){
 		table_values.put(str_ColumnName, table_Id);
@@ -583,8 +569,8 @@ public class CommonDBClass{
 
 	/**
 	 * TimeStampをContentValues追加するメソッド
-	 * @param  table_values
-	 * @param  str_ColumnName
+	 * @param  table_values テーブル値
+	 * @param  str_ColumnName カラム名
 	 */
 	public void setDBTimeStampInContentValues(ContentValues table_values, String str_ColumnName){
 		String timestamp = CommonClass.strsTimeStamp();	//タイムスタンプ
@@ -593,6 +579,8 @@ public class CommonDBClass{
 
 	/**
 	 * ContentsValueをDBに挿入するメソッド
+	 * @param table_values テーブル値
+	 * @param str_Table テーブル名
 	 */
 	public void InsertContentValuesInDB(ContentValues table_values, String str_Table){
 		db.insert(str_Table, "", table_values);
@@ -600,10 +588,11 @@ public class CommonDBClass{
 
 	/**
 	 * カーソルを取得するメソッド
-	 * @return
+	 * @return カーソル値
 	 */
+	@SuppressWarnings("unused")
 	public Cursor getCursor(){
-		return this.c;
+		return c;
 	}
 
 }
