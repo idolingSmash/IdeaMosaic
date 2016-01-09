@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ViewFlipper
+        android:id="@+id/flipper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal|center_vertical" >
+
+        <include
+            android:id="@+id/tutorialflip_1"
+            layout="@layout/tutorialflip_1" />
+
+        <include
+            android:id="@+id/tutorialflip_2"
+            layout="@layout/tutorialflip_2" />
+
+        <include
+            android:id="@+id/tutorialflip_3"
+            layout="@layout/tutorialflip_3" />
+
+        <include
+            android:id="@+id/tutorialflip_4"
+            layout="@layout/tutorialflip_4" />
+
+        <include
+            android:id="@+id/tutorialflip_5"
+            layout="@layout/tutorialflip_5" />
+
+        <include
+            android:id="@+id/tutorialflip_6"
+            layout="@layout/tutorialflip_6" />
+
+        <include
+            android:id="@+id/tutorialflip_7"
+            layout="@layout/tutorialflip_7" />
+
+        <include
+            android:id="@+id/tutorialflip_8"
+            layout="@layout/tutorialflip_8" />
+
+        <include
+            android:id="@+id/tutorialflip_9"
+            layout="@layout/tutorialflip_9" />
+
+        <include
+            android:id="@+id/tutorialflip_10"
+            layout="@layout/tutorialflip_10" />
+
+        <include
+            android:id="@+id/tutorialflip_11"
+            layout="@layout/tutorialflip_11" />
+
+        <include
+            android:id="@+id/tutorialflip_12"
+            layout="@layout/tutorialflip_12" />
+
+        <include
+            android:id="@+id/tutorialflip_13"
+            layout="@layout/tutorialflip_13" />
+
+        <include
+            android:id="@+id/tutorialflip_14"
+            layout="@layout/tutorialflip_14" />
+
+        <include
+            android:id="@+id/tutorialflip_15"
+            layout="@layout/tutorialflip_15" />
+
+        <include
+            android:id="@+id/tutorialflip_16"
+            layout="@layout/tutorialflip_16" />
+
+        <include
+            android:id="@+id/tutorialflip_17"
+            layout="@layout/tutorialflip_17" />
+
+        <include
+            android:id="@+id/tutorialflip_18"
+            layout="@layout/tutorialflip_18" />
+
+        <include
+            android:id="@+id/tutorialflip_19"
+            layout="@layout/tutorialflip_19" />
+    </ViewFlipper>
+
+    <Button
+        android:id="@+id/tutrial_button_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:text="@string/tutorial_btn_prev" >
+    </Button>
+
+    <Button
+        android:id="@+id/tutrial_button_returntomenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:text="@string/tutorial_btn_return" >
+    </Button>
+
+    <Button
+        android:id="@+id/tutrial_button_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:text="@string/tutorial_btn_next" >
+    </Button>
+
+</FrameLayout><!-- From: file:/Users/apple/StudioProjects/IdeaMosaic/app/src/main/res/layout/ideamosaic_tutorial.xml -->

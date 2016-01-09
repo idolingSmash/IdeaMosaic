@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center|center_vertical|center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txt_breadcrumb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="center_horizontal" >
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_vertical|center_horizontal"
+            android:orientation="vertical" >
+
+            <TableRow
+                android:id="@+id/tableRow_mat0"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <Button
+                    android:id="@+id/btn_trigger_serendipity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="3" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow_mat1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10px"
+                android:layout_weight="1" >
+
+                <Button
+                    android:id="@+id/idea_button0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2dip"
+                    android:layout_weight="1"
+                    android:background="@color/MOEGI" />
+
+                <Button
+                    android:id="@+id/idea_button1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2dip"
+                    android:layout_weight="1"
+                    android:background="@color/MOEGI" />
+
+                <Button
+                    android:id="@+id/idea_button2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2dip"
+                    android:layout_weight="1"
+                    android:background="@color/MOEGI" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow_mat2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <Button
+                    android:id="@+id/idea_button3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2dip"
+                    android:layout_weight="1"
+                    android:background="@color/MOEGI" />
+
+                <Button
+                    android:id="@+id/idea_button4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2dip"
+                    android:layout_weight="1"
+                    android:background="@color/TUTUJI" />
+
+                <Button
+                    android:id="@+id/idea_button5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2dip"
+                    android:layout_weight="1"
+                    android:background="@color/MOEGI" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow_mat3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <Button
+                    android:id="@+id/idea_button6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2dip"
+                    android:layout_weight="1"
+                    android:background="@color/MOEGI" />
+
+                <Button
+                    android:id="@+id/idea_button7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2dip"
+                    android:layout_weight="1"
+                    android:background="@color/MOEGI" />
+
+                <Button
+                    android:id="@+id/idea_button8"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2dip"
+                    android:layout_weight="1"
+                    android:background="@color/MOEGI" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow_mat4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/txt_explain_singleclick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="3"
+                    android:text="@string/tutorial_click" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow_mat5"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/txt_explain_doubleclick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="3"
+                    android:text="@string/tutorial_doubleclick" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow_mat6"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/txt_explain_leftflick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="3"
+                    android:text="@string/tutorial_leftflick" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</FrameLayout><!-- From: file:/Users/apple/StudioProjects/IdeaMosaic/app/src/main/res/layout/ideamosaic_mosaic.xml -->
