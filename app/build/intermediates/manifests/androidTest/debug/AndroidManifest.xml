@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="satoshi.app.ideamosaic.test">
 
-    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="15" />
+    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="17" />
 
     <application>
         <uses-library android:name="android.test.runner" />

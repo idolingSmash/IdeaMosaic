@@ -1,26 +1,23 @@
 package satoshi.app.ideamosaic;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
+import android.database.sqlite.SQLiteOpenHelper;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import common.function.sato.var2.CommonDBClass;
-
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
-import android.database.sqlite.SQLiteDatabase.CursorFactory;
-import android.database.sqlite.SQLiteOpenHelper;
-
 public class IdeaMosaicDBHelper extends SQLiteOpenHelper{
 
 	//ConstClassのインスタンスを生成
 	static IdeaMosaicCommonConst im_comst =  new IdeaMosaicCommonConst();
-	private static int db_version = 1;
-	private static String DB_PATH;
-	private static String DB_PATH_EXCEPT_EXTENTION;
-	private final static String DB_NAME_ASSET = "IdeaMosaic.db";
+	private int db_version = 1;
+	private String DB_PATH;
+	private String DB_PATH_EXCEPT_EXTENTION;
+	private final String DB_NAME_ASSET = "IdeaMosaic.db";
 	private SQLiteDatabase mDataBase;
 	private final Context mContext;
 
@@ -35,7 +32,15 @@ public class IdeaMosaicDBHelper extends SQLiteOpenHelper{
 
 	}
 
-	/**
+    public int getDb_version() {
+        return this.db_version;
+    }
+
+    public String getDbPathExceptExtention() {
+        return this.DB_PATH_EXCEPT_EXTENTION;
+    }
+
+    /**
      * asset に格納したデータベースをコピーするための空のデータベースを作成する
      *
      **/
@@ -64,16 +69,16 @@ public class IdeaMosaicDBHelper extends SQLiteOpenHelper{
      * @return 存在している場合 {@code true}
      */
     private boolean checkDataBaseExists() {
-        SQLiteDatabase checkDb = null;
+        SQLiteDatabase checkDb;
+        checkDb = null;
         try{
 //            String dbPath = DB_PATH + DB_NAME_ASSET;
             checkDb = SQLiteDatabase.openDatabase(this.DB_PATH, null, SQLiteDatabase.OPEN_READONLY);
+            if(checkDb != null){
+                checkDb.close();
+            }
         }catch(SQLiteException e){
             // データベースはまだ存在していない
-        }
-
-        if(checkDb != null){
-            checkDb.close();
         }
         return checkDb != null ? true : false;
     }

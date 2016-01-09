@@ -3,11 +3,13 @@ package common.function.sato.var2;
 import java.io.IOException;
 import java.util.Calendar;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.text.InputFilter;
 import android.text.TextUtils;
 import android.widget.EditText;
 
+@SuppressLint("Registered")
 public class CommonClass extends Activity{
 
 

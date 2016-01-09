@@ -2,8 +2,6 @@ package satoshi.app.ideamosaic;
 
 import java.util.ArrayList;
 
-import android.R.integer;
-
 /**
  * @author KSato
  *
