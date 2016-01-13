@@ -122,7 +122,6 @@ public class IdeaMosaicTutorial extends Activity implements OnGestureListener, O
 	}
 
 	public void onLongPress(MotionEvent e) {
-		// TODO 自動生成されたメソッド・スタブ
 
 	}
 

@@ -15,131 +15,232 @@ public final class R {
         public static final int slide_out_to_right=0x7f040003;
     }
     public static final class array {
-        public static final int str_Colors=0x7f050000;
+        public static final int str_Colors=0x7f070000;
     }
     public static final class attr {
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int adSize=0x7f010000;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int adSizes=0x7f010001;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int adUnitId=0x7f010002;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int circleCrop=0x7f010005;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int imageAspectRatio=0x7f010004;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td></td></tr>
+<tr><td><code>adjust_width</code></td><td>1</td><td></td></tr>
+<tr><td><code>adjust_height</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int imageAspectRatioAdjust=0x7f010003;
     }
     public static final class color {
-        public static final int AKEBOMO=0x7f060000;
-        public static final int AYAME=0x7f060001;
-        public static final int EDOCHA=0x7f060002;
-        public static final int HIMAWARI=0x7f060003;
-        public static final int KINARI=0x7f060004;
-        public static final int MOEGI=0x7f060005;
-        public static final int SORA=0x7f060006;
-        public static final int SUMI=0x7f060007;
-        public static final int TUTUJI=0x7f060008;
+        public static final int AKEBOMO=0x7f080000;
+        public static final int AYAME=0x7f080001;
+        public static final int EDOCHA=0x7f080002;
+        public static final int HIMAWARI=0x7f080003;
+        public static final int KINARI=0x7f080004;
+        public static final int MOEGI=0x7f080005;
+        public static final int SORA=0x7f080006;
+        public static final int SUMI=0x7f080007;
+        public static final int TUTUJI=0x7f080008;
+        public static final int common_action_bar_splitter=0x7f080009;
+        public static final int common_signin_btn_dark_text_default=0x7f08000a;
+        public static final int common_signin_btn_dark_text_disabled=0x7f08000b;
+        public static final int common_signin_btn_dark_text_focused=0x7f08000c;
+        public static final int common_signin_btn_dark_text_pressed=0x7f08000d;
+        public static final int common_signin_btn_default_background=0x7f08000e;
+        public static final int common_signin_btn_light_text_default=0x7f08000f;
+        public static final int common_signin_btn_light_text_disabled=0x7f080010;
+        public static final int common_signin_btn_light_text_focused=0x7f080011;
+        public static final int common_signin_btn_light_text_pressed=0x7f080012;
+        public static final int common_signin_btn_text_dark=0x7f080013;
+        public static final int common_signin_btn_text_light=0x7f080014;
     }
     public static final class drawable {
         public static final int click=0x7f020000;
-        public static final int exit=0x7f020001;
-        public static final int ic_btn_search=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int ic_menu_notifications=0x7f020004;
-        public static final int idea_mosaicr_icon=0x7f020005;
-        public static final int ideaflash=0x7f020006;
-        public static final int mindmap=0x7f020007;
-        public static final int morecolor_icon=0x7f020008;
-        public static final int morecolorful99=0x7f020009;
-        public static final int search=0x7f02000a;
-        public static final int testimage=0x7f02000b;
-        public static final int tutorial=0x7f02000c;
-        public static final int tutrialimage1=0x7f02000d;
-        public static final int tutrialimage10=0x7f02000e;
-        public static final int tutrialimage11=0x7f02000f;
-        public static final int tutrialimage12=0x7f020010;
-        public static final int tutrialimage13=0x7f020011;
-        public static final int tutrialimage14=0x7f020012;
-        public static final int tutrialimage15=0x7f020013;
-        public static final int tutrialimage16=0x7f020014;
-        public static final int tutrialimage17=0x7f020015;
-        public static final int tutrialimage18=0x7f020016;
-        public static final int tutrialimage2=0x7f020017;
-        public static final int tutrialimage3=0x7f020018;
-        public static final int tutrialimage4=0x7f020019;
-        public static final int tutrialimage5=0x7f02001a;
-        public static final int tutrialimage6=0x7f02001b;
-        public static final int tutrialimage7=0x7f02001c;
-        public static final int tutrialimage8=0x7f02001d;
-        public static final int tutrialimage9=0x7f02001e;
+        public static final int common_full_open_on_phone=0x7f020001;
+        public static final int common_ic_googleplayservices=0x7f020002;
+        public static final int common_signin_btn_icon_dark=0x7f020003;
+        public static final int common_signin_btn_icon_disabled_dark=0x7f020004;
+        public static final int common_signin_btn_icon_disabled_focus_dark=0x7f020005;
+        public static final int common_signin_btn_icon_disabled_focus_light=0x7f020006;
+        public static final int common_signin_btn_icon_disabled_light=0x7f020007;
+        public static final int common_signin_btn_icon_focus_dark=0x7f020008;
+        public static final int common_signin_btn_icon_focus_light=0x7f020009;
+        public static final int common_signin_btn_icon_light=0x7f02000a;
+        public static final int common_signin_btn_icon_normal_dark=0x7f02000b;
+        public static final int common_signin_btn_icon_normal_light=0x7f02000c;
+        public static final int common_signin_btn_icon_pressed_dark=0x7f02000d;
+        public static final int common_signin_btn_icon_pressed_light=0x7f02000e;
+        public static final int common_signin_btn_text_dark=0x7f02000f;
+        public static final int common_signin_btn_text_disabled_dark=0x7f020010;
+        public static final int common_signin_btn_text_disabled_focus_dark=0x7f020011;
+        public static final int common_signin_btn_text_disabled_focus_light=0x7f020012;
+        public static final int common_signin_btn_text_disabled_light=0x7f020013;
+        public static final int common_signin_btn_text_focus_dark=0x7f020014;
+        public static final int common_signin_btn_text_focus_light=0x7f020015;
+        public static final int common_signin_btn_text_light=0x7f020016;
+        public static final int common_signin_btn_text_normal_dark=0x7f020017;
+        public static final int common_signin_btn_text_normal_light=0x7f020018;
+        public static final int common_signin_btn_text_pressed_dark=0x7f020019;
+        public static final int common_signin_btn_text_pressed_light=0x7f02001a;
+        public static final int exit=0x7f02001b;
+        public static final int ic_btn_search=0x7f02001c;
+        public static final int ic_launcher=0x7f02001d;
+        public static final int ic_menu_notifications=0x7f02001e;
+        public static final int ic_plusone_medium_off_client=0x7f02001f;
+        public static final int ic_plusone_small_off_client=0x7f020020;
+        public static final int ic_plusone_standard_off_client=0x7f020021;
+        public static final int ic_plusone_tall_off_client=0x7f020022;
+        public static final int idea_mosaicr_icon=0x7f020023;
+        public static final int ideaflash=0x7f020024;
+        public static final int mindmap=0x7f020025;
+        public static final int morecolor_icon=0x7f020026;
+        public static final int morecolorful99=0x7f020027;
+        public static final int search=0x7f020028;
+        public static final int testimage=0x7f020029;
+        public static final int tutorial=0x7f02002a;
+        public static final int tutrialimage1=0x7f02002b;
+        public static final int tutrialimage10=0x7f02002c;
+        public static final int tutrialimage11=0x7f02002d;
+        public static final int tutrialimage12=0x7f02002e;
+        public static final int tutrialimage13=0x7f02002f;
+        public static final int tutrialimage14=0x7f020030;
+        public static final int tutrialimage15=0x7f020031;
+        public static final int tutrialimage16=0x7f020032;
+        public static final int tutrialimage17=0x7f020033;
+        public static final int tutrialimage18=0x7f020034;
+        public static final int tutrialimage2=0x7f020035;
+        public static final int tutrialimage3=0x7f020036;
+        public static final int tutrialimage4=0x7f020037;
+        public static final int tutrialimage5=0x7f020038;
+        public static final int tutrialimage6=0x7f020039;
+        public static final int tutrialimage7=0x7f02003a;
+        public static final int tutrialimage8=0x7f02003b;
+        public static final int tutrialimage9=0x7f02003c;
     }
     public static final class id {
-        public static final int ListView_idea=0x7f080000;
-        public static final int ListView_mindmapIdea=0x7f080014;
-        public static final int ListView_searchIdea=0x7f08002c;
-        public static final int btn_trigger_serendipity=0x7f080017;
-        public static final int button_menu_finish=0x7f08000d;
-        public static final int button_menu_idea=0x7f080007;
-        public static final int button_menu_mindmap=0x7f08000a;
-        public static final int button_menu_search=0x7f080009;
-        public static final int button_menu_tutorial=0x7f08000c;
-        public static final int button_mindmap_cancel=0x7f080013;
-        public static final int button_mindmap_save=0x7f080012;
-        public static final int editText_QueryKeyword=0x7f08002a;
-        public static final int et_Inpput=0x7f080044;
-        public static final int flipper=0x7f08002d;
-        public static final int idea_button0=0x7f080019;
-        public static final int idea_button1=0x7f08001a;
-        public static final int idea_button2=0x7f08001b;
-        public static final int idea_button3=0x7f08001d;
-        public static final int idea_button4=0x7f08001e;
-        public static final int idea_button5=0x7f08001f;
-        public static final int idea_button6=0x7f080021;
-        public static final int idea_button7=0x7f080022;
-        public static final int idea_button8=0x7f080023;
-        public static final int imageView1=0x7f080005;
-        public static final int linear_mindmap=0x7f08000e;
-        public static final int list_button_add=0x7f080001;
-        public static final int list_button_delete=0x7f080003;
-        public static final int list_button_search=0x7f08002b;
-        public static final int list_button_update=0x7f080002;
-        public static final int progressBar_mindmap=0x7f080011;
-        public static final int spn_color=0x7f080045;
-        public static final int tableRow1=0x7f080004;
-        public static final int tableRow2=0x7f080006;
-        public static final int tableRow3=0x7f080008;
-        public static final int tableRow4=0x7f08000b;
-        public static final int tableRow_mat0=0x7f080016;
-        public static final int tableRow_mat1=0x7f080018;
-        public static final int tableRow_mat2=0x7f08001c;
-        public static final int tableRow_mat3=0x7f080020;
-        public static final int tableRow_mat4=0x7f080024;
-        public static final int tableRow_mat5=0x7f080026;
-        public static final int tableRow_mat6=0x7f080028;
-        public static final int tutorialflip_1=0x7f08002e;
-        public static final int tutorialflip_10=0x7f080037;
-        public static final int tutorialflip_11=0x7f080038;
-        public static final int tutorialflip_12=0x7f080039;
-        public static final int tutorialflip_13=0x7f08003a;
-        public static final int tutorialflip_14=0x7f08003b;
-        public static final int tutorialflip_15=0x7f08003c;
-        public static final int tutorialflip_16=0x7f08003d;
-        public static final int tutorialflip_17=0x7f08003e;
-        public static final int tutorialflip_18=0x7f08003f;
-        public static final int tutorialflip_19=0x7f080040;
-        public static final int tutorialflip_2=0x7f08002f;
-        public static final int tutorialflip_3=0x7f080030;
-        public static final int tutorialflip_4=0x7f080031;
-        public static final int tutorialflip_5=0x7f080032;
-        public static final int tutorialflip_6=0x7f080033;
-        public static final int tutorialflip_7=0x7f080034;
-        public static final int tutorialflip_8=0x7f080035;
-        public static final int tutorialflip_9=0x7f080036;
-        public static final int tutrial_button_next=0x7f080043;
-        public static final int tutrial_button_previous=0x7f080041;
-        public static final int tutrial_button_returntomenu=0x7f080042;
-        public static final int txt_ItemCount=0x7f080047;
-        public static final int txt_ListItem=0x7f080046;
-        public static final int txt_ListTimeStamp=0x7f080048;
-        public static final int txt_MindMapListItem=0x7f080049;
-        public static final int txt_SearchItemMatrix=0x7f08004b;
-        public static final int txt_SearchListItem=0x7f08004a;
-        public static final int txt_breadcrumb=0x7f080015;
-        public static final int txt_explain_doubleclick=0x7f080027;
-        public static final int txt_explain_leftflick=0x7f080029;
-        public static final int txt_explain_singleclick=0x7f080025;
-        public static final int txt_mindmap_title=0x7f08000f;
-        public static final int txt_mindmap_waitmassege=0x7f080010;
+        public static final int ListView_idea=0x7f0b0003;
+        public static final int ListView_mindmapIdea=0x7f0b0018;
+        public static final int ListView_searchIdea=0x7f0b0030;
+        public static final int adView=0x7f0b0011;
+        public static final int adjust_height=0x7f0b0000;
+        public static final int adjust_width=0x7f0b0001;
+        public static final int btn_trigger_serendipity=0x7f0b001b;
+        public static final int button_menu_finish=0x7f0b0010;
+        public static final int button_menu_idea=0x7f0b000a;
+        public static final int button_menu_mindmap=0x7f0b000d;
+        public static final int button_menu_search=0x7f0b000c;
+        public static final int button_menu_tutorial=0x7f0b000f;
+        public static final int button_mindmap_cancel=0x7f0b0017;
+        public static final int button_mindmap_save=0x7f0b0016;
+        public static final int editText_QueryKeyword=0x7f0b002e;
+        public static final int et_Inpput=0x7f0b0048;
+        public static final int flipper=0x7f0b0031;
+        public static final int idea_button0=0x7f0b001d;
+        public static final int idea_button1=0x7f0b001e;
+        public static final int idea_button2=0x7f0b001f;
+        public static final int idea_button3=0x7f0b0021;
+        public static final int idea_button4=0x7f0b0022;
+        public static final int idea_button5=0x7f0b0023;
+        public static final int idea_button6=0x7f0b0025;
+        public static final int idea_button7=0x7f0b0026;
+        public static final int idea_button8=0x7f0b0027;
+        public static final int imageView1=0x7f0b0008;
+        public static final int linear_mindmap=0x7f0b0012;
+        public static final int list_button_add=0x7f0b0004;
+        public static final int list_button_delete=0x7f0b0006;
+        public static final int list_button_search=0x7f0b002f;
+        public static final int list_button_update=0x7f0b0005;
+        public static final int none=0x7f0b0002;
+        public static final int progressBar_mindmap=0x7f0b0015;
+        public static final int spn_color=0x7f0b0049;
+        public static final int tableRow1=0x7f0b0007;
+        public static final int tableRow2=0x7f0b0009;
+        public static final int tableRow3=0x7f0b000b;
+        public static final int tableRow4=0x7f0b000e;
+        public static final int tableRow_mat0=0x7f0b001a;
+        public static final int tableRow_mat1=0x7f0b001c;
+        public static final int tableRow_mat2=0x7f0b0020;
+        public static final int tableRow_mat3=0x7f0b0024;
+        public static final int tableRow_mat4=0x7f0b0028;
+        public static final int tableRow_mat5=0x7f0b002a;
+        public static final int tableRow_mat6=0x7f0b002c;
+        public static final int tutorialflip_1=0x7f0b0032;
+        public static final int tutorialflip_10=0x7f0b003b;
+        public static final int tutorialflip_11=0x7f0b003c;
+        public static final int tutorialflip_12=0x7f0b003d;
+        public static final int tutorialflip_13=0x7f0b003e;
+        public static final int tutorialflip_14=0x7f0b003f;
+        public static final int tutorialflip_15=0x7f0b0040;
+        public static final int tutorialflip_16=0x7f0b0041;
+        public static final int tutorialflip_17=0x7f0b0042;
+        public static final int tutorialflip_18=0x7f0b0043;
+        public static final int tutorialflip_19=0x7f0b0044;
+        public static final int tutorialflip_2=0x7f0b0033;
+        public static final int tutorialflip_3=0x7f0b0034;
+        public static final int tutorialflip_4=0x7f0b0035;
+        public static final int tutorialflip_5=0x7f0b0036;
+        public static final int tutorialflip_6=0x7f0b0037;
+        public static final int tutorialflip_7=0x7f0b0038;
+        public static final int tutorialflip_8=0x7f0b0039;
+        public static final int tutorialflip_9=0x7f0b003a;
+        public static final int tutrial_button_next=0x7f0b0047;
+        public static final int tutrial_button_previous=0x7f0b0045;
+        public static final int tutrial_button_returntomenu=0x7f0b0046;
+        public static final int txt_ItemCount=0x7f0b004b;
+        public static final int txt_ListItem=0x7f0b004a;
+        public static final int txt_ListTimeStamp=0x7f0b004c;
+        public static final int txt_MindMapListItem=0x7f0b004d;
+        public static final int txt_SearchItemMatrix=0x7f0b004f;
+        public static final int txt_SearchListItem=0x7f0b004e;
+        public static final int txt_breadcrumb=0x7f0b0019;
+        public static final int txt_explain_doubleclick=0x7f0b002b;
+        public static final int txt_explain_leftflick=0x7f0b002d;
+        public static final int txt_explain_singleclick=0x7f0b0029;
+        public static final int txt_mindmap_title=0x7f0b0013;
+        public static final int txt_mindmap_waitmassege=0x7f0b0014;
+    }
+    public static final class integer {
+        public static final int google_play_services_version=0x7f090000;
     }
     public static final class layout {
         public static final int ideamosaic_listview=0x7f030000;
@@ -173,106 +274,274 @@ public final class R {
         public static final int tutorialflip_8=0x7f03001c;
         public static final int tutorialflip_9=0x7f03001d;
     }
-    public static final class string {
-        public static final int app_name=0x7f070000;
-        public static final int buttontext_initHintMessage=0x7f070001;
-        public static final int buttontext_listview_delete=0x7f070002;
-        public static final int buttontext_listview_new=0x7f070003;
-        public static final int buttontext_listview_update=0x7f070004;
-        public static final int buttontext_menu_finish=0x7f070005;
-        public static final int buttontext_menu_mindmap=0x7f070006;
-        public static final int buttontext_menu_search=0x7f070007;
-        public static final int buttontext_menu_think=0x7f070008;
-        public static final int buttontext_menu_tutorial=0x7f070009;
-        public static final int buttontext_mindmap_cancel=0x7f07000a;
-        public static final int buttontext_mindmap_save=0x7f07000b;
-        public static final int buttontext_mosaic_previousword=0x7f07000c;
-        public static final int buttontext_mosaic_return2listview=0x7f07000d;
-        public static final int buttontext_testdata=0x7f07000e;
-        public static final int buttontext_testdata16=0x7f07000f;
-        public static final int buttontext_testdata25=0x7f070010;
-        public static final int dialog_deleteButton=0x7f070011;
-        public static final int dialog_messageDeleteListItemBackward=0x7f070012;
-        public static final int dialog_messageDeleteListItemForward=0x7f070013;
-        public static final int dialog_messageOutputCSV=0x7f070014;
-        public static final int dialog_messageOutputDB=0x7f070015;
-        public static final int dialog_messageSearch=0x7f070016;
-        public static final int dialog_negativeButton=0x7f070017;
-        public static final int dialog_positiveButton=0x7f070018;
-        public static final int dialog_positiveModifyButton=0x7f070019;
-        public static final int dialog_radioBSOFF=0x7f07001a;
-        public static final int dialog_radioBSON=0x7f07001b;
-        public static final int dialog_titleAdd=0x7f07001c;
-        public static final int dialog_titleAddKeyword=0x7f07001d;
-        public static final int dialog_titleAddListItem=0x7f07001e;
-        public static final int dialog_titleDeleteListItem=0x7f07001f;
-        public static final int dialog_titleOutputCSV=0x7f070020;
-        public static final int dialog_titleOutputDB=0x7f070021;
-        public static final int dialog_titleSearch=0x7f070022;
-        public static final int dialog_titleUpdate=0x7f070023;
-        public static final int dialog_titleUpdateListItem=0x7f070024;
-        public static final int edittext_limitLength=0x7f070025;
-        public static final int hello=0x7f070026;
-        public static final int mindmap_createmessage=0x7f070027;
-        public static final int mindmap_explain=0x7f070028;
-        public static final int mindmap_initMessage=0x7f070029;
-        public static final int optionmenu_hint=0x7f07002a;
-        public static final int optionmenu_outputCSV=0x7f07002b;
-        public static final int optionmenu_previousCard=0x7f07002c;
-        public static final int optionmenu_saveDB=0x7f07002d;
-        public static final int optionmenu_searchKeyword=0x7f07002e;
-        public static final int optionmenu_shiftBSmode=0x7f07002f;
-        public static final int toast_addItem=0x7f070030;
-        public static final int toast_deleteItem=0x7f070031;
-        public static final int toast_falseAdd=0x7f070032;
-        public static final int toast_falseDelete=0x7f070033;
-        public static final int toast_falseUpdate=0x7f070034;
-        public static final int toast_maxLengthOver=0x7f070035;
-        public static final int toast_messageDoubleBookingWithCentralWord=0x7f070036;
-        public static final int toast_messageFailToOutputCSV=0x7f070037;
-        public static final int toast_messageFailToOutputDB=0x7f070038;
-        public static final int toast_messageHitKeyword=0x7f070039;
-        public static final int toast_messageMindmap=0x7f07003a;
-        public static final int toast_messageNotChanegeCentralWord=0x7f07003b;
-        public static final int toast_messageNotFoundKeyword=0x7f07003c;
-        public static final int toast_messageOutputCSVBackward=0x7f07003d;
-        public static final int toast_messageOutputCSVForward=0x7f07003e;
-        public static final int toast_messageOutputDB=0x7f07003f;
-        public static final int toast_notExistListItem=0x7f070040;
-        public static final int toast_notInputWord=0x7f070041;
-        public static final int toast_selectListItemForPrepareToDelete=0x7f070042;
-        public static final int toast_selectListItemForPrepareToUpdate=0x7f070043;
-        public static final int toast_updateFromItem=0x7f070044;
-        public static final int toast_updateToItem=0x7f070045;
-        public static final int tutorial_btn_next=0x7f070046;
-        public static final int tutorial_btn_prev=0x7f070047;
-        public static final int tutorial_btn_return=0x7f070048;
-        public static final int tutorial_click=0x7f070049;
-        public static final int tutorial_doubleclick=0x7f07004a;
-        public static final int tutorial_explain1=0x7f07004b;
-        public static final int tutorial_explain10=0x7f07004c;
-        public static final int tutorial_explain11=0x7f07004d;
-        public static final int tutorial_explain12=0x7f07004e;
-        public static final int tutorial_explain13=0x7f07004f;
-        public static final int tutorial_explain14=0x7f070050;
-        public static final int tutorial_explain15=0x7f070051;
-        public static final int tutorial_explain16_1=0x7f070052;
-        public static final int tutorial_explain16_2=0x7f070053;
-        public static final int tutorial_explain17=0x7f070054;
-        public static final int tutorial_explain18=0x7f070055;
-        public static final int tutorial_explain19=0x7f070056;
-        public static final int tutorial_explain2=0x7f070057;
-        public static final int tutorial_explain3=0x7f070058;
-        public static final int tutorial_explain4=0x7f070059;
-        public static final int tutorial_explain5=0x7f07005a;
-        public static final int tutorial_explain6=0x7f07005b;
-        public static final int tutorial_explain7_1=0x7f07005c;
-        public static final int tutorial_explain7_2=0x7f07005d;
-        public static final int tutorial_explain8_1=0x7f07005e;
-        public static final int tutorial_explain8_2=0x7f07005f;
-        public static final int tutorial_explain9_1=0x7f070060;
-        public static final int tutorial_explain9_2=0x7f070061;
-        public static final int tutorial_leftflick=0x7f070062;
-        public static final int txt_listviewElementCount=0x7f070063;
+    public static final class raw {
+        public static final int gtm_analytics=0x7f050000;
     }
+    public static final class string {
+        public static final int accept=0x7f06001f;
+        public static final int app_name=0x7f060020;
+        public static final int banner_ad_unit_id=0x7f060021;
+        public static final int buttontext_initHintMessage=0x7f060022;
+        public static final int buttontext_listview_delete=0x7f060023;
+        public static final int buttontext_listview_new=0x7f060024;
+        public static final int buttontext_listview_update=0x7f060025;
+        public static final int buttontext_menu_finish=0x7f060026;
+        public static final int buttontext_menu_mindmap=0x7f060027;
+        public static final int buttontext_menu_search=0x7f060028;
+        public static final int buttontext_menu_think=0x7f060029;
+        public static final int buttontext_menu_tutorial=0x7f06002a;
+        public static final int buttontext_mindmap_cancel=0x7f06002b;
+        public static final int buttontext_mindmap_save=0x7f06002c;
+        public static final int buttontext_mosaic_previousword=0x7f06002d;
+        public static final int buttontext_mosaic_return2listview=0x7f06002e;
+        public static final int buttontext_testdata=0x7f06002f;
+        public static final int buttontext_testdata16=0x7f060030;
+        public static final int buttontext_testdata25=0x7f060031;
+        public static final int common_android_wear_notification_needs_update_text=0x7f060000;
+        public static final int common_android_wear_update_text=0x7f060001;
+        public static final int common_android_wear_update_title=0x7f060002;
+        public static final int common_google_play_services_enable_button=0x7f060003;
+        public static final int common_google_play_services_enable_text=0x7f060004;
+        public static final int common_google_play_services_enable_title=0x7f060005;
+        public static final int common_google_play_services_error_notification_requested_by_msg=0x7f060006;
+        public static final int common_google_play_services_install_button=0x7f060007;
+        public static final int common_google_play_services_install_text_phone=0x7f060008;
+        public static final int common_google_play_services_install_text_tablet=0x7f060009;
+        public static final int common_google_play_services_install_title=0x7f06000a;
+        public static final int common_google_play_services_invalid_account_text=0x7f06000b;
+        public static final int common_google_play_services_invalid_account_title=0x7f06000c;
+        public static final int common_google_play_services_needs_enabling_title=0x7f06000d;
+        public static final int common_google_play_services_network_error_text=0x7f06000e;
+        public static final int common_google_play_services_network_error_title=0x7f06000f;
+        public static final int common_google_play_services_notification_needs_installation_title=0x7f060010;
+        public static final int common_google_play_services_notification_needs_update_title=0x7f060011;
+        public static final int common_google_play_services_notification_ticker=0x7f060012;
+        public static final int common_google_play_services_sign_in_failed_text=0x7f060013;
+        public static final int common_google_play_services_sign_in_failed_title=0x7f060014;
+        public static final int common_google_play_services_unknown_issue=0x7f060015;
+        public static final int common_google_play_services_unsupported_text=0x7f060016;
+        public static final int common_google_play_services_unsupported_title=0x7f060017;
+        public static final int common_google_play_services_update_button=0x7f060018;
+        public static final int common_google_play_services_update_text=0x7f060019;
+        public static final int common_google_play_services_update_title=0x7f06001a;
+        public static final int common_open_on_phone=0x7f06001b;
+        public static final int common_signin_button_text=0x7f06001c;
+        public static final int common_signin_button_text_long=0x7f06001d;
+        public static final int commono_google_play_services_api_unavailable_text=0x7f06001e;
+        public static final int create_calendar_message=0x7f060032;
+        public static final int create_calendar_title=0x7f060033;
+        public static final int decline=0x7f060034;
+        public static final int dialog_deleteButton=0x7f060035;
+        public static final int dialog_messageDeleteListItemBackward=0x7f060036;
+        public static final int dialog_messageDeleteListItemForward=0x7f060037;
+        public static final int dialog_messageOutputCSV=0x7f060038;
+        public static final int dialog_messageOutputDB=0x7f060039;
+        public static final int dialog_messageSearch=0x7f06003a;
+        public static final int dialog_negativeButton=0x7f06003b;
+        public static final int dialog_positiveButton=0x7f06003c;
+        public static final int dialog_positiveModifyButton=0x7f06003d;
+        public static final int dialog_radioBSOFF=0x7f06003e;
+        public static final int dialog_radioBSON=0x7f06003f;
+        public static final int dialog_titleAdd=0x7f060040;
+        public static final int dialog_titleAddKeyword=0x7f060041;
+        public static final int dialog_titleAddListItem=0x7f060042;
+        public static final int dialog_titleDeleteListItem=0x7f060043;
+        public static final int dialog_titleOutputCSV=0x7f060044;
+        public static final int dialog_titleOutputDB=0x7f060045;
+        public static final int dialog_titleSearch=0x7f060046;
+        public static final int dialog_titleUpdate=0x7f060047;
+        public static final int dialog_titleUpdateListItem=0x7f060048;
+        public static final int edittext_limitLength=0x7f060049;
+        public static final int hello=0x7f06004a;
+        public static final int mindmap_createmessage=0x7f06004b;
+        public static final int mindmap_explain=0x7f06004c;
+        public static final int mindmap_initMessage=0x7f06004d;
+        public static final int optionmenu_hint=0x7f06004e;
+        public static final int optionmenu_outputCSV=0x7f06004f;
+        public static final int optionmenu_previousCard=0x7f060050;
+        public static final int optionmenu_saveDB=0x7f060051;
+        public static final int optionmenu_searchKeyword=0x7f060052;
+        public static final int optionmenu_shiftBSmode=0x7f060053;
+        public static final int store_picture_message=0x7f060054;
+        public static final int store_picture_title=0x7f060055;
+        public static final int toast_addItem=0x7f060056;
+        public static final int toast_deleteItem=0x7f060057;
+        public static final int toast_falseAdd=0x7f060058;
+        public static final int toast_falseDelete=0x7f060059;
+        public static final int toast_falseUpdate=0x7f06005a;
+        public static final int toast_maxLengthOver=0x7f06005b;
+        public static final int toast_messageDoubleBookingWithCentralWord=0x7f06005c;
+        public static final int toast_messageFailToOutputCSV=0x7f06005d;
+        public static final int toast_messageFailToOutputDB=0x7f06005e;
+        public static final int toast_messageHitKeyword=0x7f06005f;
+        public static final int toast_messageMindmap=0x7f060060;
+        public static final int toast_messageNotChanegeCentralWord=0x7f060061;
+        public static final int toast_messageNotFoundKeyword=0x7f060062;
+        public static final int toast_messageOutputCSVBackward=0x7f060063;
+        public static final int toast_messageOutputCSVForward=0x7f060064;
+        public static final int toast_messageOutputDB=0x7f060065;
+        public static final int toast_notExistListItem=0x7f060066;
+        public static final int toast_notInputWord=0x7f060067;
+        public static final int toast_selectListItemForPrepareToDelete=0x7f060068;
+        public static final int toast_selectListItemForPrepareToUpdate=0x7f060069;
+        public static final int toast_updateFromItem=0x7f06006a;
+        public static final int toast_updateToItem=0x7f06006b;
+        public static final int tutorial_btn_next=0x7f06006c;
+        public static final int tutorial_btn_prev=0x7f06006d;
+        public static final int tutorial_btn_return=0x7f06006e;
+        public static final int tutorial_click=0x7f06006f;
+        public static final int tutorial_doubleclick=0x7f060070;
+        public static final int tutorial_explain1=0x7f060071;
+        public static final int tutorial_explain10=0x7f060072;
+        public static final int tutorial_explain11=0x7f060073;
+        public static final int tutorial_explain12=0x7f060074;
+        public static final int tutorial_explain13=0x7f060075;
+        public static final int tutorial_explain14=0x7f060076;
+        public static final int tutorial_explain15=0x7f060077;
+        public static final int tutorial_explain16_1=0x7f060078;
+        public static final int tutorial_explain16_2=0x7f060079;
+        public static final int tutorial_explain17=0x7f06007a;
+        public static final int tutorial_explain18=0x7f06007b;
+        public static final int tutorial_explain19=0x7f06007c;
+        public static final int tutorial_explain2=0x7f06007d;
+        public static final int tutorial_explain3=0x7f06007e;
+        public static final int tutorial_explain4=0x7f06007f;
+        public static final int tutorial_explain5=0x7f060080;
+        public static final int tutorial_explain6=0x7f060081;
+        public static final int tutorial_explain7_1=0x7f060082;
+        public static final int tutorial_explain7_2=0x7f060083;
+        public static final int tutorial_explain8_1=0x7f060084;
+        public static final int tutorial_explain8_2=0x7f060085;
+        public static final int tutorial_explain9_1=0x7f060086;
+        public static final int tutorial_explain9_2=0x7f060087;
+        public static final int tutorial_leftflick=0x7f060088;
+        public static final int txt_listviewElementCount=0x7f060089;
+    }
+    public static final class style {
+        public static final int Theme_IAPTheme=0x7f0a0000;
+    }
+    public static final class styleable {
+        /** Attributes that can be used with a AdsAttrs.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #AdsAttrs_adSize satoshi.app.ideamosaic:adSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #AdsAttrs_adSizes satoshi.app.ideamosaic:adSizes}</code></td><td></td></tr>
+           <tr><td><code>{@link #AdsAttrs_adUnitId satoshi.app.ideamosaic:adUnitId}</code></td><td></td></tr>
+           </table>
+           @see #AdsAttrs_adSize
+           @see #AdsAttrs_adSizes
+           @see #AdsAttrs_adUnitId
+         */
+        public static final int[] AdsAttrs = {
+            0x7f010000, 0x7f010001, 0x7f010002
+        };
+        /**
+          <p>This symbol is the offset where the {@link satoshi.app.ideamosaic.R.attr#adSize}
+          attribute's value can be found in the {@link #AdsAttrs} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name satoshi.app.ideamosaic:adSize
+        */
+        public static final int AdsAttrs_adSize = 0;
+        /**
+          <p>This symbol is the offset where the {@link satoshi.app.ideamosaic.R.attr#adSizes}
+          attribute's value can be found in the {@link #AdsAttrs} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name satoshi.app.ideamosaic:adSizes
+        */
+        public static final int AdsAttrs_adSizes = 1;
+        /**
+          <p>This symbol is the offset where the {@link satoshi.app.ideamosaic.R.attr#adUnitId}
+          attribute's value can be found in the {@link #AdsAttrs} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name satoshi.app.ideamosaic:adUnitId
+        */
+        public static final int AdsAttrs_adUnitId = 2;
+        /** Attributes that can be used with a LoadingImageView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #LoadingImageView_circleCrop satoshi.app.ideamosaic:circleCrop}</code></td><td></td></tr>
+           <tr><td><code>{@link #LoadingImageView_imageAspectRatio satoshi.app.ideamosaic:imageAspectRatio}</code></td><td></td></tr>
+           <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust satoshi.app.ideamosaic:imageAspectRatioAdjust}</code></td><td></td></tr>
+           </table>
+           @see #LoadingImageView_circleCrop
+           @see #LoadingImageView_imageAspectRatio
+           @see #LoadingImageView_imageAspectRatioAdjust
+         */
+        public static final int[] LoadingImageView = {
+            0x7f010003, 0x7f010004, 0x7f010005
+        };
+        /**
+          <p>This symbol is the offset where the {@link satoshi.app.ideamosaic.R.attr#circleCrop}
+          attribute's value can be found in the {@link #LoadingImageView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name satoshi.app.ideamosaic:circleCrop
+        */
+        public static final int LoadingImageView_circleCrop = 2;
+        /**
+          <p>This symbol is the offset where the {@link satoshi.app.ideamosaic.R.attr#imageAspectRatio}
+          attribute's value can be found in the {@link #LoadingImageView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name satoshi.app.ideamosaic:imageAspectRatio
+        */
+        public static final int LoadingImageView_imageAspectRatio = 1;
+        /**
+          <p>This symbol is the offset where the {@link satoshi.app.ideamosaic.R.attr#imageAspectRatioAdjust}
+          attribute's value can be found in the {@link #LoadingImageView} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td></td></tr>
+<tr><td><code>adjust_width</code></td><td>1</td><td></td></tr>
+<tr><td><code>adjust_height</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name satoshi.app.ideamosaic:imageAspectRatioAdjust
+        */
+        public static final int LoadingImageView_imageAspectRatioAdjust = 0;
+    };
 }

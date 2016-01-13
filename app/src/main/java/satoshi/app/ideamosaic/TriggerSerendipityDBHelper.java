@@ -65,7 +65,6 @@ public class TriggerSerendipityDBHelper extends SQLiteOpenHelper{
     private boolean checkDataBaseExists() {
         SQLiteDatabase checkDb = null;
         try{
-//            String dbPath = DB_PATH + DB_NAME_ASSET;
             checkDb = SQLiteDatabase.openDatabase(this.DB_PATH, null, SQLiteDatabase.OPEN_READONLY);
         }catch(SQLiteException e){
             // データベースはまだ存在していない

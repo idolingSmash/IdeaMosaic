@@ -116,7 +116,10 @@
 
     <!-- 2013/09/27 -->
 	<string name = "buttontext_initHintMessage"> ボタンをクリックするとヒントが出ます </string>
-	
+
+    <!-- admob -->
+    <string name="banner_ad_unit_id">ca-app-pub-6828851032008732/4191400807</string>
+
     <string-array name="str_Colors">
         <item>赤色</item>
         <item>青色</item>
