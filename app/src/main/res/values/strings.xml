@@ -132,4 +132,10 @@
         <item>橙色</item>
     </string-array>
 
+    <!-- season color -->
+    <color name="Spring">#fef4f4</color>
+    <color name="Summer">#bce2e8</color>
+    <color name="Fall">#EB6238</color>
+    <color name="Winter">#E9EEF3</color>
+
 </resources>

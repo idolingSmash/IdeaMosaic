@@ -16,8 +16,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -74,7 +74,7 @@ public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener
 
 	private static IdeaMosaicCreateMindMapAsyncTask mindMapAsyncTask;
 	private static CommonScrollView scrollView;
-	private static LinearLayout linearLayoutParent;
+	private static RelativeLayout layoutParent;
 	private static Bitmap bitmap;
 
 	@Override
@@ -86,7 +86,7 @@ public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener
 		strFrontProgressMessage = this.getString(R.string.mindmap_createmessage);
 		initMessage = this.getString(R.string.mindmap_initMessage);
 
-		linearLayoutParent = (LinearLayout)findViewById(R.id.linear_mindmap);
+		layoutParent = (RelativeLayout)findViewById(R.id.linear_mindmap);
 
 		setLayout();
 		setListName();
@@ -215,7 +215,11 @@ public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener
 		pbar_wait = (ProgressBar)this.findViewById(R.id.progressBar_mindmap);
 
 		scrollView = new CommonScrollView(this);
-		linearLayoutParent.addView(scrollView, 3, new LinearLayout.LayoutParams(WC, (int)(deviceInfo.getWindowHeight() * 0.6)));
+		RelativeLayout.LayoutParams rules = new RelativeLayout.LayoutParams(WC, (int) (deviceInfo.getWindowHeight() * 0.6));
+		rules.addRule(RelativeLayout.BELOW, R.id.txt_mindmap_title);
+		rules.addRule(RelativeLayout.CENTER_HORIZONTAL, R.id.txt_mindmap_title);
+		layoutParent.addView(scrollView, rules);
+
 		scrollView.setVisibility(View.INVISIBLE);
 		btn_save.setVisibility(View.INVISIBLE);
 

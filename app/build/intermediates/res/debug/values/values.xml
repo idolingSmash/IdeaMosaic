@@ -16,12 +16,16 @@
     <color name="AKEBOMO">#FF9C77</color>
     <color name="AYAME">#C573B2</color>
     <color name="EDOCHA">#BC8458</color>
+    <color name="Fall">#EB6238</color>
     <color name="HIMAWARI">#FFBB00</color>
     <color name="KINARI">#EAE0D5</color>
     <color name="MOEGI">#97A61E</color>
     <color name="SORA">#89EDDE</color>
     <color name="SUMI">#343434</color>
+    <color name="Spring">#fef4f4</color>
+    <color name="Summer">#bce2e8</color>
     <color name="TUTUJI">#CF4078</color>
+    <color name="Winter">#E9EEF3</color>
     <!-- From: file:/Users/apple/StudioProjects/IdeaMosaic/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/res/values/common_colors.xml -->
     <eat-comment/>
     <color name="common_action_bar_splitter">#d2d2d2</color>
