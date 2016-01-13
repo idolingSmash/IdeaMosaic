@@ -1,14 +1,5 @@
 package satoshi.app.ideamosaic;
 
-import java.util.ArrayList;
-
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
-
-import common.function.sato.var2.CommonDBClass;
-import common.function.sato.var2.CommonOperateEdit;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -18,7 +9,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import java.util.ArrayList;
+
+import common.function.sato.var2.CommonDBClass;
+import common.function.sato.var2.CommonOperateEdit;
 
 public class IdeaMosaicMindMapListView extends Activity implements OnItemClickListener{
 
@@ -35,11 +30,8 @@ public class IdeaMosaicMindMapListView extends Activity implements OnItemClickLi
 	private static IdeaMosaicDBHelper im_DBHelp;
 
 	//ConstClassのインスタンスを生成
-	static IdeaMosaicCommonConst im_comst =  new IdeaMosaicCommonConst();
 	private static CommonOperateEdit opeEdit = new CommonOperateEdit(1);
 
-	//広告用
-	private AdView adView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -63,15 +55,17 @@ public class IdeaMosaicMindMapListView extends Activity implements OnItemClickLi
 		db = im_DBHelp.getWritableDatabase();
 
 		db.execSQL(CommonDBClass.createCreateTableQuerySentence(
-				im_comst.getStrDbBs(),
-				im_comst.getBrainstromingFieldnames(),
-				im_comst.getBrainstromingFieldtype()
+				IdeaMosaicCommonConst.str_DB_BS,
+				IdeaMosaicCommonConst.brainstroming_fieldNames,
+				IdeaMosaicCommonConst.brainstroming_fieldType
 				));
 
-		RS = db.query(im_comst.getstrDbListtable(),
-				im_comst.getListtableFieldnames(),
+		RS = db.query(
+				IdeaMosaicCommonConst.str_DB_ListTable,
+				IdeaMosaicCommonConst.Listtable_fieldNames,
 				null, null, null, null,
-				im_comst.getListtableFieldnames()[im_comst.getIntListIndexTimestamp()]);
+				IdeaMosaicCommonConst.Listtable_fieldNames[IdeaMosaicCommonConst.INT_List_Index_TimeStamp]
+		);
 
 		if (RS.getCount() != 0){
 			IdeaMosaicListViewOneCell temp_cell[] = new IdeaMosaicListViewOneCell[RS.getCount()];
@@ -125,8 +119,9 @@ public class IdeaMosaicMindMapListView extends Activity implements OnItemClickLi
 		// TODO 自動生成されたメソッド・スタブ
 		IdeaMosaicListViewOneCell click_cell = (IdeaMosaicListViewOneCell)Listview_IdeaBook.getItemAtPosition(position);
 		Intent intent = new Intent(this, satoshi.app.ideamosaic.IdeaMosaicCreateMindMap.class);
-		intent.putExtra("Matirx_Idea", click_cell.getListitem().toString());
-		startActivityForResult(intent, im_comst.getRequestCode_LISTVIEW_MINDMAPCREATE());
+		intent.putExtra("Matirx_Idea", click_cell.getListitem());
+		startActivityForResult(intent,
+				IdeaMosaicCommonConst.RequestCode_LISTVIEW_MINDMAPCREATE);
 	}
 
 
@@ -141,10 +136,11 @@ public class IdeaMosaicMindMapListView extends Activity implements OnItemClickLi
 
 	/**
 	 * クリックしたリストビューアイテムのテキストを取得する
-	 * @param parent
-	 * @param position
-	 * @return
+	 * @param parent   親ListView
+	 * @param position 押した場所
+	 * @return テキスト
 	 */
+	@SuppressWarnings("unused")
 	private String getListItem(AdapterView<?> parent,  int position){
 		final ListView list_AddTable = (ListView)parent;
 		return (String)list_AddTable.getItemAtPosition(position);

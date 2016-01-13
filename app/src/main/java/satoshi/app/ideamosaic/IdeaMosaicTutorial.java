@@ -1,6 +1,5 @@
 package satoshi.app.ideamosaic;
 
-import android.R.menu;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.GestureDetector;
@@ -11,7 +10,6 @@ import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 public class IdeaMosaicTutorial extends Activity implements OnGestureListener, OnClickListener{

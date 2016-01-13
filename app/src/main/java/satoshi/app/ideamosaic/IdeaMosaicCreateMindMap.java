@@ -1,21 +1,5 @@
 package satoshi.app.ideamosaic;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Random;
-
-import common.function.layout.KKLayout;
-import common.function.layout.NodeF;
-
-import common.function.sato.var2.CommonDBClass;
-import common.function.sato.var2.CommonDeviceInfo;
-import common.function.sato.var2.CommonScrollView;
-import common.function.sato.var2.CommonWhereQuerySentence;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -36,6 +20,21 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Random;
+
+import common.function.layout.KKLayout;
+import common.function.layout.NodeF;
+import common.function.sato.var2.CommonDBClass;
+import common.function.sato.var2.CommonDeviceInfo;
+import common.function.sato.var2.CommonScrollView;
+import common.function.sato.var2.CommonWhereQuerySentence;
 
 public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener{
 
@@ -62,9 +61,6 @@ public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener
 	private static SQLiteDatabase db;
 	private static Cursor RS;
 	private static IdeaMosaicDBHelper im_DBHelp;
-
-	//ConstClassのインスタンスを生成
-	static IdeaMosaicCommonConst im_comst =  new IdeaMosaicCommonConst();
 
 	//内部のテーブル名
 	private static String inner_TableName;
@@ -105,7 +101,6 @@ public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener
 	 * スレッドの初期設定
 	 */
 	private void initThread() {
-		// TODO 自動生成されたメソッド・スタブ
 
 		this.mindMapAsyncTask = new IdeaMosaicCreateMindMapAsyncTask(IdeaEdge, pointNode, pbar_wait, layoutProgressCount);
 		this.mindMapAsyncTask.execute();
@@ -136,15 +131,10 @@ public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener
 
 	@Override
 	protected void onResume() {
-		// TODO 自動生成されたメソッド・スタブ
 		super.onResume();
-
 		Log.v("ActivityMain", "onResume()");
 
 	}
-
-
-
 
 	/**
 	 * マインドマップを描画するメソッド
@@ -168,13 +158,10 @@ public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener
 	}
 
 	public void onClick(View view) {
-		// TODO 自動生成されたメソッド・スタブ
-
 		if(btn_save == view ){
 			try {
 				saveBitmap();
 			} catch (IOException e) {
-				// TODO 自動生成された catch ブロック
 				e.printStackTrace();
 			}
 		}else if(btn_cancel == view){
@@ -258,12 +245,22 @@ public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener
 	 */
 	private void initCreateMindMap(){
 
-		IdeaNode = new IdeaMosaicContainUniqueItem(db, RS, inner_TableName, im_comst.getMatrixFieldnames(), im_comst.getMatrixFieldtypes()).getUniqueListItem();
+		IdeaNode = new IdeaMosaicContainUniqueItem(
+				db,
+				RS,
+				inner_TableName,
+				IdeaMosaicCommonConst.Matrix_fieldNames,
+				IdeaMosaicCommonConst.Matrix_fieldTypes).getUniqueListItem();
 
 		debagRemoveIsolateNode();
 
 		IdeaEdge
-		= new IdeaMosaicContainUniqueItem(db, RS, inner_TableName, im_comst.getMatrixFieldnames(), im_comst.getMatrixFieldtypes()).getEdgeListItem();
+		= new IdeaMosaicContainUniqueItem(
+				db,
+				RS,
+				inner_TableName,
+				IdeaMosaicCommonConst.Matrix_fieldNames,
+				IdeaMosaicCommonConst.Matrix_fieldTypes).getEdgeListItem();
 
 		pointNode = new ArrayList<NodeF>();
 
@@ -289,24 +286,30 @@ public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener
 	private void getInnerTableName(){
 		//内部テーブル名 = IdeaMosaic + ID
 		inner_TableName = CommonDBClass.createTableNamePlusID(
-				im_comst.getstrDbIdeamosaic(),
+				IdeaMosaicCommonConst.str_DB_IdeaMosaic,
 				String.valueOf(getListUniqueID()));
 	}
 
 	/**
 	 * 選択されたリストのUniqueIDを取得するメソッド
-	 * @param extras
 	 * @return 選択されたリストのUniqueID
 	 */
 	private int getListUniqueID(){
 		//Query(Where)を作成
-		CommonDBClass DB_List_Instance = new CommonDBClass(db, RS, im_comst.getstrDbListtable(),
-				im_comst.getListtableFieldnames(), im_comst.getListtableFieldtypes());
+		CommonDBClass DB_List_Instance = new CommonDBClass(db, RS,
+				IdeaMosaicCommonConst.str_DB_ListTable,
+				IdeaMosaicCommonConst.Listtable_fieldNames,
+				IdeaMosaicCommonConst.Listtable_fieldTypes);
 
-		CommonWhereQuerySentence where_index_query = new  CommonWhereQuerySentence(im_comst.getListtableFieldnames()[im_comst.getIntListIndexTableName()],
+		CommonWhereQuerySentence where_index_query
+				= new  CommonWhereQuerySentence(
+				IdeaMosaicCommonConst.Listtable_fieldNames[
+						IdeaMosaicCommonConst.INT_List_Index_TableName],
 				im_extras.getString("Matirx_Idea").toString());
 
-		return DB_List_Instance.getDBUniqueIndexId(where_index_query, im_comst.getIntListIndexTableID());
+		return DB_List_Instance.getDBUniqueIndexId(
+				where_index_query,
+				IdeaMosaicCommonConst.INT_List_Index_TableID);
 	}
 
 	/**
@@ -403,7 +406,6 @@ public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener
 		}
 		this.finish();
 	}
-
 
 }
 

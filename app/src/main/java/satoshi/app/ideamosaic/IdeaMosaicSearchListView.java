@@ -1,46 +1,27 @@
 package satoshi.app.ideamosaic;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.GregorianCalendar;
-
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
-
-import common.function.sato.var2.CommonAlartDiagram;
-import common.function.sato.var2.CommonArrayAdapter;
-import common.function.sato.var2.CommonClass;
-import common.function.sato.var2.CommonDBClass;
-import common.function.sato.var2.CommonErrorCheck;
-import common.function.sato.var2.CommonOperateEdit;
-import common.function.sato.var2.CommonToastComment;
-import common.function.sato.var2.CommonWhereQuerySentence;
-import common.function.sato.var2.CommonAlartDiagram.ErrorCheckFlag;
-
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
-import android.content.ContentValues;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.InputType;
-import android.text.InputFilter.LengthFilter;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+
+import common.function.sato.var2.CommonClass;
+import common.function.sato.var2.CommonDBClass;
+import common.function.sato.var2.CommonOperateEdit;
+import common.function.sato.var2.CommonWhereQuerySentence;
 
 public class IdeaMosaicSearchListView extends Activity implements OnItemClickListener, OnClickListener {
 
@@ -64,11 +45,8 @@ public class IdeaMosaicSearchListView extends Activity implements OnItemClickLis
 	private static IdeaMosaicDBHelper im_DBHelp;
 
 	//ConstClassのインスタンスを生成
-	static IdeaMosaicCommonConst im_comst =  new IdeaMosaicCommonConst();
+	//IdeaMosaicCommonConst im_comst =  new IdeaMosaicCommonConst();
 	private static CommonOperateEdit opeEdit = new CommonOperateEdit(1);
-
-	//広告用
-	private AdView adView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -94,9 +72,9 @@ public class IdeaMosaicSearchListView extends Activity implements OnItemClickLis
 		db = im_DBHelp.getWritableDatabase();
 
 		db.execSQL(CommonDBClass.createCreateTableQuerySentence(
-				im_comst.getStrDbBs(),
-				im_comst.getBrainstromingFieldnames(),
-				im_comst.getBrainstromingFieldtype()
+				IdeaMosaicCommonConst.str_DB_BS,
+				IdeaMosaicCommonConst.brainstroming_fieldNames,
+				IdeaMosaicCommonConst.brainstroming_fieldType
 				));
 
 		ima_searchAdapter = new IdeaMosaicSearchListAdapter(this, 0, al_items);
@@ -138,7 +116,8 @@ public class IdeaMosaicSearchListView extends Activity implements OnItemClickLis
 		Intent intent = new Intent(this, satoshi.app.ideamosaic.IdeaMosaicMatrixButton.class);
 		intent.putExtra("Matirx_Idea", click_cell.getListitem().toString());
 		intent.putExtra("Matrix_Idea_Query", click_cell.getItemMatrix().toString().split(",", -1)[4]);
-		startActivityForResult(intent, im_comst.getRequestCode_MATRIX_IDEA());
+		startActivityForResult(intent,
+				IdeaMosaicCommonConst.RequestCode_MATRIX_IDEA);
 	}
 
 	public void onClick(View view) {
@@ -155,11 +134,11 @@ public class IdeaMosaicSearchListView extends Activity implements OnItemClickLis
 	 * キーワードが持つブックを表示
 	 */
 	private void InsertQueryKeywordForListView() {
-		// TODO 自動生成されたメソッド・スタブ
-		RS  = db.query(im_comst.getstrDbListtable(),
-				im_comst.getListtableFieldnames(),
+		RS  = db.query(
+				IdeaMosaicCommonConst.str_DB_ListTable,
+				IdeaMosaicCommonConst.Listtable_fieldNames,
 				null, null, null, null,
-				im_comst.getListtableFieldnames()[im_comst.getIntListIndexTimestamp()]);
+				IdeaMosaicCommonConst.Listtable_fieldNames[IdeaMosaicCommonConst.INT_Matrix_Index_TimeStamp]);
 		StringBuilder sb = new StringBuilder();
 		StringBuilder sb2 = new StringBuilder();
 
@@ -173,19 +152,19 @@ public class IdeaMosaicSearchListView extends Activity implements OnItemClickLis
 
 				CommonDBClass commonDB = new CommonDBClass(db,
 						RS2,
-						im_comst.createInnerTableName(RS.getInt(1)),
-						im_comst.getMatrixFieldnames(),
-						im_comst.getMatrixFieldtypes());
+						IdeaMosaicCommonConst.createInnerTableName(RS.getInt(1)),
+						IdeaMosaicCommonConst.Matrix_fieldNames,
+						IdeaMosaicCommonConst.Matrix_fieldTypes);
 
 				//中央のワードをキーとしたインスタンス
 				CommonWhereQuerySentence where_coreword_query = new CommonWhereQuerySentence(
-						im_comst.getMatrixFieldnames()[im_comst.getIntMatrixIndexMat4()],
+						IdeaMosaicCommonConst.Matrix_fieldNames[IdeaMosaicCommonConst.INT_Matrix_Index_Mat4],
 						et_searchIdea.getText().toString());
 
 				if(commonDB.isOneCountQueryWithWhereQuery(where_coreword_query)){
-
-					RS2  = db.query(im_comst.createInnerTableName(RS.getInt(1)),
-							im_comst.getMatrixFieldnames(),
+					RS2  = db.query(
+							IdeaMosaicCommonConst.createInnerTableName(RS.getInt(1)),
+							IdeaMosaicCommonConst.Matrix_fieldNames,
 							where_coreword_query.createSentence(),
 							null, null, null,null);
 
@@ -225,7 +204,8 @@ public class IdeaMosaicSearchListView extends Activity implements OnItemClickLis
 	private void Layout_EditText(){
 		et_searchIdea = (EditText)this.findViewById(R.id.editText_QueryKeyword);
 		et_searchIdea.setInputType(InputType.TYPE_CLASS_TEXT);
-		et_searchIdea.setHint(String.valueOf(im_comst.getNameMaxLength_IdeaBookName()) + "字まで");
+		et_searchIdea.setHint(String.valueOf(
+				IdeaMosaicCommonConst.NameMaxLength_IdeaBookName) + "字まで");
 	}
 
 
@@ -248,19 +228,22 @@ public class IdeaMosaicSearchListView extends Activity implements OnItemClickLis
 
 	/**
 	 * エディットテキスト（ダイアログ用）のレイアウト
+	 * @param context コンテクスト
+	 *
 	 */
 	private void Layout_EditTextInDialog(Context context){
 		et_Input_IdeaBook = new EditText(context);
 		et_Input_IdeaBook.setInputType(InputType.TYPE_CLASS_TEXT);
-		et_Input_IdeaBook.setHint(String.valueOf(im_comst.getNameMaxLength_IdeaBookName()) + "字まで");
-		CommonClass.Text_MaxLength(et_Input_IdeaBook, im_comst.getNameMaxLength_IdeaBookName());
+		et_Input_IdeaBook.setHint(
+				String.valueOf(IdeaMosaicCommonConst.NameMaxLength_IdeaBookName) + "字まで");
+		CommonClass.Text_MaxLength(et_Input_IdeaBook, IdeaMosaicCommonConst.NameMaxLength_IdeaBookName);
 	}
 
 	/**
 	 * クリックしたリストビューアイテムのテキストを取得する
-	 * @param parent
-	 * @param position
-	 * @return
+	 * @param parent   親のListView
+	 * @param position 押した場所
+	 * @return テキスト
 	 */
 	private String getListItem(AdapterView<?> parent,  int position){
 		final ListView list_AddTable = (ListView)parent;

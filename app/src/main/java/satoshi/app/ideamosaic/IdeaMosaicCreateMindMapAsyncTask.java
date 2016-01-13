@@ -1,14 +1,13 @@
 package satoshi.app.ideamosaic;
 
+import android.os.AsyncTask;
+import android.view.ViewGroup;
+import android.widget.ProgressBar;
+
 import java.util.ArrayList;
 
 import common.function.layout.KKLayout;
 import common.function.layout.NodeF;
-
-import android.os.AsyncTask;
-import android.util.Log;
-import android.view.ViewGroup;
-import android.widget.ProgressBar;
 
 public class IdeaMosaicCreateMindMapAsyncTask extends AsyncTask<Void, Void, String>{
 
@@ -21,7 +20,6 @@ public class IdeaMosaicCreateMindMapAsyncTask extends AsyncTask<Void, Void, Stri
 	private ProgressBar pBar;
 
 	public IdeaMosaicCreateMindMapAsyncTask( ArrayList<ArrayList<String>> IdeaEdge, ArrayList<NodeF> pointNode, ProgressBar pBar, int count) {
-		// TODO 自動生成されたコンストラクター・スタブ
 		this.pBar = pBar;
 		this.IdeaEdge = IdeaEdge;
 		this.pointNode = pointNode;
@@ -65,7 +63,6 @@ public class IdeaMosaicCreateMindMapAsyncTask extends AsyncTask<Void, Void, Stri
 	}
 
 	private void createMindMap() {
-		// TODO 自動生成されたメソッド・スタブ
 		this.kklayout = new KKLayout(this.pointNode, this.IdeaEdge, 1000, 1000);
 
 		for(int i = 0; i < stepCount ;i++){

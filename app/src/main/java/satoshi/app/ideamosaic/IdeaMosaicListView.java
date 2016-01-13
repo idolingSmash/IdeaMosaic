@@ -1,25 +1,7 @@
 package satoshi.app.ideamosaic;
 
-import java.io.IOException;
-import java.util.ArrayList;
-
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
-
-import common.function.sato.var2.CommonAlartDiagram;
-import common.function.sato.var2.CommonArrayAdapter;
-import common.function.sato.var2.CommonClass;
-import common.function.sato.var2.CommonDBClass;
-import common.function.sato.var2.CommonErrorCheck;
-import common.function.sato.var2.CommonOperateEdit;
-import common.function.sato.var2.CommonToastComment;
-import common.function.sato.var2.CommonWhereQuerySentence;
-import common.function.sato.var2.CommonAlartDiagram.ErrorCheckFlag;
-
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -35,9 +17,18 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import java.util.ArrayList;
+
+import common.function.sato.var2.CommonAlartDiagram;
+import common.function.sato.var2.CommonAlartDiagram.ErrorCheckFlag;
+import common.function.sato.var2.CommonArrayAdapter;
+import common.function.sato.var2.CommonClass;
+import common.function.sato.var2.CommonDBClass;
+import common.function.sato.var2.CommonOperateEdit;
+import common.function.sato.var2.CommonToastComment;
+import common.function.sato.var2.CommonWhereQuerySentence;
 
 public class IdeaMosaicListView extends Activity implements OnItemClickListener, OnClickListener {
 
@@ -61,11 +52,7 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 	private static IdeaMosaicDBHelper im_DBHelp;
 
 	//ConstClassのインスタンスを生成
-	static IdeaMosaicCommonConst im_comst =  new IdeaMosaicCommonConst();
 	private static CommonOperateEdit opeEdit = new CommonOperateEdit(1);
-
-	//広告用
-	private AdView adView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -91,15 +78,15 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 		db = im_DBHelp.getWritableDatabase();
 
 		db.execSQL(CommonDBClass.createCreateTableQuerySentence(
-				im_comst.getStrDbBs(),
-				im_comst.getBrainstromingFieldnames(),
-				im_comst.getBrainstromingFieldtype()
-				));
+				IdeaMosaicCommonConst.str_DB_BS,
+				IdeaMosaicCommonConst.brainstroming_fieldNames,
+				IdeaMosaicCommonConst.brainstroming_fieldType));
 
-		RS = db.query(im_comst.getstrDbListtable(),
-				im_comst.getListtableFieldnames(),
+		RS = db.query(
+				IdeaMosaicCommonConst.str_DB_ListTable,
+				IdeaMosaicCommonConst.Listtable_fieldNames,
 				null, null, null, null,
-				im_comst.getListtableFieldnames()[im_comst.getIntListIndexTimestamp()]);
+				IdeaMosaicCommonConst.Listtable_fieldNames[IdeaMosaicCommonConst.INT_List_Index_TimeStamp]);
 
 		if (RS.getCount() != 0){
 			IdeaMosaicListViewOneCell temp_cell[] = new IdeaMosaicListViewOneCell[RS.getCount()];
@@ -110,9 +97,13 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 			for(int cnt = 0; cnt < RS.getCount() ;cnt++){
 				temp_cell[cnt].setListitem(RS.getString(0));
 				temp_cell[cnt].setItemCountInList(this.getString(R.string.txt_listviewElementCount) +
-						String.valueOf(getMatrixItemCount(RS.getInt(im_comst.getIntListIndexTableID()))));
+						String.valueOf(getMatrixItemCount(
+								RS.getInt(IdeaMosaicCommonConst.INT_List_Index_TableID)
+								)));
 				temp_cell[cnt].setTimeStamp(
-						new String(RS.getString(im_comst.getIntListIndexTimestamp())).substring(0, 10));
+						new String(RS.getString(
+								IdeaMosaicCommonConst.INT_List_Index_TimeStamp
+						)).substring(0, 10));
 				al_items.add(temp_cell[cnt]);
 				RS.moveToNext();
 			}
@@ -141,27 +132,26 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 
 	/**
 	 * Matrix内にある項目数を得るメソッド
-	 * @param where_query
-	 * @return
+	 * @param int_listid
+	 * @return 項目数
 	 */
 	private static int getMatrixItemCount(int int_listid){
 
 		String str_InnerTableName;
 
-		str_InnerTableName = im_comst.getstrDbIdeamosaic() + "_" + String.valueOf(int_listid);
+		str_InnerTableName =
+				IdeaMosaicCommonConst.str_DB_IdeaMosaic + "_" + String.valueOf(int_listid);
 
 		IdeaMosaicContainUniqueItem im_uni = new IdeaMosaicContainUniqueItem(db,
 				RS2,
 				str_InnerTableName,
-				im_comst.getMatrixFieldnames(),
-				im_comst.getMatrixFieldtypes());
+				IdeaMosaicCommonConst.Matrix_fieldNames,
+				IdeaMosaicCommonConst.Matrix_fieldTypes);
 
 		return im_uni.getUniqueItemcount();
 	}
 
 	public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
-		// TODO 自動生成されたメソッド・スタブ
-
 		IdeaMosaicListViewOneCell click_cell = (IdeaMosaicListViewOneCell)Listview_IdeaBook.getItemAtPosition(position);
 
 		if(opeEdit.isEditFlag(2) == true){
@@ -172,7 +162,8 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 		}else{
 			Intent intent = new Intent(this, satoshi.app.ideamosaic.IdeaMosaicMatrixButton.class);
 			intent.putExtra("Matirx_Idea", click_cell.getListitem().toString());
-			startActivityForResult(intent, im_comst.getRequestCode_MATRIX_IDEA());
+			startActivityForResult(intent,
+					IdeaMosaicCommonConst.RequestCode_MATRIX_IDEA);
 		}
 	}
 
@@ -181,9 +172,9 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 
 		CommonDBClass commonDB = new CommonDBClass(db,
 				RS,
-				im_comst.getstrDbListtable(),
-				im_comst.getListtableFieldnames(),
-				im_comst.getListtableFieldtypes());
+				IdeaMosaicCommonConst.str_DB_ListTable,
+				IdeaMosaicCommonConst.Listtable_fieldNames,
+				IdeaMosaicCommonConst.Listtable_fieldTypes);
 
 		if(view == btn_Add_ideabook){
 			if(opeEdit.isEditFlag(1) == true){
@@ -250,15 +241,16 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 	private void Layout_EditTextInDialog(Context context){
 		et_Input_IdeaBook = new EditText(context);
 		et_Input_IdeaBook.setInputType(InputType.TYPE_CLASS_TEXT);
-		et_Input_IdeaBook.setHint(String.valueOf(im_comst.getNameMaxLength_IdeaBookName()) + this.getString(R.string.edittext_limitLength));
-		CommonClass.Text_MaxLength(et_Input_IdeaBook, im_comst.getNameMaxLength_IdeaBookName());
+		et_Input_IdeaBook.setHint(String.valueOf(
+				IdeaMosaicCommonConst.NameMaxLength_IdeaBookName) + this.getString(R.string.edittext_limitLength));
+		CommonClass.Text_MaxLength(et_Input_IdeaBook, IdeaMosaicCommonConst.NameMaxLength_IdeaBookName);
 	}
 
 	/**
 	 * クリックしたリストビューアイテムのテキストを取得する
-	 * @param parent
-	 * @param position
-	 * @return
+	 * @param parent  親ListView
+	 * @param position 押した場所
+	 * @return		   テキスト
 	 */
 	private String getListItem(AdapterView<?> parent,  int position){
 		final ListView list_AddTable = (ListView)parent;
@@ -267,19 +259,20 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 
 	/**
 	 * リストアイテムを編集するDialogメソッド
-	 * @param context
-	 * @param int_operateEdit
+	 * @param context			コンテクスト
+	 * @param int_operateEdit	編集フラグ
 	 * 1:追加
 	 * 2:修正
 	 * 3:削除
 	 */
 	private void Dialog_InputListItem(final Context context, int int_operateEdit,
 			IdeaMosaicListViewOneCell cell_ListClickItem) {
-		// TODO 自動生成されたメソッド・スタブ
-
 		Layout_EditTextInDialog(context);
 
-		CommonAlartDiagram commonAD = new CommonAlartDiagram(context, et_Input_IdeaBook, im_comst.getIntListIndexTableID());
+		CommonAlartDiagram commonAD = new CommonAlartDiagram(
+				context,
+				et_Input_IdeaBook,
+				IdeaMosaicCommonConst.INT_List_Index_TableID);
 
 		switch(int_operateEdit){
 		case 1:
@@ -318,12 +311,11 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 
 
 	/**
-	 *
+	 * 追加項目ダイアログ作成
 	 * @param commonAD
 	 * @param context
 	 */
 	private static void Add_setPositiveButton(final CommonAlartDiagram commonAD, final Context context) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		commonAD.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 
@@ -331,39 +323,46 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 
 				CommonDBClass commonDB = new CommonDBClass(db,
 						RS,
-						im_comst.getstrDbListtable(),
-						im_comst.getListtableFieldnames(),
-						im_comst.getListtableFieldtypes());
+						IdeaMosaicCommonConst.str_DB_ListTable,
+						IdeaMosaicCommonConst.Listtable_fieldNames,
+						IdeaMosaicCommonConst.Listtable_fieldTypes);
 
-				CommonWhereQuerySentence search_query = new CommonWhereQuerySentence(im_comst.getListtableFieldnames()[0],
-						et_Input_IdeaBook.getText().toString());
+				CommonWhereQuerySentence search_query =
+						new CommonWhereQuerySentence(
+								IdeaMosaicCommonConst.Listtable_fieldNames[0],
+								et_Input_IdeaBook.getText().toString());
 
 				ErrorCheckFlag errorflag = commonAD.isErrorCheck(commonDB,
-						im_comst.getListtableFieldnames()[1], search_query);
+						IdeaMosaicCommonConst.Listtable_fieldNames[1], search_query);
 				ContentValues table_values = new ContentValues();
 
-				if(errorflag.isCheck_flag() == true){
+				if(errorflag.isCheck_flag()){
 
 					commonDB.setDBValueInContentValues(
-							table_values, im_comst.getListtableFieldnames()[0], et_Input_IdeaBook.getText().toString());
+							table_values, IdeaMosaicCommonConst.Listtable_fieldNames[0], et_Input_IdeaBook.getText().toString());
 					commonDB.setDBIndexInContentValues(table_values,
-							im_comst.getListtableFieldnames()[1],
+							IdeaMosaicCommonConst.Listtable_fieldNames[1],
 							errorflag.getTable_ID());
 					commonDB.setDBTimeStampInContentValues(table_values,
-							im_comst.getMatrixFieldnames()[im_comst.getIntMatrixIndexTimestamp()]);
-					commonDB.InsertContentValuesInDB(table_values, im_comst.getstrDbListtable());
+							IdeaMosaicCommonConst.Matrix_fieldNames[IdeaMosaicCommonConst.INT_Matrix_Index_TimeStamp]);
+					commonDB.InsertContentValuesInDB(table_values,
+							IdeaMosaicCommonConst.str_DB_ListTable);
 
 					//IMテーブルの作成
 					db.execSQL(CommonDBClass.createCreateTableQuerySentence(
-							CommonDBClass.createTableNamePlusID(im_comst.getstrDbIdeamosaic(), String.valueOf(errorflag.getTable_ID())),
-							im_comst.getMatrixFieldnames(),
-							im_comst.getMatrixFieldtypes()));
+							CommonDBClass.createTableNamePlusID(
+									IdeaMosaicCommonConst.str_DB_IdeaMosaic,
+									String.valueOf(errorflag.getTable_ID())),
+							IdeaMosaicCommonConst.Matrix_fieldNames,
+							IdeaMosaicCommonConst.Matrix_fieldTypes));
 
 					//色テーブルの作成
 					db.execSQL(CommonDBClass.createCreateTableQuerySentence(
-							CommonDBClass.createTableNamePlusID(im_comst.getStrDbImcolor(), String.valueOf(errorflag.getTable_ID())),
-							im_comst.getMatrixbuttoncolorFieldnames(),
-							im_comst.getMatrixbuttoncolorFieldtypes()));
+							CommonDBClass.createTableNamePlusID(
+									IdeaMosaicCommonConst.str_DB_IMColor,
+									String.valueOf(errorflag.getTable_ID())),
+							IdeaMosaicCommonConst.MatrixButtonColor_fieldNames,
+							IdeaMosaicCommonConst.MatrixButtonColor_fieldTypes));
 
 					IdeaMosaicListViewOneCell add_cell = new IdeaMosaicListViewOneCell(et_Input_IdeaBook.getText().toString(),
 							context.getString(R.string.txt_listviewElementCount) + String.valueOf(0),
@@ -381,10 +380,9 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 
 	/***
 	 * 修正が完了したときのメソッド
-	 * @param ad
-	 * @param context
-	 * @param str_Update
-	 * @param adapt
+	 * @param commonAD ダイアグラム
+	 * @param context  コンテクスト
+	 * @param update_prv_cell 以前のリスト項目
 	 */
 	private static void Modified_setPositiveButton(final CommonAlartDiagram commonAD, final Context context,
 			final IdeaMosaicListViewOneCell update_prv_cell){
@@ -397,25 +395,31 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 
 				CommonDBClass commonDB = new CommonDBClass(db,
 						RS,
-						im_comst.getstrDbListtable(),
-						im_comst.getListtableFieldnames(),
-						im_comst.getListtableFieldtypes());
+						IdeaMosaicCommonConst.str_DB_ListTable,
+						IdeaMosaicCommonConst.Listtable_fieldNames,
+						IdeaMosaicCommonConst.Listtable_fieldTypes);
 
-				CommonWhereQuerySentence set_query = new CommonWhereQuerySentence(im_comst.getListtableFieldnames()[0], et_Input_IdeaBook.getText().toString());
-				CommonWhereQuerySentence search_query = new CommonWhereQuerySentence(im_comst.getListtableFieldnames()[0], update_prv_cell.getListitem());
+				CommonWhereQuerySentence set_query = new CommonWhereQuerySentence(
+						IdeaMosaicCommonConst.Listtable_fieldNames[0], et_Input_IdeaBook.getText().toString());
+				CommonWhereQuerySentence search_query = new CommonWhereQuerySentence(
+						IdeaMosaicCommonConst.Listtable_fieldNames[0], update_prv_cell.getListitem());
 
 				ErrorCheckFlag errorflag = commonAD.isErrorCheckWithoutMessage(commonDB,
-						im_comst.getListtableFieldnames()[1], set_query);
+						IdeaMosaicCommonConst.Listtable_fieldNames[1], set_query);
 
-				if(errorflag.isCheck_flag() == true){
+				if(errorflag.isCheck_flag()){
 					commonDB.setDBValueInContentValues(table_values, set_query);
-					commonDB.setDBTimeStampInContentValues(table_values, im_comst.getListtableFieldnames()[2]);
-					if(commonDB.isOneCountQueryWithWhereQuery(search_query) == true &&
-							commonDB.isRecordUpdate(table_values, search_query) == true){
+					commonDB.setDBTimeStampInContentValues(table_values,
+							IdeaMosaicCommonConst.Listtable_fieldNames[2]);
+					if(commonDB.isOneCountQueryWithWhereQuery(search_query) && commonDB.isRecordUpdate(table_values, search_query)){
 
 						//updateした項目
 						IdeaMosaicListViewOneCell update_cell = new IdeaMosaicListViewOneCell(et_Input_IdeaBook.getText().toString(),
-								context.getString(R.string.txt_listviewElementCount) + String.valueOf(getMatrixItemCount(commonDB.getDBUniqueIndexId(set_query, im_comst.getIntListIndexTableID()))),
+								context.getString(R.string.txt_listviewElementCount) +
+										String.valueOf(
+												getMatrixItemCount(
+														commonDB.getDBUniqueIndexId(set_query,
+																IdeaMosaicCommonConst.INT_List_Index_TableID))),
 								new String(CommonClass.strsTimeStamp()).substring(0, 10));
 						CommonArrayAdapter.UpdateDataSetChenge(ima_adapter, update_prv_cell, update_cell, ima_adapter.getPosition(update_prv_cell));
 						CommonToastComment.UpdateItem(context, update_prv_cell.getListitem(), et_Input_IdeaBook.getText().toString());
@@ -432,9 +436,9 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 
 	/***
 	 * 削除が完了したときのメソッド
-	 * @param ad
-	 * @param context
-	 * @param str_Delete
+	 * @param ad		ダイアログ
+	 * @param context	コンテクスト
+	 * @param delete_cell 削除する項目
 	 */
 
 	private static void Delete_setPositiveButton(AlertDialog.Builder ad, final Context context,
@@ -447,32 +451,33 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 			String Del_TableName = "";
 			String Del_ColorTableName = "";
 			public void onClick(DialogInterface dialog, int which) {
-				// TODO 自動生成されたメソッド・スタブ
 
 				CommonDBClass commonDB = new CommonDBClass(db,
 						RS,
-						im_comst.getstrDbListtable(),
-						im_comst.getListtableFieldnames(),
-						im_comst.getListtableFieldtypes());
+						IdeaMosaicCommonConst.str_DB_ListTable,
+						IdeaMosaicCommonConst.Listtable_fieldNames,
+						IdeaMosaicCommonConst.Listtable_fieldTypes);
 
 				CommonWhereQuerySentence where_del_query =
-						new CommonWhereQuerySentence(im_comst.getListtableFieldnames()[0], delete_cell.getListitem());
+						new CommonWhereQuerySentence(
+								IdeaMosaicCommonConst.Listtable_fieldNames[0], delete_cell.getListitem());
 
 				//対象のテーブルを削除
-				if(commonDB.isOneCountQueryWithWhereQuery(where_del_query) == true){
+				if(commonDB.isOneCountQueryWithWhereQuery(where_del_query)){
 
 					//生成されていたIdeaMosaicテーブルを削除
 					Del_TableName = CommonDBClass.createTableNamePlusID(
-							im_comst.getstrDbIdeamosaic(), String.valueOf(commonDB.getDBUniqueIndexId(where_del_query, 1)));
+							IdeaMosaicCommonConst.str_DB_IdeaMosaic,
+							String.valueOf(commonDB.getDBUniqueIndexId(where_del_query, 1)));
 					//生成されていたIdeaMosaicテーブルを削除
 					Del_ColorTableName = CommonDBClass.createTableNamePlusID(
-							im_comst.getStrDbImcolor(), String.valueOf(commonDB.getDBUniqueIndexId(where_del_query, 1)));
+							IdeaMosaicCommonConst.str_DB_IMColor, String.valueOf(commonDB.getDBUniqueIndexId(where_del_query, 1)));
 					db.execSQL(CommonDBClass.createDeleteTableQuerySentence(Del_TableName));
 					db.execSQL(CommonDBClass.createDeleteTableQuerySentence(Del_ColorTableName));
 				}
 				RS.close();
 
-				if (commonDB.isRecordDelete(where_del_query) == true){
+				if (commonDB.isRecordDelete(where_del_query)){
 					CommonArrayAdapter.DeleteDataSetChenge(ima_adapter, delete_cell); //リストの更新
 					CommonToastComment.DeleteItem(context, delete_cell.getListitem());
 					//ボタンの色をデフォルト

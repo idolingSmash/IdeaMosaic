@@ -13,7 +13,6 @@ import java.io.OutputStream;
 public class IdeaMosaicDBHelper extends SQLiteOpenHelper{
 
 	//ConstClassのインスタンスを生成
-	static IdeaMosaicCommonConst im_comst =  new IdeaMosaicCommonConst();
 	private int db_version = 1;
 	private String DB_PATH;
 	private String DB_PATH_EXCEPT_EXTENTION;
@@ -24,32 +23,22 @@ public class IdeaMosaicDBHelper extends SQLiteOpenHelper{
 
 
 	public IdeaMosaicDBHelper(Context context) {
-		super(context, im_comst.getDbName(), null, im_comst.getDbVersion());
-		// TODO 自動生成されたコンストラクター・スタブ
+		super(context,
+                IdeaMosaicCommonConst.DB_NAME,
+                null,
+                IdeaMosaicCommonConst.DB_VERSION);
 		this.mContext = context;
 		this.DB_PATH = this.mContext.getDatabasePath(DB_NAME_ASSET).getPath();
 		this.DB_PATH_EXCEPT_EXTENTION = this.DB_PATH.substring(0, this.DB_PATH.length() - 3);
 
 	}
 
-    public int getDb_version() {
-        return this.db_version;
-    }
-
-    public String getDbPathExceptExtention() {
-        return this.DB_PATH_EXCEPT_EXTENTION;
-    }
-
     /**
      * asset に格納したデータベースをコピーするための空のデータベースを作成する
      *
      **/
     public void createEmptyDataBase() throws IOException{
-        boolean dbExist = checkDataBaseExists();
-
-        if(dbExist){
-            // すでにデータベースは作成されている
-        }else{
+        if(!checkDataBaseExists()){
             // このメソッドを呼ぶことで、空のデータベースが
             // アプリのデフォルトシステムパスに作られる
             this.getReadableDatabase();
@@ -72,15 +61,12 @@ public class IdeaMosaicDBHelper extends SQLiteOpenHelper{
         SQLiteDatabase checkDb;
         checkDb = null;
         try{
-//            String dbPath = DB_PATH + DB_NAME_ASSET;
             checkDb = SQLiteDatabase.openDatabase(this.DB_PATH, null, SQLiteDatabase.OPEN_READONLY);
-            if(checkDb != null){
-                checkDb.close();
-            }
+            checkDb.close();
         }catch(SQLiteException e){
             // データベースはまだ存在していない
         }
-        return checkDb != null ? true : false;
+        return checkDb != null;
     }
 
     /**
@@ -110,7 +96,6 @@ public class IdeaMosaicDBHelper extends SQLiteOpenHelper{
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		// TODO 自動生成されたメソッド・スタブ
 //		db.execSQL(CommonDBClass.createCreateTableQuerySentence(
 //				im_comst.getstrDbListtable(),
 //				im_comst.getListtableFieldnames(),
@@ -126,7 +111,8 @@ public class IdeaMosaicDBHelper extends SQLiteOpenHelper{
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int arg1, int arg2) {
 		// TODO 自動生成されたメソッド・スタブ
-		db.execSQL("drop table if exists " + im_comst.getstrDbListtable());
+		db.execSQL("drop table if exists " +
+                IdeaMosaicCommonConst.str_DB_ListTable);
 		onCreate(db);
 	}
 

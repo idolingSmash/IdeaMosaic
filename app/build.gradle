@@ -19,7 +19,6 @@ android {
 }
 
 dependencies {
-    compile files('libs/GoogleAdMobAdsSdk-6.3.0.jar')
     compile files('libs/Jama-1.0.3.jar')
     compile files('libs/Utils.jar')
 }
