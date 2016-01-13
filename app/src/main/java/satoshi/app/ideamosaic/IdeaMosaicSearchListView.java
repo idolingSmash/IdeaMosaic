@@ -58,15 +58,6 @@ public class IdeaMosaicSearchListView extends Activity implements OnItemClickLis
 		Layout_Button();
 		Layout_ListView();
 
-		//		// adView を作成する
-		//		adView = new AdView(this, AdSize.BANNER, "a1513b3a75207b9");
-		//		// 属性 android:id="@+id/mainLayout" が与えられているものとして
-		//		// LinearLayout をルックアップする
-		//		// adView を追加
-		//		adView.loadAd(new AdRequest());
-		//		LinearLayout adPosition = (LinearLayout) findViewById(R.id.admob_searchlistview);
-		//		adPosition.addView(adView);
-
 		//dbの設定
 		im_DBHelp = new IdeaMosaicDBHelper(this);
 		db = im_DBHelp.getWritableDatabase();
@@ -111,7 +102,6 @@ public class IdeaMosaicSearchListView extends Activity implements OnItemClickLis
 	}
 
 	public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
-		// TODO 自動生成されたメソッド・スタブ
 		IdeaMosaicListViewOneCell click_cell = (IdeaMosaicListViewOneCell)Listview_IdeaBook.getItemAtPosition(position);
 		Intent intent = new Intent(this, satoshi.app.ideamosaic.IdeaMosaicMatrixButton.class);
 		intent.putExtra("Matirx_Idea", click_cell.getListitem().toString());
@@ -121,34 +111,32 @@ public class IdeaMosaicSearchListView extends Activity implements OnItemClickLis
 	}
 
 	public void onClick(View view) {
-		// TODO 自動生成されたメソッド・スタブ
-
 		if(view == btn_Search_ideabook){
 			al_items.clear();
 			InsertQueryKeywordForListView();
 		}
-
 	}
 
 	/**
 	 * キーワードが持つブックを表示
 	 */
 	private void InsertQueryKeywordForListView() {
+		boolean err_flag = true;
+
 		RS  = db.query(
 				IdeaMosaicCommonConst.str_DB_ListTable,
 				IdeaMosaicCommonConst.Listtable_fieldNames,
 				null, null, null, null,
-				IdeaMosaicCommonConst.Listtable_fieldNames[IdeaMosaicCommonConst.INT_Matrix_Index_TimeStamp]);
+				IdeaMosaicCommonConst.Listtable_fieldNames[IdeaMosaicCommonConst.INT_List_Index_TimeStamp]);
 		StringBuilder sb = new StringBuilder();
-		StringBuilder sb2 = new StringBuilder();
 
-		if (RS.getCount() != 0){
+		if( 0 < RS.getCount()) {
 			IdeaMosaicListViewOneCell temp_cell[] = new IdeaMosaicListViewOneCell[RS.getCount()];
-			for(int i = 0; i < RS.getCount();i++)
+			for (int i = 0; i < RS.getCount(); i++)
 				temp_cell[i] = new IdeaMosaicListViewOneCell();
 
 			RS.moveToFirst();
-			for(int cnt = 0; cnt < RS.getCount() ;cnt++){
+			for (int cnt = 0; cnt < RS.getCount(); cnt++) {
 
 				CommonDBClass commonDB = new CommonDBClass(db,
 						RS2,
@@ -161,26 +149,27 @@ public class IdeaMosaicSearchListView extends Activity implements OnItemClickLis
 						IdeaMosaicCommonConst.Matrix_fieldNames[IdeaMosaicCommonConst.INT_Matrix_Index_Mat4],
 						et_searchIdea.getText().toString());
 
-				if(commonDB.isOneCountQueryWithWhereQuery(where_coreword_query)){
-					RS2  = db.query(
+				if (commonDB.isOneCountQueryWithWhereQuery(where_coreword_query)) {
+					RS2 = db.query(
 							IdeaMosaicCommonConst.createInnerTableName(RS.getInt(1)),
 							IdeaMosaicCommonConst.Matrix_fieldNames,
 							where_coreword_query.createSentence(),
-							null, null, null,null);
+							null, null, null, null);
 
 					temp_cell[cnt].setListitem(RS.getString(0));
 					RS2.moveToFirst();
-					for(int i = 0;i < 9;i++){
-						if(i > 0){
+					for (int i = 0; i < 9; i++) {
+						if (i > 0) {
 							sb.append(" ,");
 						}
-						if(RS2.getString(i) != null){
+						if (RS2.getString(i) != null) {
 							sb.append(RS2.getString(i));
 						}
 					}
 					temp_cell[cnt].setItemMatrix(new String(sb));
 					al_items.add(temp_cell[cnt]);
 					sb.delete(0, sb.length());
+					err_flag = false;
 					RS2.close();
 				}
 				RS.moveToNext();
@@ -189,7 +178,9 @@ public class IdeaMosaicSearchListView extends Activity implements OnItemClickLis
 			//アダプターの設定
 			Listview_IdeaBook.setAdapter(ima_searchAdapter);
 			et_searchIdea.setText("");
-		}else{
+		}
+
+		if(err_flag) {
 			Toast.makeText(this, this.getString(R.string.toast_messageNotFoundKeyword), Toast.LENGTH_LONG).show();
 		}
 

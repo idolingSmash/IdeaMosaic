@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:background="@color/Winter"
+    android:orientation="vertical">
 
-    <LinearLayout
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:text="@string/mindmap_explain"
+        android:textColor="@color/SUMI"
+        android:textSize="20sp"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="20sp"
-            android:text="@string/mindmap_explain" />
+    <ListView
+        android:id="@+id/ListView_mindmapIdea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/SUMI"
+        android:dividerHeight="2dp"
+        android:layout_below="@+id/textView"
+        android:layout_above="@+id/adView" />
 
-        <ListView
-            android:id="@+id/ListView_mindmapIdea"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-        </ListView>
-    </LinearLayout>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:gravity="bottom"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"/>
 
-</FrameLayout><!-- From: file:/Users/apple/StudioProjects/IdeaMosaic/app/src/main/res/layout/ideamosaic_mindmaplistview.xml -->
+</RelativeLayout><!-- From: file:/Users/apple/StudioProjects/IdeaMosaic/app/src/main/res/layout/ideamosaic_mindmaplistview.xml -->

@@ -2,7 +2,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="@color/Winter">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -19,7 +20,8 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/tutorial_explain2" />
+            android:text="@string/tutorial_explain2"
+            android:textColor="@color/SUMI"/>
     </LinearLayout>
 
 </FrameLayout><!-- From: file:/Users/apple/StudioProjects/IdeaMosaic/app/src/main/res/layout/tutorialflip_2.xml -->

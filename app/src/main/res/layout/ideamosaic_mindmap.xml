@@ -23,7 +23,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textColor="@color/SUMI"
-        android:text="\@@@@@@@@@"
         android:layout_alignLeft="@+id/txt_mindmap_title"
         android:layout_below="@+id/txt_mindmap_title"
         android:layout_alignParentLeft="false"
