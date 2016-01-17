@@ -13,6 +13,8 @@ import com.google.android.gms.ads.AdView;
 import java.io.File;
 import java.io.IOException;
 
+import common.function.sato.var2.CommonAlartDiagram;
+
 public class IdeaMosaicMenu extends Activity implements OnClickListener {
 	/** Called when the activity is first created. */
 
@@ -62,7 +64,7 @@ public class IdeaMosaicMenu extends Activity implements OnClickListener {
 		if(btn_view.equals(btn_idea)){
 			startActivityForResult(Intent_idea, IdeaMosaicCommonConst.RequestCode_LISTVIEW_IDEA);
 		}else if(btn_view.equals(btn_search)){
-			startActivityForResult(Intent_search, IdeaMosaicCommonConst.RequestCode_LISTVIEW_SEARCH);
+			CommonAlartDiagram.ToMyAppLink(this,this.getString(R.string.pay_message));
 		}else if (btn_view.equals(btn_mindmap)) {
 			startActivityForResult(Intent_mindmap, IdeaMosaicCommonConst.RequestCode_LISTVIEW_MINDMAP);
 		}else if (btn_view.equals(btn_tutorial)) {
@@ -85,5 +87,33 @@ public class IdeaMosaicMenu extends Activity implements OnClickListener {
 		btn_tutorial.setOnClickListener(this);
 		btn_finish.setOnClickListener(this);
 	}
+
+/*
+	private void ToMyAppLink() {
+
+		final WebView webview = new WebView(this);
+		TextView tv = new TextView(this);
+		tv.setText(this.getString(R.string.pay_message));
+		// これ重要！
+		tv.setMovementMethod(LinkMovementMethod.getInstance());
+
+		AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+		alertDialog.setTitle(this.getString(R.string.pay_title));
+		alertDialog.setView(tv);
+		alertDialog.setPositiveButton(this.getString(R.string.pay_positivebutton), new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface arg0, int arg1) {
+				Uri uri = Uri.parse(getString(R.string.pay_url));
+				Intent marketIntent = new Intent(Intent.ACTION_VIEW, uri);
+				startActivity(marketIntent);
+			}});
+		alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface arg0, int arg1) {
+			}});
+		// 処理
+		alertDialog.create();
+		alertDialog.show();
+
+	}
+*/
 
 }

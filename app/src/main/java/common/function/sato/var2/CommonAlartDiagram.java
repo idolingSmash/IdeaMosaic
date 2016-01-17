@@ -2,7 +2,15 @@ package common.function.sato.var2;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
+import android.text.method.LinkMovementMethod;
+import android.webkit.WebView;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import satoshi.app.ideamosaic.sample.R;
 
 public class CommonAlartDiagram extends AlertDialog.Builder{
 
@@ -137,6 +145,32 @@ public class CommonAlartDiagram extends AlertDialog.Builder{
 		public void setTable_ID(int table_ID) {
 			this.table_ID = table_ID;
 		}
+
+	}
+
+	public static void ToMyAppLink(final Context context, String text) {
+
+		final WebView webview = new WebView(context);
+		TextView tv = new TextView(context);
+		tv.setText(context.getString(R.string.pay_message));
+		// これ重要！
+		tv.setMovementMethod(LinkMovementMethod.getInstance());
+
+		AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
+		alertDialog.setTitle(context.getString(R.string.pay_title));
+		alertDialog.setView(tv);
+		alertDialog.setPositiveButton(context.getString(R.string.pay_positivebutton), new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface arg0, int arg1) {
+				Uri uri = Uri.parse(context.getString(R.string.pay_url));
+				Intent marketIntent = new Intent(Intent.ACTION_VIEW, uri);
+				context.startActivity(marketIntent);
+			}});
+		alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface arg0, int arg1) {
+			}});
+		// 処理
+		alertDialog.create();
+		alertDialog.show();
 
 	}
 
