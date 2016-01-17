@@ -19,6 +19,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.ArrayList;
 
 import common.function.sato.var2.CommonAlartDiagram;
@@ -63,15 +66,9 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 		Layout_ListView();
 		Layout_Button();
 
-//        // adView を作成する
-//        adView = new AdView(this, AdSize.BANNER, "a1513b3a75207b9");
-//        // 属性 android:id="@+id/mainLayout" が与えられているものとして
-//        // LinearLayout をルックアップする
-//        // adView を追加
-//        adView.loadAd(new AdRequest());
-//        LinearLayout adPosition = (LinearLayout) findViewById(R.id.admob_listview);
-//        adPosition.addView(adView);
-
+		AdView mAdView = (AdView) findViewById(R.id.adView);
+		AdRequest adRequest = new AdRequest.Builder().build();
+		mAdView.loadAd(adRequest);
 
 		//dbの設定
 		im_DBHelp = new IdeaMosaicDBHelper(this);

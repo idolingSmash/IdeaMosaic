@@ -39,6 +39,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
@@ -139,14 +142,9 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 		Layout_Button();
 		Layout_MatrixButton();
 
-		//		// adView を作成する
-		//		adView = new AdView(this, AdSize.BANNER, "a1513b3a75207b9");
-		//		// 属性 android:id="@+id/mainLayout" が与えられているものとして
-		//		// LinearLayout をルックアップする
-		//		// adView を追加
-		//		adView.loadAd(new AdRequest());
-		//		LinearLayout adPosition = (LinearLayout) findViewById(R.id.admob_mosaic);
-		//		adPosition.addView(adView);
+		AdView mAdView = (AdView) findViewById(R.id.adView);
+		AdRequest adRequest = new AdRequest.Builder().build();
+		mAdView.loadAd(adRequest);
 
 		//dbの設定
 		im_DBHelp = new IdeaMosaicDBHelper(this);
