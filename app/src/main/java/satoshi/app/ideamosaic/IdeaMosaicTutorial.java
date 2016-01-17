@@ -89,7 +89,6 @@ public class IdeaMosaicTutorial extends Activity implements OnGestureListener, O
 	}
 
 	public boolean onDown(MotionEvent e) {
-		// TODO 自動生成されたメソッド・スタブ
 		return false;
 	}
 
