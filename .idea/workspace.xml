@@ -50,67 +50,106 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32e7bebf-5616-4ce6-b756-61a905a22a37" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mockable_android_17.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/debug/satoshi/app/ideamosaic/test/BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/satoshi/app/ideamosaic/BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/satoshi/app/ideamosaic/R.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicCommonConst.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicContainUniqueItem.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicCreateMindMap$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicCreateMindMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicCreateMindMapAsyncTask.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicDBHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListView$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListView$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListView$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListView$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListView.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListViewOneCell.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMenu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMindMapListAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMindMapListView.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicSearchListAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicSearchListView.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicTutorial.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/R$array.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/R$raw.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/TriggerSerendipityDBHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicCommonConst.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicContainUniqueItem.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicCreateMindMap.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicCreateMindMapAsyncTask.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicDBHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicListAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicListView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicListViewOneCell.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMatrixButton.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMenu.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMindMapListAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMindMapListView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicSearchListAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicSearchListView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicTutorial.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/TriggerSerendipityDBHelper.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/common/function/layout/KKLayout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/common/function/layout/KKLayout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/common/function/sato/var2/CommonAlartDiagram$ErrorCheckFlag.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/common/function/sato/var2/CommonAlartDiagram$ErrorCheckFlag.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/common/function/sato/var2/CommonClass.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/common/function/sato/var2/CommonClass.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/common/function/sato/var2/CommonDeviceInfo.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/common/function/sato/var2/CommonDeviceInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/common/function/sato/var2/CommonFileOperate.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/common/function/sato/var2/CommonFileOperate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/common/function/sato/var2/CommonScrollView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/common/function/sato/var2/CommonScrollView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app-release.apk" afterPath="$PROJECT_DIR$/app/app-release.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/common/function/sato/var2/CommonToastComment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/common/function/sato/var2/CommonToastComment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicCommonConst.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicCommonConst.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicCreateMindMap$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicCreateMindMap$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicCreateMindMap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicCreateMindMap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicCreateMindMapAsyncTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicCreateMindMapAsyncTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicDBHelper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicDBHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListView$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListView$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListView$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListView$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListView$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListView$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListView$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListView$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicListView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$14.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$15.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMatrixButton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMenu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMenu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMindMapListAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMindMapListAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMindMapListView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicMindMapListView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicSearchListAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicSearchListAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicSearchListView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicSearchListView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicTutorial.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/IdeaMosaicTutorial.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/TriggerSerendipityDBHelper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/satoshi/app/ideamosaic/TriggerSerendipityDBHelper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/mockable-android-17.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/mockable-android-17.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/Jama-1.0.3-ef6e5d1600e6fabd06f624b8d95efbc87228bdb6.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/Jama-1.0.3-ef6e5d1600e6fabd06f624b8d95efbc87228bdb6.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/Utils-51243826bb83b96db36ea460f1ad4f703c46c5d9.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/Utils-51243826bb83b96db36ea460f1ad4f703c46c5d9.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-0878637f8cb8d76cfd903b74412b3cf16d814195.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-0878637f8cb8d76cfd903b74412b3cf16d814195.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-324114f7d612549c43257ca944144d9dfc4576d6.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-324114f7d612549c43257ca944144d9dfc4576d6.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-a64635ab2781b29c6148f8f514b3fa8b3a4762a6.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-a64635ab2781b29c6148f8f514b3fa8b3a4762a6.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-d47d2ea7a1116ee2227f538b2660f7d55fdf07e2.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-d47d2ea7a1116ee2227f538b2660f7d55fdf07e2.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-51b58b11e79da41ffb62b66cccaaf3d38515a5e4.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-51b58b11e79da41ffb62b66cccaaf3d38515a5e4.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-f4f248b90d0457da1de697648c4b9012313e729f.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-f4f248b90d0457da1de697648c4b9012313e729f.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicCreateMindMap.java" afterPath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicCreateMindMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicListView.java" afterPath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicListView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMatrixButton.java" afterPath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMatrixButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMenu.java" afterPath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMindMapListView.java" afterPath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMindMapListView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicSearchListView.java" afterPath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicSearchListView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicTutorial.java" afterPath="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicTutorial.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/androidTest/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/androidTest/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/common/function/sato/var2/CommonToastComment.java" afterPath="$PROJECT_DIR$/app/src/main/java/common/function/sato/var2/CommonToastComment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="IdeaMosaic.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -152,87 +191,118 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="IdeaMosaicMenu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.111111">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommonScrollView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/common/function/sato/var2/CommonScrollView.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicMenu.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+              <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IdeaMosaicCreateMindMap.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicCreateMindMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2669#2715#0" expanded="true" />
-                <element signature="e#2733#2777#0" expanded="true" />
-                <element signature="e#5331#5376#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IdeaMosaicListView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicListView.java">
+      <file leaf-file-name="IdeaMosaicSearchListAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicSearchListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IdeaMosaicMatrixButton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMatrixButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+              <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="IdeaMosaicMindMapListView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMindMapListView.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicMindMapListView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
-              <folding />
+              <caret line="118" column="41" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
+              <folding>
+                <element signature="e#796#823#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="IdeaMosaicSearchListView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicSearchListView.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicSearchListView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.2222223">
-              <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="112" column="41" selection-start-line="112" selection-start-column="41" selection-end-line="112" selection-end-column="41" />
+              <folding>
+                <element signature="e#1280#1307#0" expanded="true" />
+                <element signature="e#5533#5586#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonToastComment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/common/function/sato/var2/CommonToastComment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#399#445#0" expanded="true" />
+                <element signature="e#665#706#0" expanded="true" />
+                <element signature="e#933#975#0" expanded="true" />
+                <element signature="e#1267#1315#0" expanded="true" />
+                <element signature="e#1344#1390#0" expanded="true" />
+                <element signature="e#1556#1601#0" expanded="true" />
+                <element signature="e#1831#1875#0" expanded="true" />
+                <element signature="e#2040#2085#0" expanded="true" />
+                <element signature="e#2265#2315#0" expanded="true" />
+                <element signature="e#2526#2592#0" expanded="true" />
+                <element signature="e#2803#2869#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.1438849">
+              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="IdeaMosaicTutorial.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicTutorial.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicTutorial.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.222222">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TriggerSerendipityDBHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/TriggerSerendipityDBHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IdeaMosaicListView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicListView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="158" column="14" selection-start-line="158" selection-start-column="14" selection-end-line="158" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -241,8 +311,9 @@
     </leaf>
   </component>
   <component name="GenerateSignedApkSettings">
-    <option name="KEY_STORE_PATH" value="$USER_HOME$/Desktop/keystore/IdeaMosaic_keystore" />
-    <option name="KEY_ALIAS" value="ideamosaic" />
+    <option name="KEY_STORE_PATH" value="$USER_HOME$/Desktop/keystore/IdeaMosaic_Sample" />
+    <option name="KEY_ALIAS" value="ideamosaic_sample" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -1334,7 +1405,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4333746480000" />
+        <entry key="$PROJECT_DIR$" value="4333754644000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1636,27 +1707,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/common/function/sato/var2/CommonDeviceInfo.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/common/function/sato/var2/CommonDraw.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/common/function/sato/var2/CommonErrorCheck.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/common/function/sato/var2/CommonFileOperate.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/common/function/sato/var2/CommonClass.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/common/function/layout/KKLayout.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicContainUniqueItem.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicCreateMindMapAsyncTask.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicDBHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicCommonConst.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/TriggerSerendipityDBHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/ideamosaic_menu.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/listview_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/mindmaplistview_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/searchlistview_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/tutorialflip_1.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/tutorialflip_2.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/tutorialflip_3.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/tutorialflip_4.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/tutorialflip_5.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/tutorialflip_6.xml" />
@@ -1687,6 +1737,27 @@
         <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicSearchListView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicTutorial.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicCreateMindMap.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/sample/IdeaMosaicCreateMindMap.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicCommonConst.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicCommonConst.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicContainUniqueItem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicCreateMindMap.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicCreateMindMapAsyncTask.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicDBHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicListViewOneCell.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicMatrixButton.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicMindMapListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicSearchListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicTutorial.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/TriggerSerendipityDBHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicListView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicMenu.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicMindMapListView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicSearchListView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/common/function/sato/var2/CommonToastComment.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
       </list>
     </option>
   </component>
@@ -1701,7 +1772,6 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="58" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="817" />
@@ -1757,27 +1827,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IdeaMosaic" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IdeaMosaic" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1854,11 +1903,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ideamosaic" />
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1888,9 +1933,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IdeaMosaic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IdeaMosaic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="function" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IdeaMosaic" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IdeaMosaic" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1898,7 +1994,7 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5556" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Android403" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/keystore/IdeaMosaic_Sample" />
     <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
     <property name="ExportApk.Flavors" value="" />
     <property name="ExportApk.BuildType" value="release" />
@@ -2021,8 +2117,45 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
       <envs />
       <method />
     </configuration>
@@ -2048,6 +2181,34 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
@@ -2143,7 +2304,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="58" y="23" width="1440" height="817" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="817" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32668713" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2151,8 +2312,8 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3243243" sideWeight="0.5143061" order="16" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32904148" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32904148" sideWeight="0.5100143" order="16" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32904148" sideWeight="0.4899857" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874617" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822084" sideWeight="0.4970545" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -2182,7 +2343,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30129126" sideWeight="0.48569384" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32904148" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2206,91 +2367,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicListViewOneCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMindMapListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicSearchListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicCommonConst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33226836">
-          <caret line="151" column="37" selection-start-line="151" selection-start-column="37" selection-end-line="151" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5447942">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicContainUniqueItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/TriggerSerendipityDBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.814815">
-          <caret line="140" column="12" selection-start-line="140" selection-start-column="12" selection-end-line="140" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16198704">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ideamosaic_menu.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -2298,9 +2374,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.137931">
           <caret line="8" column="38" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="38" />
-          <folding>
-            <element signature="e#3663#3695#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2322,7 +2395,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2355,7 +2427,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2366,7 +2437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.172414">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2377,7 +2447,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.172414">
           <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2388,7 +2457,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.655172">
           <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2399,7 +2467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.172414">
           <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2410,7 +2477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.172414">
           <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2421,7 +2487,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.896552">
           <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2432,7 +2497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.896552">
           <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2443,7 +2507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.896552">
           <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2454,7 +2517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.172414">
           <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2465,7 +2527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.172414">
           <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2476,7 +2537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.655172">
           <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2487,7 +2547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.655172">
           <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2498,7 +2557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.655172">
           <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2509,7 +2567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.655172">
           <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2520,7 +2577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.896552">
           <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2531,7 +2587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.172414">
           <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2542,7 +2597,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.655172">
           <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2553,7 +2607,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2564,7 +2617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7222222">
           <caret line="70" column="40" selection-start-line="59" selection-start-column="0" selection-end-line="70" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2575,12 +2627,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="93" column="11" selection-start-line="93" selection-start-column="11" selection-end-line="93" selection-end-column="11" />
-          <folding>
-            <element signature="e#2922#2949#0" expanded="false" />
-            <element signature="e#3336#3365#0" expanded="false" />
-            <element signature="e#3732#3759#0" expanded="false" />
-            <element signature="e#4169#4196#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2591,7 +2637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3472222">
           <caret line="38" column="35" selection-start-line="37" selection-start-column="8" selection-end-line="38" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2602,10 +2647,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding>
-            <element signature="e#450#475#0" expanded="false" />
-            <element signature="e#1447#1474#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2616,12 +2657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7916667">
           <caret line="159" column="17" selection-start-line="159" selection-start-column="17" selection-end-line="159" selection-end-column="17" />
-          <folding>
-            <element signature="e#4815#4839#0" expanded="false" />
-            <element signature="e#5082#5112#0" expanded="false" />
-            <element signature="e#5353#5381#0" expanded="false" />
-            <element signature="e#5709#5736#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2632,7 +2667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2640,65 +2674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="512" column="25" selection-start-line="512" selection-start-column="25" selection-end-line="512" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicCreateMindMapAsyncTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.111111">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMatrixButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicMindMapListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicSearchListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.2222223">
-          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicTutorial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.222222">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2710,16 +2685,173 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/IdeaMosaicCreateMindMap.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicCommonConst.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicContainUniqueItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicCreateMindMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicCreateMindMapAsyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicDBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicListViewOneCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicMatrixButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicMindMapListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicSearchListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicTutorial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/TriggerSerendipityDBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="158" column="14" selection-start-line="158" selection-start-column="14" selection-end-line="158" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicMindMapListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="118" column="41" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
+          <folding>
+            <element signature="e#796#823#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/satoshi/app/ideamosaic/sample/IdeaMosaicSearchListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="112" column="41" selection-start-line="112" selection-start-column="41" selection-end-line="112" selection-end-column="41" />
+          <folding>
+            <element signature="e#1280#1307#0" expanded="true" />
+            <element signature="e#5533#5586#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/common/function/sato/var2/CommonToastComment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2669#2715#0" expanded="true" />
-            <element signature="e#2733#2777#0" expanded="true" />
-            <element signature="e#5331#5376#0" expanded="true" />
+            <element signature="e#399#445#0" expanded="true" />
+            <element signature="e#665#706#0" expanded="true" />
+            <element signature="e#933#975#0" expanded="true" />
+            <element signature="e#1267#1315#0" expanded="true" />
+            <element signature="e#1344#1390#0" expanded="true" />
+            <element signature="e#1556#1601#0" expanded="true" />
+            <element signature="e#1831#1875#0" expanded="true" />
+            <element signature="e#2040#2085#0" expanded="true" />
+            <element signature="e#2265#2315#0" expanded="true" />
+            <element signature="e#2526#2592#0" expanded="true" />
+            <element signature="e#2803#2869#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1438849">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
