@@ -18,7 +18,6 @@ public class CommonScrollView extends View{
 	//元の画像
 	public Bitmap mSrcBitmap;
 	private Resources mSrcRes;
-	private int initHeight = 1000;
 
 	//表示用(View)資源
 	public Bitmap mViewBitmap;
@@ -27,7 +26,7 @@ public class CommonScrollView extends View{
 	private int mViewHeight = 240;
 	private int mViewPointX = 0;
 	private int mViewPointY = 0;
-	private boolean initViewSizeGet = false;
+	private int initSquare = 2048;
 
 	//タッチした位置を示す属性
 	private float currentDotX = 0;
@@ -59,6 +58,19 @@ public class CommonScrollView extends View{
 	private static float MAX_HEIGHT = 2000;
 
 
+	/**
+	 * コンストラクタ
+	 * @param context コンテクスト
+	 */
+	public CommonScrollView(Context context) {
+		super(context);
+		setFocusable(true);
+		this.mContext = context;
+		this.mSrcBitmap = Bitmap.createBitmap(initSquare, initSquare, Bitmap.Config.ARGB_8888);
+		for(int x = 0;x < initSquare;x++)
+			for(int y = 0;y < initSquare;y++)
+				this.mSrcBitmap.setPixel(x, y, android.graphics.Color.GREEN);
+	}
 
 	/**
 	 * コンストラクタ
@@ -75,30 +87,13 @@ public class CommonScrollView extends View{
 
 	}
 
-	public CommonScrollView(Context context) {
-		// TODO 自動生成されたコンストラクター・スタブ
-		super(context);
-		setFocusable(true);
-		this.mContext = context;
-		int initWidth = 1000;
-		this.mSrcBitmap = Bitmap.createBitmap(initWidth, initHeight, Bitmap.Config.ARGB_8888);
-		for(int x = 0;x < initWidth;x++)
-			for(int y = 0;y < initHeight;y++)
-				this.mSrcBitmap.setPixel(x, y, android.graphics.Color.GREEN);
-	}
-
-
 	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-		// TODO 自動生成されたメソッド・スタブ
+
 		super.onSizeChanged(w, h, oldw, oldh);
-		Log.v("View", "onSizeChanged Width:" + w + ",Height:" + h );
+		Log.v("View", "onSizeChanged Width:" + w + ",Height:" + h);
 		this.mViewWidth = w;
 		this.mViewHeight = h;
-		if(!initViewSizeGet){
-			MIN_WIDTH = this.mViewWidth + 50;
-			MIN_HEIGHT = this.mViewHeight + 50;
-		}
 
 		//画像を切り抜く
 		this.mViewBitmap = Bitmap.createBitmap(this.mSrcBitmap, this.mViewPointX, this.mViewPointY, this.mViewWidth, this.mViewHeight);
