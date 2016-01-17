@@ -138,6 +138,11 @@ available. Please contact the developer for assistance.</string>
     <string name="optionmenu_saveDB">DBを保存</string>
     <string name="optionmenu_searchKeyword">検索</string>
     <string name="optionmenu_shiftBSmode">BSモード</string>
+    <string name="pay_hint_message">有料版では多彩なフレーズを出力することができます。</string>
+    <string name="pay_message">この機能は有料版でお使いいただけます。</string>
+    <string name="pay_positivebutton">有料版</string>
+    <string name="pay_title">It\'s free</string>
+    <string name="pay_url">https://play.google.com/store/apps/details?id=satoshi.app.ideamosaic</string>
     <!-- From: file:/Users/apple/StudioProjects/IdeaMosaic/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.3.0/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
