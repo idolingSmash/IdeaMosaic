@@ -98,7 +98,7 @@ int drawable tutrialimage9 0x7f02003c
 int id ListView_idea 0x7f0b0003
 int id ListView_mindmapIdea 0x7f0b001a
 int id ListView_searchIdea 0x7f0b002c
-int id adView 0x7f0b0005
+int id adView 0x7f0b0008
 int id adjust_height 0x7f0b0000
 int id adjust_width 0x7f0b0001
 int id btn_trigger_serendipity 0x7f0b001c
@@ -125,10 +125,10 @@ int id imageView1 0x7f0b000a
 int id layout_query 0x7f0b0029
 int id linearLayout 0x7f0b0004
 int id linear_mindmap 0x7f0b0013
-int id list_button_add 0x7f0b0006
-int id list_button_delete 0x7f0b0008
+int id list_button_add 0x7f0b0005
+int id list_button_delete 0x7f0b0007
 int id list_button_search 0x7f0b002b
-int id list_button_update 0x7f0b0007
+int id list_button_update 0x7f0b0006
 int id none 0x7f0b0002
 int id progressBar_mindmap 0x7f0b0016
 int id spn_color 0x7f0b0045

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linear_mindmap"
     android:layout_width="match_parent"
@@ -15,7 +14,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/SUMI"
-        android:textSize="16pt"/>
+        android:textSize="16pt"
+        android:layout_alignParentTop="true"/>
 
     <TextView
         android:id="@+id/txt_mindmap_waitmassege"
@@ -41,8 +41,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/adView"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
 
         <Button
             android:id="@+id/button_mindmap_save"
@@ -56,18 +56,5 @@
             android:layout_height="wrap_content"
             android:text="@string/buttontext_mindmap_cancel" />
     </LinearLayout>
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"
-        android:layout_gravity="bottom|center_horizontal"
-        android:gravity="bottom"
-        android:layout_alignWithParentIfMissing="false"
-        android:layout_centerHorizontal="true">
-    </com.google.android.gms.ads.AdView>
 
 </RelativeLayout><!-- From: file:/Users/apple/StudioProjects/IdeaMosaic/app/src/main/res/layout/ideamosaic_mindmap.xml -->

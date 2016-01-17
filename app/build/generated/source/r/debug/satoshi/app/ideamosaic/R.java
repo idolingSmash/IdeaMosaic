@@ -165,7 +165,7 @@ containing a value of this type.
         public static final int ListView_idea=0x7f0b0003;
         public static final int ListView_mindmapIdea=0x7f0b001a;
         public static final int ListView_searchIdea=0x7f0b002c;
-        public static final int adView=0x7f0b0005;
+        public static final int adView=0x7f0b0008;
         public static final int adjust_height=0x7f0b0000;
         public static final int adjust_width=0x7f0b0001;
         public static final int btn_trigger_serendipity=0x7f0b001c;
@@ -192,10 +192,10 @@ containing a value of this type.
         public static final int layout_query=0x7f0b0029;
         public static final int linearLayout=0x7f0b0004;
         public static final int linear_mindmap=0x7f0b0013;
-        public static final int list_button_add=0x7f0b0006;
-        public static final int list_button_delete=0x7f0b0008;
+        public static final int list_button_add=0x7f0b0005;
+        public static final int list_button_delete=0x7f0b0007;
         public static final int list_button_search=0x7f0b002b;
-        public static final int list_button_update=0x7f0b0007;
+        public static final int list_button_update=0x7f0b0006;
         public static final int none=0x7f0b0002;
         public static final int progressBar_mindmap=0x7f0b0016;
         public static final int spn_color=0x7f0b0045;
