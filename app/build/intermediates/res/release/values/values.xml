@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/apple/StudioProjects/IdeaMosaic/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string-array name="str_Colors">
+        <item>赤色</item>
+        <item>青色</item>
+        <item>黄色</item>
+        <item>緑色</item>
+        <item>紫色</item>
+        <item>白色</item>
+        <item>黒色</item>
+        <item>茶色</item>
+        <item>橙色</item>
+    </string-array>
+    <color name="AKEBOMO">#FF9C77</color>
+    <color name="AYAME">#C573B2</color>
+    <color name="EDOCHA">#BC8458</color>
+    <color name="Fall">#EB6238</color>
+    <color name="HIMAWARI">#FFBB00</color>
+    <color name="KINARI">#EAE0D5</color>
+    <color name="MOEGI">#97A61E</color>
+    <color name="SORA">#89EDDE</color>
+    <color name="SUMI">#343434</color>
+    <color name="Spring">#fef4f4</color>
+    <color name="Summer">#bce2e8</color>
+    <color name="TUTUJI">#CF4078</color>
+    <color name="Winter">#E9EEF3</color>
+    <string name="app_name">アイデアモザイク</string>
+    <string name="banner_ad_unit_id">ca-app-pub-6828851032008732/4191400807</string>
+    <string name="buttontext_initHintMessage"> ボタンをクリックするとヒントが出ます </string>
+    <string name="buttontext_listview_delete">削除</string>
+    <string name="buttontext_listview_new">新規作成</string>
+    <string name="buttontext_listview_update">修正</string>
+    <string name="buttontext_menu_finish">終了</string>
+    <string name="buttontext_menu_mindmap">マインドマップ</string>
+    <string name="buttontext_menu_search">検索</string>
+    <string name="buttontext_menu_think">アイデアを考える</string>
+    <string name="buttontext_menu_tutorial">操作\n方法</string>
+    <string name="buttontext_mindmap_cancel">キャンセル</string>
+    <string name="buttontext_mindmap_save">保存</string>
+    <string name="buttontext_mosaic_previousword">ひとつ前に戻る</string>
+    <string name="buttontext_mosaic_return2listview">リスト選択へ戻る</string>
+    <string name="buttontext_testdata">0123456789\nabcde</string>
+    <string name="buttontext_testdata16">いろはに\nほへとち\nるぬるを\nわかよた</string>
+    <string name="buttontext_testdata25">いろはにほ\nへとちるぬ\nるをわかよ\nたれそつね\nならむうい</string>
+    <string name="dialog_deleteButton">削除</string>
+    <string name="dialog_messageDeleteListItemBackward">を削除してもいいですか？</string>
+    <string name="dialog_messageDeleteListItemForward">本当に</string>
+    <string name="dialog_messageOutputCSV">本当にCSVファイルを出力しますか？</string>
+    <string name="dialog_messageOutputDB">本当にDBファイルを出力しますか？</string>
+    <string name="dialog_messageSearch">検索したいワードを入力してください。</string>
+    <string name="dialog_negativeButton">キャンセル</string>
+    <string name="dialog_positiveButton">OK</string>
+    <string name="dialog_positiveModifyButton">修正</string>
+    <string name="dialog_radioBSOFF">ブレストモードOFF</string>
+    <string name="dialog_radioBSON">ブレストモードON</string>
+    <string name="dialog_titleAdd">新規</string>
+    <string name="dialog_titleAddKeyword">キーワード追加</string>
+    <string name="dialog_titleAddListItem">リスト追加</string>
+    <string name="dialog_titleDeleteListItem">リスト削除</string>
+    <string name="dialog_titleOutputCSV">CSVファイル出力</string>
+    <string name="dialog_titleOutputDB">DBファイル出力</string>
+    <string name="dialog_titleSearch">検索</string>
+    <string name="dialog_titleUpdate">修正</string>
+    <string name="dialog_titleUpdateListItem">リスト修正</string>
+    <string name="edittext_limitLength">字まで</string>
+    <string name="hello">Hello World, MnadalArtNetworkActivity!</string>
+    <string name="mindmap_createmessage">マインドマップ生成中</string>
+    <string name="mindmap_explain">リストを選択してください</string>
+    <string name="mindmap_initMessage">初期化</string>
+    <string name="optionmenu_hint">ヒント</string>
+    <string name="optionmenu_outputCSV">CSVファイルに出力</string>
+    <string name="optionmenu_previousCard">前へ戻る</string>
+    <string name="optionmenu_saveDB">DBを保存</string>
+    <string name="optionmenu_searchKeyword">検索</string>
+    <string name="optionmenu_shiftBSmode">BSモード</string>
+    <string name="toast_addItem">を追加しました。</string>
+    <string name="toast_deleteItem">を削除しました。</string>
+    <string name="toast_falseAdd">はすでに存在しています。</string>
+    <string name="toast_falseDelete">削除に失敗しました。</string>
+    <string name="toast_falseUpdate">修正に失敗しました。</string>
+    <string name="toast_maxLengthOver">制限文字数をオーバーしました。</string>
+    <string name="toast_messageDoubleBookingWithCentralWord">中央のワードと重複します。</string>
+    <string name="toast_messageFailToOutputCSV">"CSVファイルの出力に失敗しました。"</string>
+    <string name="toast_messageFailToOutputDB">DBファイルの出力に失敗しました。</string>
+    <string name="toast_messageHitKeyword">キーワードがヒットしました。</string>
+    <string name="toast_messageMindmap">SDカードの「IdeaMosaic」フォルダに保存しました</string>
+    <string name="toast_messageNotChanegeCentralWord">中央にあるワードは変更できません。</string>
+    <string name="toast_messageNotFoundKeyword">検索したキーワードが存在しません。</string>
+    <string name="toast_messageOutputCSVBackward">』ファイルを出力しました。</string>
+    <string name="toast_messageOutputCSVForward">SDカードの「IdeaMosaic」フォルダに『</string>
+    <string name="toast_messageOutputDB">SDカードの「IdeaMosaic」フォルダにDBファイルを出力しました</string>
+    <string name="toast_notExistListItem">リストがありません。</string>
+    <string name="toast_notInputWord">文字が入力されていません。</string>
+    <string name="toast_selectListItemForPrepareToDelete">削除したいリストを一つクリックしてください。</string>
+    <string name="toast_selectListItemForPrepareToUpdate">名称変更したいリストを一つクリックしてください。</string>
+    <string name="toast_updateFromItem">を</string>
+    <string name="toast_updateToItem">に修正しました。</string>
+    <string name="tutorial_btn_next">次へ進む</string>
+    <string name="tutorial_btn_prev">前へ戻る</string>
+    <string name="tutorial_btn_return">メニューへ戻る</string>
+    <string name="tutorial_click">クリック　⇒　文字入力</string>
+    <string name="tutorial_doubleclick">ダブルクリック　⇒　次のワードへ移る</string>
+    <string name="tutorial_explain1">①アプリを起動し「アイディアを考える」ボタンを押します。"</string>
+    <string name="tutorial_explain10">⑩中央のボタンに前の画面で押した文字が表示され、前の画面で中央のボタンにあった文字が周辺のボタンにランダムに表示されます。前の画面では「ゲーム」ボタンを押したので、「ゲーム」の文字が中央のボタンに印字され、前の画面で中央のボタンにあった文字は「趣味」だったので、周辺のどこかのボタンに印字されます。</string>
+    <string name="tutorial_explain11">⑪このように、中央ボタンのキーワードに関連するワードを周辺のボタンに入力していき、繰り返します。</string>
+    <string name="tutorial_explain12">⑫う～ん。。。この「ゲーム」の表示が何かとウザい。と思われた方は以下の動作を行ってください。</string>
+    <string name="tutorial_explain13">⑬メニューボタンを押し、そこから「ＢＳモード」を選択してください。</string>
+    <string name="tutorial_explain14">⑭ブレストモードOFFを選択し、「ＯＫ」ボタンを選択します。</string>
+    <string name="tutorial_explain15">⑮この状態で「Queen」ボタンをを押します。</string>
+    <string name="tutorial_explain16_1">⑯以前は「チェス」の文字が周辺のボタンに表示されていましたが、ここでは表示されません。</string>
+    <string name="tutorial_explain16_2">このように中央ボタンのキーワードを次の画面で使わないと感じた時は、メニューのBSモードで切り替えてください。</string>
+    <string name="tutorial_explain17">⑰また、メニューボタンを押し、「ヒント」を選択すると、アイディアをサポートするフレーズが表示されます。</string>
+    <string name="tutorial_explain18">⑱例えばこんな感じ。</string>
+    <string name="tutorial_explain19">And that\'s the way it is.</string>
+    <string name="tutorial_explain2">②下部の「新規作成」ボタンを押します。</string>
+    <string name="tutorial_explain3">③リスト名を入力し、「ＯＫ」ボタンを押します。ここでは【私の趣味】と入力します。</string>
+    <string name="tutorial_explain4">④リストに追加されたら、【私の趣味】の項目を押します。"</string>
+    <string name="tutorial_explain5">⑤中央に配置するキーワードを入力し、「ＯＫ」ボタンを押します。</string>
+    <string name="tutorial_explain6">⑥入力したキーワードが中央のボタンに配置されます。</string>
+    <string name="tutorial_explain7_1">⑦周辺にあるボタンをどれか一つ押し、【趣味】に関係するワードの入力と色の選択をします。</string>
+    <string name="tutorial_explain7_2">ここでは【サイクリング】を入力し、色は【青色】を選択します。</string>
+    <string name="tutorial_explain8_1">⑧押したボタンに文字と色が入力されます。</string>
+    <string name="tutorial_explain8_2">このような要領で【趣味】に関するワードを入力していきます。</string>
+    <string name="tutorial_explain9_1">⑨ワードが入っている周辺のボタンを、ダブルクリックで押します。</string>
+    <string name="tutorial_explain9_2">ここでは右上にある「ゲーム」のボタンを、ダブルクリックで押します。</string>
+    <string name="tutorial_leftflick">左フリック　⇒　前のワードへ戻る</string>
+    <string name="txt_listviewElementCount">要素数：</string>
+</resources>
