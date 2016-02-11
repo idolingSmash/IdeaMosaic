@@ -126,22 +126,18 @@ public class IdeaMosaicTutorial extends Activity implements OnGestureListener, O
 
 	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
 			float distanceY) {
-		// TODO 自動生成されたメソッド・スタブ
 		return false;
 	}
 
 	public void onShowPress(MotionEvent e) {
-		// TODO 自動生成されたメソッド・スタブ
 
 	}
 
 	public boolean onSingleTapUp(MotionEvent e) {
-		// TODO 自動生成されたメソッド・スタブ
 		return false;
 	}
 
 	public void onClick(View arg0) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		if(arg0 == menuButton){
 			this.finish();
