@@ -252,40 +252,35 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 	@Override
 	public void onClick(View v) {
 
-
 		if (v == btn_hint) {
-
 			StringBuilder sbMessageBuffer = new StringBuilder();
-
-			if (v == btn_hint) {
-				long seed = Runtime.getRuntime().freeMemory(); // 空きメモリ量
-				Random r = new Random(seed);
-				int i_rand = r.nextInt(1000);
-				if (i_rand % 5 == 0 && sampleIdeaKeyword != null) {
-					sbMessageBuffer.append(this.getString(R.string.pay_hint_message));
-					sbMessageBuffer.append(System.getProperty("line.separator"));
-					sbMessageBuffer.append("例）");
-					sbMessageBuffer.append(System.getProperty("line.separator"));
-					sbMessageBuffer.append("・[");
-					sbMessageBuffer.append(sampleIdeaKeyword);
-					sbMessageBuffer.append("]をコピーしてください。");
-					sbMessageBuffer.append(System.getProperty("line.separator"));
-					sbMessageBuffer.append("・[");
-					sbMessageBuffer.append(sampleIdeaKeyword);
-					sbMessageBuffer.append("]を念力で動かしてください。");
-					sbMessageBuffer.append(System.getProperty("line.separator"));
-					sbMessageBuffer.append("・[");
-					sbMessageBuffer.append(sampleIdeaKeyword);
-					sbMessageBuffer.append("]で大事なところを守ってください。");
-					CommonAlartDiagram.ToMyAppLink(this, sbMessageBuffer.toString());
-				} else {
-					FlashIdeaHint();
-				}
+			long seed = Runtime.getRuntime().freeMemory(); // 空きメモリ量
+			Random r = new Random(seed);
+			int i_rand = r.nextInt(1000);
+			if (i_rand % 5 == 0 && sampleIdeaKeyword != null) {
+				sbMessageBuffer.append(this.getString(R.string.pay_hint_message));
+				sbMessageBuffer.append(System.getProperty("line.separator"));
+				sbMessageBuffer.append("例）");
+				sbMessageBuffer.append(System.getProperty("line.separator"));
+				sbMessageBuffer.append("・[");
+				sbMessageBuffer.append(sampleIdeaKeyword);
+				sbMessageBuffer.append("]をコピーしてください。");
+				sbMessageBuffer.append(System.getProperty("line.separator"));
+				sbMessageBuffer.append("・[");
+				sbMessageBuffer.append(sampleIdeaKeyword);
+				sbMessageBuffer.append("]を念力で動かしてください。");
+				sbMessageBuffer.append(System.getProperty("line.separator"));
+				sbMessageBuffer.append("・[");
+				sbMessageBuffer.append(sampleIdeaKeyword);
+				sbMessageBuffer.append("]で大事なところを守ってください。");
+				CommonAlartDiagram.ToMyAppLink(this, sbMessageBuffer.toString());
 			} else {
-				for (int i = 0; i < 9; i++) {
-					if (v == listbtn_Matrix.get(i)) {
-						int_ClickButtonIndex_fornext = i;
-					}
+				FlashIdeaHint();
+			}
+		} else {
+			for (int i = 0; i < 9; i++) {
+				if (v == listbtn_Matrix.get(i)) {
+					int_ClickButtonIndex_fornext = i;
 				}
 			}
 		}
