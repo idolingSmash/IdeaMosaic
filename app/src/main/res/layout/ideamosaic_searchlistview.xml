@@ -37,22 +37,8 @@
         android:layout_height="wrap_content"
         android:divider="@color/SUMI"
         android:dividerHeight="2dp"
-        android:layout_above="@+id/adView"
         android:layout_below="@+id/layout_query">
     </ListView>
 
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"
-        android:layout_gravity="bottom|center_horizontal"
-        android:gravity="bottom"
-        android:layout_alignWithParentIfMissing="false"
-        android:layout_centerHorizontal="true">
-    </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>
