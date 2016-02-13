@@ -1,4 +1,4 @@
-package satoshi.app.ideamosaic.sample;
+package satoshi.app.ideamosaic;
 
 import android.app.Activity;
 import android.app.AlertDialog;
