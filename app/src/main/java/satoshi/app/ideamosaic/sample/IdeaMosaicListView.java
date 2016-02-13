@@ -477,12 +477,7 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 				if (commonDB.isRecordDelete(where_del_query)){
 					CommonArrayAdapter.DeleteDataSetChenge(ima_adapter, delete_cell); //リストの更新
 					CommonToastComment.DeleteItem(context, delete_cell.getListitem());
-					//ボタンの色をデフォルト
-					//					if(Integer.parseInt(
-					//							CommonDBClass.getDBAllCount(db, RS, common.getDbTabletable(), common.getAddtableFieldnames())
-					//							) <= common.getMaxTablecount()){
-					//						btn_Add.setEnabled(true);
-					//					}
+
 				}else{
 					CommonToastComment.FalseDelete(context);
 				}
