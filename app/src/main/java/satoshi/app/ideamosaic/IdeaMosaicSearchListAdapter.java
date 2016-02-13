@@ -1,4 +1,4 @@
-package satoshi.app.ideamosaic.sample;
+package satoshi.app.ideamosaic;
 
 import java.util.List;
 
@@ -11,11 +11,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-public class IdeaMosaicMindMapListAdapter extends ArrayAdapter<IdeaMosaicListViewOneCell>{
+public class IdeaMosaicSearchListAdapter extends ArrayAdapter<IdeaMosaicListViewOneCell>{
 
 	private LayoutInflater inflater;
 
-	public IdeaMosaicMindMapListAdapter(Context context, int textViewResourceId,
+	public IdeaMosaicSearchListAdapter(Context context, int textViewResourceId,
 			List<IdeaMosaicListViewOneCell> objects) {
 		super(context, textViewResourceId, objects);
 		// TODO 自動生成されたコンストラクター・スタブ
@@ -26,16 +26,19 @@ public class IdeaMosaicMindMapListAdapter extends ArrayAdapter<IdeaMosaicListVie
 
 		// ビューを受け取る
 		View view = convertView;
-		if (view == null) view = inflater.inflate(R.layout.mindmaplistview_row, null);
+		if (view == null) view = inflater.inflate(R.layout.searchlistview_row, null);
 
 		// 表示すべきデータの取得
 		IdeaMosaicListViewOneCell Cell_item = (IdeaMosaicListViewOneCell)getItem(position);
 		if (Cell_item != null) {
-			TextView txt_Item = (TextView)view.findViewById(R.id.txt_MindMapListItem);
+			TextView txt_Item = (TextView)view.findViewById(R.id.txt_SearchListItem);
+			TextView txt_Matrix = (TextView)view.findViewById(R.id.txt_SearchItemMatrix);
 
 			txt_Item.setTypeface(Typeface.DEFAULT_BOLD);
 
 			if (txt_Item != null) txt_Item.setText(Cell_item.getListitem());
+			if (txt_Matrix != null) txt_Matrix.setText(Cell_item.getItemMatrix());
+
 		}
 		return view;
 	}
