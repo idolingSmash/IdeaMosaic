@@ -4,7 +4,7 @@ android {
     compileSdkVersion 17
     buildToolsVersion "22.0.1"
     defaultConfig {
-        applicationId "satoshi.app.ideamosaic.sample.english"
+        applicationId "satoshi.app.ideamosaic.english"
         minSdkVersion 14
         targetSdkVersion 17
     }

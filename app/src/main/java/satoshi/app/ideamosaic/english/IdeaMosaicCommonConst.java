@@ -1,4 +1,4 @@
-package satoshi.app.ideamosaic.sample.english;
+package satoshi.app.ideamosaic.english;
 
 import java.util.Arrays;
 import java.util.List;

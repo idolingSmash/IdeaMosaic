@@ -10,7 +10,7 @@ import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import satoshi.app.ideamosaic.sample.english.R;
+import satoshi.app.ideamosaic.english.R;
 
 public class CommonAlartDiagram extends AlertDialog.Builder{
 
