@@ -10,8 +10,6 @@ import android.widget.Button;
 import java.io.File;
 import java.io.IOException;
 
-import common.function.sato.var2.CommonAlartDiagram;
-
 public class IdeaMosaicMenu extends Activity implements OnClickListener {
 	/** Called when the activity is first created. */
 
@@ -59,7 +57,7 @@ public class IdeaMosaicMenu extends Activity implements OnClickListener {
 		if(btn_view.equals(btn_idea)){
 			startActivityForResult(Intent_idea, IdeaMosaicCommonConst.RequestCode_LISTVIEW_IDEA);
 		}else if(btn_view.equals(btn_search)){
-			CommonAlartDiagram.ToMyAppLink(this,this.getString(R.string.pay_message));
+			startActivityForResult(Intent_search, IdeaMosaicCommonConst.RequestCode_LISTVIEW_SEARCH);
 		}else if (btn_view.equals(btn_mindmap)) {
 			startActivityForResult(Intent_mindmap, IdeaMosaicCommonConst.RequestCode_LISTVIEW_MINDMAP);
 		}else if (btn_view.equals(btn_tutorial)) {
