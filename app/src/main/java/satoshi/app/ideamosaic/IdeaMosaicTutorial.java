@@ -12,9 +12,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ViewFlipper;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
 public class IdeaMosaicTutorial extends Activity implements OnGestureListener, OnClickListener{
 
 	private GestureDetector gestureDetector;
@@ -36,10 +33,6 @@ public class IdeaMosaicTutorial extends Activity implements OnGestureListener, O
 		setContentView(R.layout.ideamosaic_tutorial);
 
 		Button_Layout();
-
-		AdView mAdView = (AdView) findViewById(R.id.adView);
-		AdRequest adRequest = new AdRequest.Builder().build();
-		mAdView.loadAd(adRequest);
 
 		viewFlipper = (ViewFlipper) findViewById(R.id.flipper);
 

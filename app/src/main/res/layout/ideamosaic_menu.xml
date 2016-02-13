@@ -12,7 +12,6 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_gravity="center_horizontal|top"
-        android:layout_above="@+id/adView"
         android:gravity="center_vertical"
         android:layout_alignParentRight="false"
         android:layout_alignParentEnd="false"
@@ -95,16 +94,5 @@
                 android:text="@string/buttontext_menu_finish" />
         </TableRow>
     </TableLayout>
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id">
-    </com.google.android.gms.ads.AdView>
-
 
 </RelativeLayout>
