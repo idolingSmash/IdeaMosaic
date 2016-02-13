@@ -3,7 +3,7 @@ package common.function.sato.var2;
 import android.content.Context;
 import android.widget.Toast;
 
-import satoshi.app.ideamosaic.sample.R;
+import satoshi.app.ideamosaic.sample.english.R;
 
 
 /***
