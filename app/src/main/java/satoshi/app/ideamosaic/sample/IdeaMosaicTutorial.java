@@ -53,13 +53,10 @@ public class IdeaMosaicTutorial extends Activity implements OnGestureListener, O
 				AnimationUtils.loadAnimation(this, R.anim.slide_out_to_right);
 
 		gestureDetector = new GestureDetector(this, this);
-		//        viewFlipper.setAutoStart(true);     //自動でスライドショーを開始
-		//        viewFlipper.setFlipInterval(3000);  //更新間隔(ms単位)
 		visibleButtonLayout();
 	}
 
 	private void Button_Layout() {
-		// TODO 自動生成されたメソッド・スタブ
 		backButton = (Button)findViewById(R.id.tutrial_button_previous);
 		nextButton = (Button)findViewById(R.id.tutrial_button_next);
 		menuButton = (Button)findViewById(R.id.tutrial_button_returntomenu);
@@ -96,13 +93,11 @@ public class IdeaMosaicTutorial extends Activity implements OnGestureListener, O
 	}
 
 	public boolean onDown(MotionEvent e) {
-		// TODO 自動生成されたメソッド・スタブ
 		return false;
 	}
 
 	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
 			float velocityY) {
-		// TODO 自動生成されたメソッド・スタブ
 		float dx = Math.abs(e1.getX() - e2.getX());
 		float dy = Math.abs(e1.getY() - e2.getY());
 		if (dx > dy) {
@@ -134,23 +129,18 @@ public class IdeaMosaicTutorial extends Activity implements OnGestureListener, O
 
 	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
 			float distanceY) {
-		// TODO 自動生成されたメソッド・スタブ
 		return false;
 	}
 
 	public void onShowPress(MotionEvent e) {
-		// TODO 自動生成されたメソッド・スタブ
 
 	}
 
 	public boolean onSingleTapUp(MotionEvent e) {
-		// TODO 自動生成されたメソッド・スタブ
 		return false;
 	}
 
 	public void onClick(View arg0) {
-		// TODO 自動生成されたメソッド・スタブ
-
 		if(arg0 == menuButton){
 			this.finish();
 		}else if(arg0 == backButton){
