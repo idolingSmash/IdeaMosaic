@@ -38,7 +38,6 @@ public class IdeaMosaicMindMapListView extends Activity implements OnItemClickLi
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO 自動生成されたメソッド・スタブ
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ideamosaic_mindmaplistview);
 
@@ -114,7 +113,6 @@ public class IdeaMosaicMindMapListView extends Activity implements OnItemClickLi
 	}
 
 	public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
-		// TODO 自動生成されたメソッド・スタブ
 		IdeaMosaicListViewOneCell click_cell = (IdeaMosaicListViewOneCell)Listview_IdeaBook.getItemAtPosition(position);
 		Intent intent = new Intent(this, IdeaMosaicCreateMindMap.class);
 		intent.putExtra("Matirx_Idea", click_cell.getListitem());
@@ -127,7 +125,6 @@ public class IdeaMosaicMindMapListView extends Activity implements OnItemClickLi
 	 * リストビューのレイアウト
 	 */
 	private void Layout_ListView() {
-		// TODO 自動生成されたメソッド・スタブ
 		Listview_IdeaBook = (ListView)this.findViewById(R.id.ListView_mindmapIdea);
 		Listview_IdeaBook.setOnItemClickListener(this);
 	}
