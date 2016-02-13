@@ -1,7 +1,4 @@
-package satoshi.app.ideamosaic.sample;
-
-import java.util.List;
-
+package satoshi.app.ideamosaic;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -10,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import java.util.List;
 
 public class IdeaMosaicListAdapter extends ArrayAdapter<IdeaMosaicListViewOneCell>{
 
