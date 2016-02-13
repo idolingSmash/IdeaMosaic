@@ -1,4 +1,4 @@
-package satoshi.app.ideamosaic.sample.english;
+package satoshi.app.ideamosaic.english;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -21,9 +21,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -34,7 +31,6 @@ import java.util.Random;
 
 import common.function.layout.KKLayout;
 import common.function.layout.NodeF;
-import common.function.sato.var2.CommonAlartDiagram;
 import common.function.sato.var2.CommonDBClass;
 import common.function.sato.var2.CommonDeviceInfo;
 import common.function.sato.var2.CommonScrollView;
@@ -91,10 +87,6 @@ public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener
 		initMessage = this.getString(R.string.mindmap_initMessage);
 
 		layoutParent = (RelativeLayout)findViewById(R.id.linear_mindmap);
-		AdView mAdView = (AdView) findViewById(R.id.adView);
-		AdRequest adRequest = new AdRequest.Builder().build();
-		mAdView.loadAd(adRequest);
-
 
 		setLayout();
 		setListName();
@@ -168,7 +160,11 @@ public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener
 
 	public void onClick(View view) {
 		if(btn_save == view ){
-			CommonAlartDiagram.ToMyAppLink(this,this.getString(R.string.pay_message));
+			try{
+				saveBitmap();
+			}catch(IOException e){
+				Log.e("Failed to Create Bitmap", e.toString());
+			}
 		}else if(btn_cancel == view){
 			onCancel();
 		}

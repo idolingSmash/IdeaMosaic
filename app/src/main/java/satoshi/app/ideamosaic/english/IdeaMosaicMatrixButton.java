@@ -1,4 +1,4 @@
-package satoshi.app.ideamosaic.sample.english;
+package satoshi.app.ideamosaic.english;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Environment;
@@ -37,9 +38,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -141,10 +139,6 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 		Layout_Text();
 		Layout_Button();
 		Layout_MatrixButton();
-
-		AdView mAdView = (AdView) findViewById(R.id.adView);
-		AdRequest adRequest = new AdRequest.Builder().build();
-		mAdView.loadAd(adRequest);
 
 		//dbの設定
 		im_DBHelp = new IdeaMosaicDBHelper(this);
@@ -254,38 +248,11 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 
 
 		if (v == btn_hint) {
-
-			StringBuilder sbMessageBuffer = new StringBuilder();
-
-			if (v == btn_hint) {
-				long seed = Runtime.getRuntime().freeMemory(); // 空きメモリ量
-				Random r = new Random(seed);
-				int i_rand = r.nextInt(1000);
-				if (i_rand % 5 == 0 && sampleIdeaKeyword != null) {
-					sbMessageBuffer.append(this.getString(R.string.pay_hint_message));
-					sbMessageBuffer.append(System.getProperty("line.separator"));
-					sbMessageBuffer.append("ex)");
-					sbMessageBuffer.append(System.getProperty("line.separator"));
-					sbMessageBuffer.append("* Please copy [");
-					sbMessageBuffer.append(sampleIdeaKeyword);
-					sbMessageBuffer.append("].");
-					sbMessageBuffer.append(System.getProperty("line.separator"));
-					sbMessageBuffer.append("* Please move [");
-					sbMessageBuffer.append(sampleIdeaKeyword);
-					sbMessageBuffer.append("] by will.");
-					sbMessageBuffer.append(System.getProperty("line.separator"));
-					sbMessageBuffer.append("* Please protect an important place by [");
-					sbMessageBuffer.append(sampleIdeaKeyword);
-					sbMessageBuffer.append("].");
-					CommonAlartDiagram.ToMyAppLink(this, sbMessageBuffer.toString());
-				} else {
-					FlashIdeaHint();
-				}
-			} else {
-				for (int i = 0; i < 9; i++) {
-					if (v == listbtn_Matrix.get(i)) {
-						int_ClickButtonIndex_fornext = i;
-					}
+			FlashIdeaHint();
+		}else{
+			for (int i = 0; i < 9; i++) {
+				if (v == listbtn_Matrix.get(i)) {
+					int_ClickButtonIndex_fornext = i;
 				}
 			}
 		}
@@ -1348,45 +1315,58 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 
 	private void FlashIdeaHint() {
 
-		String src_hintSentence = "";
+
+		//DBの定義
+		SQLiteDatabase db_hint;
+		Cursor RS_hint;
+		TriggerSerendipityDBHelper im_DBHelp_hint = new TriggerSerendipityDBHelper(this);
+		String[] trigger_fieldNames = {"HintSentence","ReplaceCount","HintId"};
+		String strTableName = "TriggerSerendipity";
+		String src_hintSentence;
+		int replaceCount = 1;
 		String[] replaceWord = {"※","☆","＃"};
+
+		try {
+			im_DBHelp_hint.createEmptyDataBase();
+			db_hint = im_DBHelp_hint.getReadableDatabase();
+		} catch (IOException ioe) {
+			throw new Error("Unable to create database");
+		} catch(SQLException sqle){
+			throw sqle;
+		}
 
 		//テーブル内のキーワードを抽出
 		ArrayList<String> al_uniqueKeyword
-				= new IdeaMosaicContainUniqueItem(db, RS, inner_TableName,
-				IdeaMosaicCommonConst.Matrix_fieldNames, IdeaMosaicCommonConst.brainstroming_fieldType).getUniqueListItem();
+				= new IdeaMosaicContainUniqueItem(db, RS, inner_TableName, IdeaMosaicCommonConst.Matrix_fieldNames, IdeaMosaicCommonConst.Matrix_fieldTypes).getUniqueListItem();
 		Collections.shuffle(al_uniqueKeyword);
-		long seed = Runtime.getRuntime().freeMemory(); // 空きメモリ量
-		Random r = new Random(seed);
-		int i_rand = r.nextInt(1000);
-		switch(i_rand % 10){
-			case 0:
-			case 1:
-			case 2:
-			case 3:
-				src_hintSentence = "Please raise worth of ※.";
-				break;
-			case 4:
-			case 5:
-				src_hintSentence = "Please feed back ※.";
-				break;
-			case 6:
-			case 7:
-				src_hintSentence = "Please let me finish ※ for a short time.";
-				break;
-			case 8:
-			case 9:
-				src_hintSentence = "Please automate ※.";
-				break;
-			default:
-				src_hintSentence = "Please raise worth of ※.";
-				break;
+
+		if(al_uniqueKeyword.size() < 2){
+			RS_hint = db_hint.query(strTableName, trigger_fieldNames, "ReplaceCount = '1'", null, null, null, "RANDOM()");
+		}else if(al_uniqueKeyword.size() < 3){
+			RS_hint = db_hint.query(strTableName, trigger_fieldNames,
+					"ReplaceCount = '1' or ReplaceCount = '2'", null, null, null, "RANDOM()");
+		}else{
+			RS_hint = db_hint.query(strTableName, trigger_fieldNames, null, null, null, null, "RANDOM()");
 		}
 
+		RS_hint.moveToFirst();
+		src_hintSentence = RS_hint.getString(0);
+
+		replaceCount = RS_hint.getInt(1);
+
 		src_hintSentence = src_hintSentence.replaceAll(replaceWord[0], "[" + al_uniqueKeyword.get(0) + "]");
-		sampleIdeaKeyword = al_uniqueKeyword.get(0);
+		if(replaceCount == 2){
+			src_hintSentence = src_hintSentence.replaceAll(replaceWord[1], "[" + al_uniqueKeyword.get(1) + "]");
+		}else if(replaceCount == 3){
+			src_hintSentence = src_hintSentence.replaceAll(replaceWord[1], "[" + al_uniqueKeyword.get(1) + "]");
+			src_hintSentence = src_hintSentence.replaceAll(replaceWord[2], "[" + al_uniqueKeyword.get(2) + "]");
+		}
 
 		btn_hint.setText(src_hintSentence);
+
+		RS_hint.close();
+		db_hint.close();
+
 	}
 
 	/**

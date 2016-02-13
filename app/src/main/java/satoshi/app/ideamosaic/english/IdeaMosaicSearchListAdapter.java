@@ -1,7 +1,4 @@
-package satoshi.app.ideamosaic.sample.english;
-
-import java.util.List;
-
+package satoshi.app.ideamosaic.english;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -11,11 +8,13 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-public class IdeaMosaicListAdapter extends ArrayAdapter<IdeaMosaicListViewOneCell>{
+import java.util.List;
+
+public class IdeaMosaicSearchListAdapter extends ArrayAdapter<IdeaMosaicListViewOneCell>{
 
 	private LayoutInflater inflater;
 
-	public IdeaMosaicListAdapter(Context context, int textViewResourceId,
+	public IdeaMosaicSearchListAdapter(Context context, int textViewResourceId,
 			List<IdeaMosaicListViewOneCell> objects) {
 		super(context, textViewResourceId, objects);
 		// TODO 自動生成されたコンストラクター・スタブ
@@ -26,20 +25,18 @@ public class IdeaMosaicListAdapter extends ArrayAdapter<IdeaMosaicListViewOneCel
 
 		// ビューを受け取る
 		View view = convertView;
-		if (view == null) view = inflater.inflate(R.layout.listview_row, null);
+		if (view == null) view = inflater.inflate(R.layout.searchlistview_row, null);
 
 		// 表示すべきデータの取得
 		IdeaMosaicListViewOneCell Cell_item = (IdeaMosaicListViewOneCell)getItem(position);
 		if (Cell_item != null) {
-			TextView txt_Item = (TextView)view.findViewById(R.id.txt_ListItem);
-			TextView txt_Count = (TextView)view.findViewById(R.id.txt_ItemCount);
-			TextView txt_Stamp = (TextView)view.findViewById(R.id.txt_ListTimeStamp);
+			TextView txt_Item = (TextView)view.findViewById(R.id.txt_SearchListItem);
+			TextView txt_Matrix = (TextView)view.findViewById(R.id.txt_SearchItemMatrix);
 
 			txt_Item.setTypeface(Typeface.DEFAULT_BOLD);
 
 			if (txt_Item != null) txt_Item.setText(Cell_item.getListitem());
-			if (txt_Count != null) txt_Count.setText(Cell_item.getItemCountInList());
-			if (txt_Stamp != null) txt_Stamp.setText(Cell_item.getTimeStamp());
+			if (txt_Matrix != null) txt_Matrix.setText(Cell_item.getItemMatrix());
 
 		}
 		return view;

@@ -41,7 +41,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/adView"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
 
         <Button
@@ -56,18 +56,5 @@
             android:layout_height="wrap_content"
             android:text="@string/buttontext_mindmap_cancel" />
     </LinearLayout>
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"
-        android:layout_gravity="bottom|center_horizontal"
-        android:gravity="bottom"
-        android:layout_alignWithParentIfMissing="false"
-        android:layout_centerHorizontal="true">
-    </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>
