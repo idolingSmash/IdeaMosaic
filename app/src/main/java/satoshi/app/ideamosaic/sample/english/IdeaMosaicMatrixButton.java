@@ -1,4 +1,4 @@
-package satoshi.app.ideamosaic.sample;
+package satoshi.app.ideamosaic.sample.english;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -264,19 +264,19 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 				if (i_rand % 5 == 0 && sampleIdeaKeyword != null) {
 					sbMessageBuffer.append(this.getString(R.string.pay_hint_message));
 					sbMessageBuffer.append(System.getProperty("line.separator"));
-					sbMessageBuffer.append("例）");
+					sbMessageBuffer.append("ex)");
 					sbMessageBuffer.append(System.getProperty("line.separator"));
-					sbMessageBuffer.append("・[");
+					sbMessageBuffer.append("* Please copy [");
 					sbMessageBuffer.append(sampleIdeaKeyword);
-					sbMessageBuffer.append("]をコピーしてください。");
+					sbMessageBuffer.append("].");
 					sbMessageBuffer.append(System.getProperty("line.separator"));
-					sbMessageBuffer.append("・[");
+					sbMessageBuffer.append("* Please move [");
 					sbMessageBuffer.append(sampleIdeaKeyword);
-					sbMessageBuffer.append("]を念力で動かしてください。");
+					sbMessageBuffer.append("] by will.");
 					sbMessageBuffer.append(System.getProperty("line.separator"));
-					sbMessageBuffer.append("・[");
+					sbMessageBuffer.append("* Please protect an important place by [");
 					sbMessageBuffer.append(sampleIdeaKeyword);
-					sbMessageBuffer.append("]で大事なところを守ってください。");
+					sbMessageBuffer.append("].");
 					CommonAlartDiagram.ToMyAppLink(this, sbMessageBuffer.toString());
 				} else {
 					FlashIdeaHint();
@@ -1364,22 +1364,22 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 			case 1:
 			case 2:
 			case 3:
-				src_hintSentence = "※の価値を高めてください。";
+				src_hintSentence = "Please raise worth of ※.";
 				break;
 			case 4:
 			case 5:
-				src_hintSentence = "※をフィードバックしてください。";
+				src_hintSentence = "Please feed back ※.";
 				break;
 			case 6:
 			case 7:
-				src_hintSentence = "※を短時間で終わらせてください。";
+				src_hintSentence = "Please let me finish ※ for a short time.";
 				break;
 			case 8:
 			case 9:
-				src_hintSentence = "※を自動化してください。";
+				src_hintSentence = "Please automate ※.";
 				break;
 			default:
-				src_hintSentence = "※の価値を高めてください。";
+				src_hintSentence = "Please raise worth of ※.";
 				break;
 		}
 
