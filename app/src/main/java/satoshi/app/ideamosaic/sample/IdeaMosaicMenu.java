@@ -74,6 +74,9 @@ public class IdeaMosaicMenu extends Activity implements OnClickListener {
 		}
 	}
 
+	/**
+	 * レイアウト設定
+	 */
 	private void Layout_button() {
 		btn_idea = (Button)this.findViewById(R.id.button_menu_idea);
 		btn_search = (Button)this.findViewById(R.id.button_menu_search);
