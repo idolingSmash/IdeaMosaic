@@ -39,6 +39,9 @@ public class IdeaMosaicMenu extends Activity implements OnClickListener {
 
 	}
 
+	/**
+	 * DB生成メソッド
+	 */
 	private void createIdeaMosaicDB() {
 		String path = this.getDatabasePath(IdeaMosaicCommonConst.DB_NAME).getPath();
 		File file = new File(path);
@@ -54,7 +57,6 @@ public class IdeaMosaicMenu extends Activity implements OnClickListener {
 
 
 	public void onClick(View btn_view) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		Intent Intent_idea = new Intent(this, IdeaMosaicListView.class);
 		Intent Intent_search = new Intent(this, IdeaMosaicSearchListView.class);
