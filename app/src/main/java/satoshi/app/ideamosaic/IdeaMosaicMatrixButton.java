@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Environment;
@@ -245,43 +246,16 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 	@Override
 	public void onClick(View v) {
 
-
-		if (v == btn_hint) {
-
-			StringBuilder sbMessageBuffer = new StringBuilder();
-
-			if (v == btn_hint) {
-				long seed = Runtime.getRuntime().freeMemory(); // 空きメモリ量
-				Random r = new Random(seed);
-				int i_rand = r.nextInt(1000);
-				if (i_rand % 5 == 0 && sampleIdeaKeyword != null) {
-					sbMessageBuffer.append(this.getString(R.string.pay_hint_message));
-					sbMessageBuffer.append(System.getProperty("line.separator"));
-					sbMessageBuffer.append("例）");
-					sbMessageBuffer.append(System.getProperty("line.separator"));
-					sbMessageBuffer.append("・[");
-					sbMessageBuffer.append(sampleIdeaKeyword);
-					sbMessageBuffer.append("]をコピーしてください。");
-					sbMessageBuffer.append(System.getProperty("line.separator"));
-					sbMessageBuffer.append("・[");
-					sbMessageBuffer.append(sampleIdeaKeyword);
-					sbMessageBuffer.append("]を念力で動かしてください。");
-					sbMessageBuffer.append(System.getProperty("line.separator"));
-					sbMessageBuffer.append("・[");
-					sbMessageBuffer.append(sampleIdeaKeyword);
-					sbMessageBuffer.append("]で大事なところを守ってください。");
-					CommonAlartDiagram.ToMyAppLink(this, sbMessageBuffer.toString());
-				} else {
-					FlashIdeaHint();
-				}
-			} else {
-				for (int i = 0; i < 9; i++) {
-					if (v == listbtn_Matrix.get(i)) {
-						int_ClickButtonIndex_fornext = i;
-					}
+		if(v == btn_hint){
+			FlashIdeaHint();
+		}else{
+			for(int i = 0;i < 9;i++){
+				if(v == listbtn_Matrix.get(i)){
+					int_ClickButtonIndex_fornext = i;
 				}
 			}
 		}
+
 	}
 
 	protected void onPause() {
@@ -1341,45 +1315,58 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 
 	private void FlashIdeaHint() {
 
-		String src_hintSentence = "";
+
+		//DBの定義
+		SQLiteDatabase db_hint;
+		Cursor RS_hint;
+		TriggerSerendipityDBHelper im_DBHelp_hint = new TriggerSerendipityDBHelper(this);
+		String[] trigger_fieldNames = {"HintSentence","ReplaceCount","HintId"};
+		String strTableName = "TriggerSerendipity";
+		String src_hintSentence;
+		int replaceCount = 1;
 		String[] replaceWord = {"※","☆","＃"};
+
+		try {
+			im_DBHelp_hint.createEmptyDataBase();
+			db_hint = im_DBHelp_hint.getReadableDatabase();
+		} catch (IOException ioe) {
+			throw new Error("Unable to create database");
+		} catch(SQLException sqle){
+			throw sqle;
+		}
 
 		//テーブル内のキーワードを抽出
 		ArrayList<String> al_uniqueKeyword
-				= new IdeaMosaicContainUniqueItem(db, RS, inner_TableName,
-				IdeaMosaicCommonConst.Matrix_fieldNames, IdeaMosaicCommonConst.brainstroming_fieldType).getUniqueListItem();
+				= new IdeaMosaicContainUniqueItem(db, RS, inner_TableName, IdeaMosaicCommonConst.Matrix_fieldNames, IdeaMosaicCommonConst.Matrix_fieldTypes).getUniqueListItem();
 		Collections.shuffle(al_uniqueKeyword);
-		long seed = Runtime.getRuntime().freeMemory(); // 空きメモリ量
-		Random r = new Random(seed);
-		int i_rand = r.nextInt(1000);
-		switch(i_rand % 10){
-			case 0:
-			case 1:
-			case 2:
-			case 3:
-				src_hintSentence = "※の価値を高めてください。";
-				break;
-			case 4:
-			case 5:
-				src_hintSentence = "※をフィードバックしてください。";
-				break;
-			case 6:
-			case 7:
-				src_hintSentence = "※を短時間で終わらせてください。";
-				break;
-			case 8:
-			case 9:
-				src_hintSentence = "※を自動化してください。";
-				break;
-			default:
-				src_hintSentence = "※の価値を高めてください。";
-				break;
+
+		if(al_uniqueKeyword.size() < 2){
+			RS_hint = db_hint.query(strTableName, trigger_fieldNames, "ReplaceCount = '1'", null, null, null, "RANDOM()");
+		}else if(al_uniqueKeyword.size() < 3){
+			RS_hint = db_hint.query(strTableName, trigger_fieldNames,
+					"ReplaceCount = '1' or ReplaceCount = '2'", null, null, null, "RANDOM()");
+		}else{
+			RS_hint = db_hint.query(strTableName, trigger_fieldNames, null, null, null, null, "RANDOM()");
 		}
 
+		RS_hint.moveToFirst();
+		src_hintSentence = RS_hint.getString(0);
+
+		replaceCount = RS_hint.getInt(1);
+
 		src_hintSentence = src_hintSentence.replaceAll(replaceWord[0], "[" + al_uniqueKeyword.get(0) + "]");
-		sampleIdeaKeyword = al_uniqueKeyword.get(0);
+		if(replaceCount == 2){
+			src_hintSentence = src_hintSentence.replaceAll(replaceWord[1], "[" + al_uniqueKeyword.get(1) + "]");
+		}else if(replaceCount == 3){
+			src_hintSentence = src_hintSentence.replaceAll(replaceWord[1], "[" + al_uniqueKeyword.get(1) + "]");
+			src_hintSentence = src_hintSentence.replaceAll(replaceWord[2], "[" + al_uniqueKeyword.get(2) + "]");
+		}
 
 		btn_hint.setText(src_hintSentence);
+
+		RS_hint.close();
+		db_hint.close();
+
 	}
 
 	/**
