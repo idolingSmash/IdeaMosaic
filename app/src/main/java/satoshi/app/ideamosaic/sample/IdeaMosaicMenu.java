@@ -88,32 +88,4 @@ public class IdeaMosaicMenu extends Activity implements OnClickListener {
 		btn_finish.setOnClickListener(this);
 	}
 
-/*
-	private void ToMyAppLink() {
-
-		final WebView webview = new WebView(this);
-		TextView tv = new TextView(this);
-		tv.setText(this.getString(R.string.pay_message));
-		// これ重要！
-		tv.setMovementMethod(LinkMovementMethod.getInstance());
-
-		AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-		alertDialog.setTitle(this.getString(R.string.pay_title));
-		alertDialog.setView(tv);
-		alertDialog.setPositiveButton(this.getString(R.string.pay_positivebutton), new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface arg0, int arg1) {
-				Uri uri = Uri.parse(getString(R.string.pay_url));
-				Intent marketIntent = new Intent(Intent.ACTION_VIEW, uri);
-				startActivity(marketIntent);
-			}});
-		alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface arg0, int arg1) {
-			}});
-		// 処理
-		alertDialog.create();
-		alertDialog.show();
-
-	}
-*/
-
 }
