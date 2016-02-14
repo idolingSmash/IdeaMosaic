@@ -29,7 +29,7 @@ public class IdeaMosaicMenu extends Activity implements OnClickListener {
 
 		Layout_button();
 		createIdeaMosaicDB();
-		
+
 	}
 
 	/**
