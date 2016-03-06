@@ -1014,13 +1014,13 @@ public class IdeaMosaicMatrixButton extends AppCompatActivity implements OnClick
 //			FlashIdeaHint();
 //			break;				DEL : 2013/09/28
 		case 2:
-			SearchIdeaItem();
+			CommonAlartDiagram.ToMyAppLink(this,this.getString(R.string.pay_message));
 			break;
 		case 3:
-			setAlertConfirmOutputCSV();
+			CommonAlartDiagram.ToMyAppLink(this,this.getString(R.string.pay_message));
 			break;
 		case 4:
-			setAlertConfirmOutputDB();
+			CommonAlartDiagram.ToMyAppLink(this,this.getString(R.string.pay_message));
 			break;
 		case 5:
 			setBrainStormingMode();
