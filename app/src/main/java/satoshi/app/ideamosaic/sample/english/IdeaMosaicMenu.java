@@ -41,6 +41,10 @@ public class IdeaMosaicMenu extends AppCompatActivity implements OnClickListener
 		AdView mAdView = (AdView) findViewById(R.id.adView);
 		AdRequest adRequest = new AdRequest.Builder().build();
 		mAdView.loadAd(adRequest);
+<<<<<<< d05e992795baa0eb8c6bb2ea38f01990933403fc
+=======
+		
+>>>>>>> 広告クラスをメニュー画面に復活
 	}
 
 	/**
