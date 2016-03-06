@@ -108,7 +108,7 @@
     <color name="EDOCHA">#BC8458</color>
     <color name="AKEBOMO">#FF9C77</color>
 
-    <string name="buttontext_menu_tutorial">操作\n方法</string>
+    <string name="buttontext_menu_tutorial">操作方法</string>
 
     <!-- 2013/08/09 -->
     <string name="buttontext_menu_mindmap">マインドマップ</string>
@@ -140,6 +140,7 @@
 
     <!-- season color -->
     <color name="Spring">#fef4f4</color>
+    <color name="SpringGreen">#CCE198</color>
     <color name="Summer">#bce2e8</color>
     <color name="Fall">#EB6238</color>
     <color name="Winter">#E9EEF3</color>

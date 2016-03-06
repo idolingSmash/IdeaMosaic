@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/menu_new"
+        android:orderInCategory="1"
+        android:title="@string/buttontext_listview_new"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_add" />
+
+
+    <item
+        android:id="@+id/menu_update"
+        android:orderInCategory="2"
+        android:title="@string/buttontext_listview_update"
+        app:showAsAction="never"
+        android:icon="@android:drawable/ic_menu_edit" />
+
+
+    <item
+        android:id="@+id/menu_delete"
+        android:orderInCategory="3"
+        android:title="@string/buttontext_listview_delete"
+        app:showAsAction="never"
+        android:icon="@android:drawable/ic_menu_delete" />
+
+</menu>

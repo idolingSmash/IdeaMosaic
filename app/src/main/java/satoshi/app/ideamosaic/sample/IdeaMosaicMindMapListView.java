@@ -1,10 +1,11 @@
 package satoshi.app.ideamosaic.sample;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 import common.function.sato.var2.CommonDBClass;
 import common.function.sato.var2.CommonOperateEdit;
 
-public class IdeaMosaicMindMapListView extends Activity implements OnItemClickListener{
+public class IdeaMosaicMindMapListView extends AppCompatActivity implements OnItemClickListener{
 
 
 	//リストビューの定義
@@ -40,6 +41,10 @@ public class IdeaMosaicMindMapListView extends Activity implements OnItemClickLi
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ideamosaic_mindmaplistview);
+
+		ActionBar abar = this.getSupportActionBar();
+		abar.setTitle("");
+		abar.show();
 
 		Layout_ListView();
 

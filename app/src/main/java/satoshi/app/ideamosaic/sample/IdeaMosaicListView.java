@@ -1,6 +1,5 @@
 package satoshi.app.ideamosaic.sample;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.Context;
@@ -9,13 +8,17 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -33,12 +36,12 @@ import common.function.sato.var2.CommonOperateEdit;
 import common.function.sato.var2.CommonToastComment;
 import common.function.sato.var2.CommonWhereQuerySentence;
 
-public class IdeaMosaicListView extends Activity implements OnItemClickListener, OnClickListener {
+public class IdeaMosaicListView extends AppCompatActivity implements OnItemClickListener, OnClickListener {
 
 	//ボタンの定義
-	private static Button btn_Add_ideabook;
-	private static Button btn_Update_ideabook;
-	private static Button btn_Delete_ideabook;
+//	private static Button btn_Add_ideabook;
+//	private static Button btn_Update_ideabook;
+//	private static Button btn_Delete_ideabook;
 
 	//エディットボックスの定義
 	private static EditText et_Input_IdeaBook;
@@ -59,9 +62,12 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO 自動生成されたメソッド・スタブ
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ideamosaic_listview);
+
+		ActionBar abar = this.getSupportActionBar();
+		abar.setTitle("");
+		abar.show();
 
 		Layout_ListView();
 		Layout_Button();
@@ -127,6 +133,66 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 
 	}
 
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.actionbar_items, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+
+		int menuId = item.getItemId();
+		CommonDBClass commonDB = new CommonDBClass(db,
+				RS,
+				IdeaMosaicCommonConst.str_DB_ListTable,
+				IdeaMosaicCommonConst.Listtable_fieldNames,
+				IdeaMosaicCommonConst.Listtable_fieldTypes);
+
+		if(menuId == R.id.menu_new){
+			if(opeEdit.isEditFlag(1)){
+				//デフォルトに戻す
+//				opeEdit.FontColorOrengeInSelectButton(1, btn_Update_ideabook, btn_Delete_ideabook);
+				opeEdit.EditThreeFlag(1);
+				Dialog_InputListItem(this, 1, null);
+				//				AddDialog(this);
+			}
+		}else if(menuId == R.id.menu_update){
+			if(opeEdit.isEditFlag(1)){
+				if(commonDB.isZeroCountQuery()){
+					CommonToastComment.notExistListItem(this);
+				}else{
+					//修正ボタンの背景色を変える
+//					opeEdit.FontColorOrengeInSelectButton(2, btn_Update_ideabook, btn_Delete_ideabook);
+					opeEdit.EditThreeFlag(2);
+					CommonToastComment.selectListItemForPrepareToUpdate(this);
+				}
+			}else if(opeEdit.isEditFlag(2)){
+				//デフォルトに戻す
+//				opeEdit.FontColorOrengeInSelectButton(1, btn_Update_ideabook, btn_Delete_ideabook);
+				opeEdit.EditThreeFlag(1);
+			}
+		}else if(menuId == R.id.menu_delete) {
+			if (opeEdit.isEditFlag(1)) {
+				if (commonDB.isZeroCountQuery()) {
+					CommonToastComment.notExistListItem(this);
+				} else {
+					//削除ボタンの背景色を変える
+//					opeEdit.FontColorOrengeInSelectButton(3, btn_Update_ideabook, btn_Delete_ideabook);
+					opeEdit.EditThreeFlag(3);
+					CommonToastComment.selectListItemForPrepareToDelete(this);
+				}
+			} else if (opeEdit.isEditFlag(3)) {
+				//デフォルトに戻す
+				opeEdit.EditThreeFlag(1);
+//				opeEdit.FontColorOrengeInSelectButton(1, btn_Update_ideabook, btn_Delete_ideabook);
+			}
+		}
+
+		return super.onOptionsItemSelected(item);
+	}
+
 	/**
 	 * Matrix内にある項目数を得るメソッド
 	 * @param int_listid
@@ -151,10 +217,10 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 	public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
 		IdeaMosaicListViewOneCell click_cell = (IdeaMosaicListViewOneCell)Listview_IdeaBook.getItemAtPosition(position);
 
-		if(opeEdit.isEditFlag(2) == true){
+		if(opeEdit.isEditFlag(2)){
 			Dialog_InputListItem(this, 2, click_cell);
 		}
-		else if(opeEdit.isEditFlag(3) == true){
+		else if(opeEdit.isEditFlag(3)){
 			Dialog_InputListItem(this, 3, click_cell);
 		}else{
 			Intent intent = new Intent(this, IdeaMosaicMatrixButton.class);
@@ -165,55 +231,52 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 	}
 
 	public void onClick(View view) {
-		// TODO 自動生成されたメソッド・スタブ
-
-		CommonDBClass commonDB = new CommonDBClass(db,
-				RS,
-				IdeaMosaicCommonConst.str_DB_ListTable,
-				IdeaMosaicCommonConst.Listtable_fieldNames,
-				IdeaMosaicCommonConst.Listtable_fieldTypes);
-
-		if(view == btn_Add_ideabook){
-			if(opeEdit.isEditFlag(1) == true){
-				//デフォルトに戻す
-				opeEdit.FontColorOrengeInSelectButton(1, btn_Update_ideabook, btn_Delete_ideabook);
-				Dialog_InputListItem(this, 1, null);
-				//				AddDialog(this);
-			}
-		}else if(view == btn_Update_ideabook){
-			if(opeEdit.isEditFlag(1) == true){
-				if(commonDB.isZeroCountQuery() == true){
-					CommonToastComment.notExistListItem(this);
-				}else{
-					//修正ボタンの背景色を変える
-					opeEdit.FontColorOrengeInSelectButton(2, btn_Update_ideabook, btn_Delete_ideabook);
-					CommonToastComment.selectListItemForPrepareToUpdate(this);
-				}
-			}else if(opeEdit.isEditFlag(2) == true){
-				//デフォルトに戻す
-				opeEdit.FontColorOrengeInSelectButton(1, btn_Update_ideabook, btn_Delete_ideabook);
-			}
-		}else if(view == btn_Delete_ideabook){
-			if(opeEdit.isEditFlag(1) == true){
-				if(commonDB.isZeroCountQuery() == true){
-					CommonToastComment.notExistListItem(this);
-				}else{
-					//削除ボタンの背景色を変える
-					opeEdit.FontColorOrengeInSelectButton(3, btn_Update_ideabook, btn_Delete_ideabook);
-					CommonToastComment.selectListItemForPrepareToDelete(this);
-				}
-			}else if(opeEdit.isEditFlag(3) == true){
-				//デフォルトに戻す
-				opeEdit.FontColorOrengeInSelectButton(1, btn_Update_ideabook, btn_Delete_ideabook);
-			}
-		}
+//		CommonDBClass commonDB = new CommonDBClass(db,
+//				RS,
+//				IdeaMosaicCommonConst.str_DB_ListTable,
+//				IdeaMosaicCommonConst.Listtable_fieldNames,
+//				IdeaMosaicCommonConst.Listtable_fieldTypes);
+//
+//		if(view == btn_Add_ideabook){
+//			if(opeEdit.isEditFlag(1)){
+//				//デフォルトに戻す
+//				opeEdit.FontColorOrengeInSelectButton(1, btn_Update_ideabook, btn_Delete_ideabook);
+//				Dialog_InputListItem(this, 1, null);
+//				//				AddDialog(this);
+//			}
+//		}else if(view == btn_Update_ideabook){
+//			if(opeEdit.isEditFlag(1)){
+//				if(commonDB.isZeroCountQuery()){
+//					CommonToastComment.notExistListItem(this);
+//				}else{
+//					//修正ボタンの背景色を変える
+//					opeEdit.FontColorOrengeInSelectButton(2, btn_Update_ideabook, btn_Delete_ideabook);
+//					CommonToastComment.selectListItemForPrepareToUpdate(this);
+//				}
+//			}else if(opeEdit.isEditFlag(2)){
+//				//デフォルトに戻す
+//				opeEdit.FontColorOrengeInSelectButton(1, btn_Update_ideabook, btn_Delete_ideabook);
+//			}
+//		}else if(view == btn_Delete_ideabook){
+//			if(opeEdit.isEditFlag(1)){
+//				if(commonDB.isZeroCountQuery()){
+//					CommonToastComment.notExistListItem(this);
+//				}else{
+//					//削除ボタンの背景色を変える
+//					opeEdit.FontColorOrengeInSelectButton(3, btn_Update_ideabook, btn_Delete_ideabook);
+//					CommonToastComment.selectListItemForPrepareToDelete(this);
+//				}
+//			}else if(opeEdit.isEditFlag(3)){
+//				//デフォルトに戻す
+//				opeEdit.FontColorOrengeInSelectButton(1, btn_Update_ideabook, btn_Delete_ideabook);
+//			}
+//		}
 	}
 
 	/**
 	 * リストビューのレイアウト
 	 */
 	private void Layout_ListView() {
-		// TODO 自動生成されたメソッド・スタブ
 		Listview_IdeaBook = (ListView)this.findViewById(R.id.ListView_idea);
 		Listview_IdeaBook.setOnItemClickListener(this);
 	}
@@ -222,14 +285,13 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 	 * ボタンのレイアウト
 	 */
 	private void Layout_Button() {
-		// TODO 自動生成されたメソッド・スタブ
-		btn_Add_ideabook = (Button)this.findViewById(R.id.list_button_add);
-		btn_Update_ideabook = (Button)this.findViewById(R.id.list_button_update);
-		btn_Delete_ideabook = (Button)this.findViewById(R.id.list_button_delete);
-
-		btn_Add_ideabook.setOnClickListener(this);
-		btn_Update_ideabook.setOnClickListener(this);
-		btn_Delete_ideabook.setOnClickListener(this);
+//		btn_Add_ideabook = (Button)this.findViewById(R.id.list_button_add);
+//		btn_Update_ideabook = (Button)this.findViewById(R.id.list_button_update);
+//		btn_Delete_ideabook = (Button)this.findViewById(R.id.list_button_delete);
+//
+//		btn_Add_ideabook.setOnClickListener(this);
+//		btn_Update_ideabook.setOnClickListener(this);
+//		btn_Delete_ideabook.setOnClickListener(this);
 	}
 
 	/**
@@ -296,7 +358,7 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 			commonAD.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int whichButton) {
 					/* Cancel ボタンをクリックした時の処理 */
-					opeEdit.FontColorOrengeInSelectButton(1, btn_Update_ideabook, btn_Delete_ideabook);
+					opeEdit.EditThreeFlag(1);
 				}
 			});
 		}
@@ -424,7 +486,8 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 						CommonToastComment.FalseUpdate(context);
 					}
 				}
-				opeEdit.FontColorOrengeInSelectButton(1, btn_Update_ideabook, btn_Delete_ideabook);
+				opeEdit.EditThreeFlag(1);
+//				opeEdit.FontColorOrengeInSelectButton(1, btn_Update_ideabook, btn_Delete_ideabook);
 			}
 		}
 				);
@@ -481,7 +544,8 @@ public class IdeaMosaicListView extends Activity implements OnItemClickListener,
 				}else{
 					CommonToastComment.FalseDelete(context);
 				}
-				opeEdit.FontColorOrengeInSelectButton(1, btn_Update_ideabook, btn_Delete_ideabook);
+				opeEdit.EditThreeFlag(1);
+//				opeEdit.FontColorOrengeInSelectButton(1, btn_Update_ideabook, btn_Delete_ideabook);
 			}
 		});
 	}

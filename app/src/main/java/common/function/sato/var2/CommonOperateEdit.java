@@ -84,21 +84,21 @@ public class CommonOperateEdit {
 	 * 修正:2
 	 * 削除:3
 	 */
-/*
+
 
 	public void EditThreeFlag(int int_operateEdit){
 		switch(int_operateEdit){
-		case Default:	changeIntoDefaultFlag();
-		break;
-		case Update:	changeIntoUpdateFlag();
-		break;
-		case Delete:	changeIntoDeleteFlag();
-		break;
-		default:		changeIntoDefaultFlag();
-		break;
+			case Default:	changeIntoDefaultFlag();
+			break;
+			case Update:	changeIntoUpdateFlag();
+			break;
+			case Delete:	changeIntoDeleteFlag();
+			break;
+			default:		changeIntoDefaultFlag();
+			break;
 		}
 	}
-*/
+
 
 	/**
 	 * フラグをdefault型にするメソッド
