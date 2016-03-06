@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-<<<<<<< b429750a55d5834ff6fa865d395aebdc0fcb8397
     package="satoshi.app.ideamosaic.english"
-=======
-    package="satoshi.app.ideamosaic.sample.english"
->>>>>>> version 1.0.4 relase
     android:versionCode="7"
     android:versionName="1.0.4">
 

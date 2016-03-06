@@ -1,12 +1,11 @@
 package satoshi.app.ideamosaic.english;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -24,7 +23,7 @@ import common.function.sato.var2.CommonDBClass;
 import common.function.sato.var2.CommonOperateEdit;
 import common.function.sato.var2.CommonWhereQuerySentence;
 
-public class IdeaMosaicSearchListView extends AppCompatActivity implements OnItemClickListener, OnClickListener {
+public class IdeaMosaicSearchListView extends Activity implements OnItemClickListener, OnClickListener {
 
 	//ボタンの定義
 	private static ImageButton btn_Search_ideabook;
@@ -54,10 +53,6 @@ public class IdeaMosaicSearchListView extends AppCompatActivity implements OnIte
 		// TODO 自動生成されたメソッド・スタブ
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ideamosaic_searchlistview);
-
-		ActionBar abar = this.getSupportActionBar();
-		abar.setTitle("");
-		abar.show();
 
 		Layout_EditText();
 		Layout_Button();

@@ -1,9 +1,8 @@
 package satoshi.app.ideamosaic.english;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -11,9 +10,7 @@ import android.widget.Button;
 import java.io.File;
 import java.io.IOException;
 
-import common.function.sato.var2.CommonAlartDiagram;
-
-public class IdeaMosaicMenu extends AppCompatActivity implements OnClickListener {
+public class IdeaMosaicMenu extends Activity implements OnClickListener {
 	/** Called when the activity is first created. */
 
 	private Button btn_idea;
@@ -27,10 +24,6 @@ public class IdeaMosaicMenu extends AppCompatActivity implements OnClickListener
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ideamosaic_menu);
-
-		ActionBar abar = this.getSupportActionBar();
-		abar.setTitle("");
-		abar.show();
 
 		Layout_button();
 		createIdeaMosaicDB();

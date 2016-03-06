@@ -1,24 +1,22 @@
-package satoshi.app.ideamosaic.sample.english;
+package satoshi.app.ideamosaic.english;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 
 import common.function.sato.var2.CommonDBClass;
 import common.function.sato.var2.CommonOperateEdit;
 
-public class IdeaMosaicMindMapListView extends Activity implements OnItemClickListener{
+public class IdeaMosaicMindMapListView extends AppCompatActivity implements OnItemClickListener{
 
 
 	//リストビューの定義
@@ -41,11 +39,11 @@ public class IdeaMosaicMindMapListView extends Activity implements OnItemClickLi
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ideamosaic_mindmaplistview);
 
-		Layout_ListView();
+		ActionBar abar = this.getSupportActionBar();
+		abar.setTitle("");
+		abar.show();
 
-		AdView mAdView = (AdView) findViewById(R.id.adView);
-		AdRequest adRequest = new AdRequest.Builder().build();
-		mAdView.loadAd(adRequest);
+		Layout_ListView();
 
 		//dbの設定
 		im_DBHelp = new IdeaMosaicDBHelper(this);

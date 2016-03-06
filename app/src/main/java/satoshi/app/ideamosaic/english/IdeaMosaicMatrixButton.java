@@ -1,5 +1,6 @@
 package satoshi.app.ideamosaic.english;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.ContentValues;
@@ -12,8 +13,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnDoubleTapListener;
@@ -60,7 +59,7 @@ import common.function.sato.var2.CommonErrorCheck;
 import common.function.sato.var2.CommonToastComment;
 import common.function.sato.var2.CommonWhereQuerySentence;
 
-public class IdeaMosaicMatrixButton extends AppCompatActivity implements OnClickListener, OnTouchListener, OnDoubleTapListener, OnLongClickListener, OnGestureListener, Runnable, OnItemSelectedListener{
+public class IdeaMosaicMatrixButton extends Activity implements OnClickListener, OnTouchListener, OnDoubleTapListener, OnLongClickListener, OnGestureListener, Runnable, OnItemSelectedListener{
 
 	static ArrayList<Button> listbtn_Matrix = new ArrayList<Button>();
 
@@ -137,9 +136,6 @@ public class IdeaMosaicMatrixButton extends AppCompatActivity implements OnClick
 							]
 					,im_extras.getString("Matrix_Idea_Query").toString().trim()).createSentence();
 
-		ActionBar abar = this.getSupportActionBar();
-		abar.setTitle("");
-		abar.show();
 		Layout_Text();
 		Layout_Button();
 		Layout_MatrixButton();
@@ -150,6 +146,8 @@ public class IdeaMosaicMatrixButton extends AppCompatActivity implements OnClick
 
 		getInnerTableName();
 		getInnerColorTableName();
+
+		//		Toast.makeText(this, inner_TableName + ":" + querySentenceFromSearchList, 1).show();
 
 		if(querySentenceFromSearchList != null){
 			RS = db.query(inner_TableName, IdeaMosaicCommonConst.Matrix_fieldNames, querySentenceFromSearchList, null, null, null, null);
@@ -247,6 +245,8 @@ public class IdeaMosaicMatrixButton extends AppCompatActivity implements OnClick
 
 	@Override
 	public void onClick(View v) {
+
+
 		if (v == btn_hint) {
 			FlashIdeaHint();
 		}else{
@@ -257,7 +257,6 @@ public class IdeaMosaicMatrixButton extends AppCompatActivity implements OnClick
 			}
 		}
 	}
-
 
 	protected void onPause() {
 
@@ -301,6 +300,9 @@ public class IdeaMosaicMatrixButton extends AppCompatActivity implements OnClick
 	 */
 	public boolean onLongClick(View v) {
 
+		//		Toast.makeText(this, "Top:" + String.valueOf(v.getTop()) + "Left:" + String.valueOf(v.getLeft())
+		//				+ "Buttom:" + String.valueOf(v.getBottom()) + "Right:" + String.valueOf(v.getRight()), Toast.LENGTH_LONG).show();
+
 		for(int i = 0; i < 9;i++){
 			if(v == listbtn_Matrix.get(i)){
 				EditText move_text = new EditText(this);
@@ -314,15 +316,21 @@ public class IdeaMosaicMatrixButton extends AppCompatActivity implements OnClick
 	 * ダブルタッチしたとき
 	 */
 	public boolean onTouch(View v, MotionEvent event) {
+
+
+		//		CommonDraw int_buttonLength = new CommonDraw(context, 100);
+		//		Toast.makeText(this, "called onTouch", Toast.LENGTH_LONG).show();
 		gestureDetector.onTouchEvent(event);
 		float lastTouchX = 0.0f;
 		float currentX = 0.0f;
 
 
-		if(bool_doubleclick){
+		if(bool_doubleclick == true ){
 			for(int i = 0;i < 9;i++){
 				if(v == listbtn_Matrix.get(i)){
-				if(!CommonClass.isNullOrZeroLength(listbtn_Matrix.get(i).getText().toString()) && i != 4){
+					//					Toast.makeText(this, String.valueOf(i) + "をダブルクリックしました.", Toast.LENGTH_SHORT).show();
+					if(CommonClass.isNullOrZeroLength(listbtn_Matrix.get(i).getText().toString()) == false
+							&& i != 4){
 						int_ClickButtonIndex_fornext = i;
 						//次遷移へのアニメーション
 						nextStageAnimation();
@@ -345,7 +353,7 @@ public class IdeaMosaicMatrixButton extends AppCompatActivity implements OnClick
 			}
 		}
 
-		if(bool_singleclick && AD_count == 0){
+		if(bool_singleclick == true && AD_count == 0){
 			if(int_ClickButtonIndex_fornext != 4){
 				InputDialog(this, int_ClickButtonIndex_fornext);
 			}else{

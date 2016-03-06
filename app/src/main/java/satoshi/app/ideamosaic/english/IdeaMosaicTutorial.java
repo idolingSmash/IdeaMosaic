@@ -1,8 +1,7 @@
 package satoshi.app.ideamosaic.english;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
@@ -13,7 +12,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ViewFlipper;
 
-public class IdeaMosaicTutorial extends AppCompatActivity implements OnGestureListener, OnClickListener{
+public class IdeaMosaicTutorial extends Activity implements OnGestureListener, OnClickListener{
 
 	private GestureDetector gestureDetector;
 	private ViewFlipper viewFlipper;
@@ -32,10 +31,6 @@ public class IdeaMosaicTutorial extends AppCompatActivity implements OnGestureLi
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ideamosaic_tutorial);
-
-		ActionBar abar = this.getSupportActionBar();
-		abar.setTitle("");
-		abar.show();
 
 		Button_Layout();
 
