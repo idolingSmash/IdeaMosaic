@@ -13,9 +13,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ViewFlipper;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
 public class IdeaMosaicTutorial extends AppCompatActivity implements OnGestureListener, OnClickListener{
 
 	private GestureDetector gestureDetector;
