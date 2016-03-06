@@ -1,6 +1,5 @@
 package satoshi.app.ideamosaic.english;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.ContentValues;
@@ -13,6 +12,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnDoubleTapListener;
@@ -59,7 +60,7 @@ import common.function.sato.var2.CommonErrorCheck;
 import common.function.sato.var2.CommonToastComment;
 import common.function.sato.var2.CommonWhereQuerySentence;
 
-public class IdeaMosaicMatrixButton extends Activity implements OnClickListener, OnTouchListener, OnDoubleTapListener, OnLongClickListener, OnGestureListener, Runnable, OnItemSelectedListener{
+public class IdeaMosaicMatrixButton extends AppCompatActivity implements OnClickListener, OnTouchListener, OnDoubleTapListener, OnLongClickListener, OnGestureListener, Runnable, OnItemSelectedListener{
 
 	static ArrayList<Button> listbtn_Matrix = new ArrayList<Button>();
 
@@ -113,7 +114,7 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 	private String sampleIdeaKeyword = "";
 
 	private final String strClickHintMessageString = null;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
@@ -132,10 +133,13 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 		if(im_intent.hasExtra("Matrix_Idea_Query"))
 			querySentenceFromSearchList = new CommonWhereQuerySentence(
 					IdeaMosaicCommonConst.Matrix_fieldNames[
-														IdeaMosaicCommonConst.INT_Matrix_Index_Mat4
+							IdeaMosaicCommonConst.INT_Matrix_Index_Mat4
 							]
 					,im_extras.getString("Matrix_Idea_Query").toString().trim()).createSentence();
 
+		ActionBar abar = this.getSupportActionBar();
+		abar.setTitle("");
+		abar.show();
 		Layout_Text();
 		Layout_Button();
 		Layout_MatrixButton();
@@ -146,8 +150,6 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 
 		getInnerTableName();
 		getInnerColorTableName();
-
-		//		Toast.makeText(this, inner_TableName + ":" + querySentenceFromSearchList, 1).show();
 
 		if(querySentenceFromSearchList != null){
 			RS = db.query(inner_TableName, IdeaMosaicCommonConst.Matrix_fieldNames, querySentenceFromSearchList, null, null, null, null);
@@ -182,7 +184,7 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 
 		txt_breadCrumb = (TextView) findViewById(R.id.txt_breadcrumb);
 	}
-	
+
 	/**
 	 * ボタン設定
 	 */
@@ -193,7 +195,7 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 		btn_hint.setText(getResources().getString(R.string.buttontext_initHintMessage));
 		btn_hint.setOnClickListener(this);
 	}
-	
+
 	/**
 	 * ブレストモードの初期設定
 	 */
@@ -245,8 +247,6 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 
 	@Override
 	public void onClick(View v) {
-
-
 		if (v == btn_hint) {
 			FlashIdeaHint();
 		}else{
@@ -257,6 +257,7 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 			}
 		}
 	}
+
 
 	protected void onPause() {
 
@@ -300,9 +301,6 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 	 */
 	public boolean onLongClick(View v) {
 
-		//		Toast.makeText(this, "Top:" + String.valueOf(v.getTop()) + "Left:" + String.valueOf(v.getLeft())
-		//				+ "Buttom:" + String.valueOf(v.getBottom()) + "Right:" + String.valueOf(v.getRight()), Toast.LENGTH_LONG).show();
-
 		for(int i = 0; i < 9;i++){
 			if(v == listbtn_Matrix.get(i)){
 				EditText move_text = new EditText(this);
@@ -316,21 +314,15 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 	 * ダブルタッチしたとき
 	 */
 	public boolean onTouch(View v, MotionEvent event) {
-
-
-		//		CommonDraw int_buttonLength = new CommonDraw(context, 100);
-		//		Toast.makeText(this, "called onTouch", Toast.LENGTH_LONG).show();
 		gestureDetector.onTouchEvent(event);
 		float lastTouchX = 0.0f;
 		float currentX = 0.0f;
 
 
-		if(bool_doubleclick == true ){
+		if(bool_doubleclick){
 			for(int i = 0;i < 9;i++){
 				if(v == listbtn_Matrix.get(i)){
-					//					Toast.makeText(this, String.valueOf(i) + "をダブルクリックしました.", Toast.LENGTH_SHORT).show();
-					if(CommonClass.isNullOrZeroLength(listbtn_Matrix.get(i).getText().toString()) == false
-							&& i != 4){
+					if(!CommonClass.isNullOrZeroLength(listbtn_Matrix.get(i).getText().toString()) && i != 4){
 						int_ClickButtonIndex_fornext = i;
 						//次遷移へのアニメーション
 						nextStageAnimation();
@@ -353,7 +345,7 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 			}
 		}
 
-		if(bool_singleclick == true && AD_count == 0){
+		if(bool_singleclick && AD_count == 0){
 			if(int_ClickButtonIndex_fornext != 4){
 				InputDialog(this, int_ClickButtonIndex_fornext);
 			}else{
@@ -363,24 +355,24 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 		}
 
 		switch (event.getAction()) {
-		case MotionEvent.ACTION_DOWN:
-			lastTouchX = event.getX();
+			case MotionEvent.ACTION_DOWN:
+				lastTouchX = event.getX();
 
-			break;
-		case MotionEvent.ACTION_UP:
-			currentX = event.getX();
-			if (lastTouchX > currentX) {
-				if(AL_BreadCrumb.size() > 1)
-					PreviousSatgeMatrix();
-			}
-			break;
-		case MotionEvent.ACTION_CANCEL:
-			currentX = event.getX();
-			if (lastTouchX > currentX) {
-				if(AL_BreadCrumb.size() > 1)
-					PreviousSatgeMatrix();
-			}
-			break;
+				break;
+			case MotionEvent.ACTION_UP:
+				currentX = event.getX();
+				if (lastTouchX > currentX) {
+					if(AL_BreadCrumb.size() > 1)
+						PreviousSatgeMatrix();
+				}
+				break;
+			case MotionEvent.ACTION_CANCEL:
+				currentX = event.getX();
+				if (lastTouchX > currentX) {
+					if(AL_BreadCrumb.size() > 1)
+						PreviousSatgeMatrix();
+				}
+				break;
 
 		}
 
@@ -404,7 +396,7 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 			as.setDuration(1000); // 1000msかけてアニメーションする
 			listbtn_Matrix.get(j).startAnimation(as);
 		}
-		
+
 		AnimationSet asLeftFade = new AnimationSet(true);
 		AlphaAnimation alphaLeftFade = new AlphaAnimation(1, 0.1f); // 透明度を1から0.1に変化させる
 		long seed = Runtime.getRuntime().freeMemory(); // 空きメモリ量
@@ -416,7 +408,7 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 		}else{
 			moveX = btn_hint.getWidth();
 		}
-		TranslateAnimation transLeftFade = new TranslateAnimation(0, moveX, 0, 0); 
+		TranslateAnimation transLeftFade = new TranslateAnimation(0, moveX, 0, 0);
 		asLeftFade.addAnimation(alphaLeftFade);
 		asLeftFade.addAnimation(transLeftFade);
 		asLeftFade.setDuration(1000); // 1000msかけてアニメーションする
@@ -465,7 +457,7 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 	}
 
 	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
-			float velocityY) {
+						   float velocityY) {
 
 		return false;
 	}
@@ -475,7 +467,7 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 	}
 
 	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
-			float distanceY) {
+							float distanceY) {
 
 		return false;
 	}
@@ -711,59 +703,59 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 		}
 
 		commonAD.setPositiveButton(str_DialogButtonText,new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int which) {
+					public void onClick(DialogInterface dialog, int which) {
 
-				//未入力判定
-				if(CommonErrorCheck.isNullString(et_Input.getText().toString())){
-					CommonToastComment.NullString(context);
-				}
-				//入力した文字がセンターワードと同じ場合はエラー
-				else if(listbtn_Matrix.get(
-						IdeaMosaicCommonConst.INT_Matrix_Index_Mat4).getText().toString().
-						equals(et_Input.getText().toString())){
-					Toast.makeText(context, context.getString(R.string.toast_messageDoubleBookingWithCentralWord), Toast.LENGTH_LONG).show();
-				}
-				else{
-					CommonDBClass commonDB = new CommonDBClass(db,
-							RS,
-							inner_TableName,
-							IdeaMosaicCommonConst.Matrix_fieldNames,
-							IdeaMosaicCommonConst.Matrix_fieldTypes);
-
-					//中央のワードをキーとしたインスタンス
-					CommonWhereQuerySentence where_coreword_query = new CommonWhereQuerySentence(
-							IdeaMosaicCommonConst.Matrix_fieldNames[							IdeaMosaicCommonConst.INT_Matrix_Index_Mat4],
-							listbtn_Matrix.get(							IdeaMosaicCommonConst.INT_Matrix_Index_Mat4).getText().toString());
-
-					commonDB.setDBValueInContentValues(table_values,
-							IdeaMosaicCommonConst.Matrix_fieldNames[int_ClickButtonIndex],
-							et_Input.getText().toString());
-					commonDB.setDBTimeStampInContentValues(table_values, IdeaMosaicCommonConst.Matrix_fieldNames[IdeaMosaicCommonConst.INT_Matrix_Index_TimeStamp]);
-
-					//ボタンの更新
-					if(commonDB.isRecordUpdate(table_values, where_coreword_query)){
-
-						if(int_EditText == 1){
-							CommonToastComment.AddItem(context, et_Input.getText().toString());
-						}else if(int_EditText == 2){
-							if(!et_Input.getText().toString().equals(
-									listbtn_Matrix.get(int_ClickButtonIndex).getText().toString())){
-								CommonToastComment.UpdateItem(context, listbtn_Matrix.get(int_ClickButtonIndex).getText().toString(),et_Input.getText().toString());
-							}
+						//未入力判定
+						if(CommonErrorCheck.isNullString(et_Input.getText().toString())){
+							CommonToastComment.NullString(context);
 						}
-						listbtn_Matrix.get(int_ClickButtonIndex).setText(et_Input.getText().toString());
-						setButtonColor(int_ClickButtonIndex,
-								commonDB.getDBUniqueIndexId(where_coreword_query, IdeaMosaicCommonConst.INT_Matrix_Index_ID));
-					}else{
-						CommonToastComment.FalseUpdate(context);
+						//入力した文字がセンターワードと同じ場合はエラー
+						else if(listbtn_Matrix.get(
+								IdeaMosaicCommonConst.INT_Matrix_Index_Mat4).getText().toString().
+								equals(et_Input.getText().toString())){
+							Toast.makeText(context, context.getString(R.string.toast_messageDoubleBookingWithCentralWord), Toast.LENGTH_LONG).show();
+						}
+						else{
+							CommonDBClass commonDB = new CommonDBClass(db,
+									RS,
+									inner_TableName,
+									IdeaMosaicCommonConst.Matrix_fieldNames,
+									IdeaMosaicCommonConst.Matrix_fieldTypes);
+
+							//中央のワードをキーとしたインスタンス
+							CommonWhereQuerySentence where_coreword_query = new CommonWhereQuerySentence(
+									IdeaMosaicCommonConst.Matrix_fieldNames[							IdeaMosaicCommonConst.INT_Matrix_Index_Mat4],
+									listbtn_Matrix.get(							IdeaMosaicCommonConst.INT_Matrix_Index_Mat4).getText().toString());
+
+							commonDB.setDBValueInContentValues(table_values,
+									IdeaMosaicCommonConst.Matrix_fieldNames[int_ClickButtonIndex],
+									et_Input.getText().toString());
+							commonDB.setDBTimeStampInContentValues(table_values, IdeaMosaicCommonConst.Matrix_fieldNames[IdeaMosaicCommonConst.INT_Matrix_Index_TimeStamp]);
+
+							//ボタンの更新
+							if(commonDB.isRecordUpdate(table_values, where_coreword_query)){
+
+								if(int_EditText == 1){
+									CommonToastComment.AddItem(context, et_Input.getText().toString());
+								}else if(int_EditText == 2){
+									if(!et_Input.getText().toString().equals(
+											listbtn_Matrix.get(int_ClickButtonIndex).getText().toString())){
+										CommonToastComment.UpdateItem(context, listbtn_Matrix.get(int_ClickButtonIndex).getText().toString(),et_Input.getText().toString());
+									}
+								}
+								listbtn_Matrix.get(int_ClickButtonIndex).setText(et_Input.getText().toString());
+								setButtonColor(int_ClickButtonIndex,
+										commonDB.getDBUniqueIndexId(where_coreword_query, IdeaMosaicCommonConst.INT_Matrix_Index_ID));
+							}else{
+								CommonToastComment.FalseUpdate(context);
+							}
+
+						}
+
+						onPause();
 					}
-
 				}
-
-				onPause();
-			}
-		}
-				);
+		);
 	}
 
 	/**
@@ -776,16 +768,16 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 
 		CommonDBClass colorDB = new CommonDBClass(db, RS,
 				inner_ColorTableName,
-								IdeaMosaicCommonConst.MatrixButtonColor_fieldNames,
+				IdeaMosaicCommonConst.MatrixButtonColor_fieldNames,
 				IdeaMosaicCommonConst.MatrixButtonColor_fieldTypes);
 
 		ContentValues cv_color = new ContentValues();
 		CommonWhereQuerySentence where_color_query = new CommonWhereQuerySentence(
-								IdeaMosaicCommonConst.MatrixButtonColor_fieldNames[position],
+				IdeaMosaicCommonConst.MatrixButtonColor_fieldNames[position],
 				IdeaMosaicCommonConst.alist_ColorName.get(int_selectColor));
 
 		CommonWhereQuerySentence where_colorid_query = new CommonWhereQuerySentence(
-								IdeaMosaicCommonConst.MatrixButtonColor_fieldNames[9],
+				IdeaMosaicCommonConst.MatrixButtonColor_fieldNames[9],
 				String.valueOf(im_id));
 
 		colorDB.setDBValueInContentValues(cv_color, where_color_query);
@@ -819,7 +811,7 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 		int int_colorindex = 3;	 //初期値は萌黄色
 
 		CommonWhereQuerySentence where_id_query = new CommonWhereQuerySentence(
-								IdeaMosaicCommonConst.MatrixButtonColor_fieldNames[9], String.valueOf(im_id));
+				IdeaMosaicCommonConst.MatrixButtonColor_fieldNames[9], String.valueOf(im_id));
 
 		RS = db.query(inner_ColorTableName, IdeaMosaicCommonConst.MatrixButtonColor_fieldNames,
 				where_id_query.createSentence(), null, null, null, null);
@@ -898,70 +890,70 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 	 * @param int_ClickButtonIndex
 	 */
 	private void Delete_setPositiveButton(CommonAlartDiagram commonAD,
-			final Context context, final int int_ClickButtonIndex) {
+										  final Context context, final int int_ClickButtonIndex) {
 
 		final ContentValues table_values_text = new ContentValues();
 		final ContentValues table_values_color = new ContentValues();
 
 		commonAD.setNeutralButton(context.getString(R.string.dialog_deleteButton),new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int which) {
+					public void onClick(DialogInterface dialog, int which) {
 
-				int im_id = 0;
-				Cursor RS2;
-				CommonDBClass commonDB = new CommonDBClass(db,
-						RS,
-						inner_TableName,
-						IdeaMosaicCommonConst.Matrix_fieldNames,
-						IdeaMosaicCommonConst.Matrix_fieldTypes);
+						int im_id = 0;
+						Cursor RS2;
+						CommonDBClass commonDB = new CommonDBClass(db,
+								RS,
+								inner_TableName,
+								IdeaMosaicCommonConst.Matrix_fieldNames,
+								IdeaMosaicCommonConst.Matrix_fieldTypes);
 
-				//中央のワードをキーとしたインスタンス
-				CommonWhereQuerySentence where_coreword_query = new CommonWhereQuerySentence(
-						IdeaMosaicCommonConst.Matrix_fieldNames[							IdeaMosaicCommonConst.INT_Matrix_Index_Mat4],
-						listbtn_Matrix.get(							IdeaMosaicCommonConst.INT_Matrix_Index_Mat4).getText().toString());
+						//中央のワードをキーとしたインスタンス
+						CommonWhereQuerySentence where_coreword_query = new CommonWhereQuerySentence(
+								IdeaMosaicCommonConst.Matrix_fieldNames[							IdeaMosaicCommonConst.INT_Matrix_Index_Mat4],
+								listbtn_Matrix.get(							IdeaMosaicCommonConst.INT_Matrix_Index_Mat4).getText().toString());
 
-				commonDB.setDBValueInContentValues(table_values_text,
-						IdeaMosaicCommonConst.Matrix_fieldNames[int_ClickButtonIndex],
-						"");
-				commonDB.setDBTimeStampInContentValues(table_values_text,
-						IdeaMosaicCommonConst.Matrix_fieldNames[IdeaMosaicCommonConst.INT_Matrix_Index_TimeStamp]);
+						commonDB.setDBValueInContentValues(table_values_text,
+								IdeaMosaicCommonConst.Matrix_fieldNames[int_ClickButtonIndex],
+								"");
+						commonDB.setDBTimeStampInContentValues(table_values_text,
+								IdeaMosaicCommonConst.Matrix_fieldNames[IdeaMosaicCommonConst.INT_Matrix_Index_TimeStamp]);
 
-				RS2 = db.query(inner_TableName, IdeaMosaicCommonConst.Matrix_fieldNames, where_coreword_query.createSentence(),
-						null, null, null, null);
-				RS2.moveToFirst();
-				im_id = RS2.getInt(9);
+						RS2 = db.query(inner_TableName, IdeaMosaicCommonConst.Matrix_fieldNames, where_coreword_query.createSentence(),
+								null, null, null, null);
+						RS2.moveToFirst();
+						im_id = RS2.getInt(9);
 
-				//ボタンの更新
-				if(commonDB.isRecordUpdate(table_values_text, where_coreword_query) == true){
-					CommonToastComment.DeleteItem(context, et_Input.getText().toString());
-					listbtn_Matrix.get(int_ClickButtonIndex).setText("");
-				}else{
-					CommonToastComment.FalseUpdate(context);//3:萌黄色
+						//ボタンの更新
+						if(commonDB.isRecordUpdate(table_values_text, where_coreword_query) == true){
+							CommonToastComment.DeleteItem(context, et_Input.getText().toString());
+							listbtn_Matrix.get(int_ClickButtonIndex).setText("");
+						}else{
+							CommonToastComment.FalseUpdate(context);//3:萌黄色
+						}
+
+						CommonDBClass commonDBcolor = new CommonDBClass(db,
+								RS2,
+								inner_ColorTableName,
+								IdeaMosaicCommonConst.MatrixButtonColor_fieldNames,
+								IdeaMosaicCommonConst.MatrixButtonColor_fieldTypes);
+
+						commonDBcolor.setDBValueInContentValues(table_values_color,
+								IdeaMosaicCommonConst.MatrixButtonColor_fieldNames[int_ClickButtonIndex],
+								IdeaMosaicCommonConst.alist_ColorName.get(3));
+						commonDBcolor.setDBTimeStampInContentValues(table_values_color,
+								IdeaMosaicCommonConst.MatrixButtonColor_fieldNames[10]);
+
+						CommonWhereQuerySentence where_color_query = new CommonWhereQuerySentence(
+								IdeaMosaicCommonConst.MatrixButtonColor_fieldNames[9],
+								String.valueOf(im_id));
+
+						if(commonDBcolor.isRecordUpdate(table_values_color, where_color_query)){
+							listbtn_Matrix.get(int_ClickButtonIndex).setBackgroundColor(getResources().getColor(IdeaMosaicCommonConst.alist_RColor.get(3)));
+						}
+						RS2.close();
+						onPause();
+					}
 				}
-
-				CommonDBClass commonDBcolor = new CommonDBClass(db,
-						RS2,
-						inner_ColorTableName,
-										IdeaMosaicCommonConst.MatrixButtonColor_fieldNames,
-						IdeaMosaicCommonConst.MatrixButtonColor_fieldTypes);
-
-				commonDBcolor.setDBValueInContentValues(table_values_color,
-										IdeaMosaicCommonConst.MatrixButtonColor_fieldNames[int_ClickButtonIndex],
-						IdeaMosaicCommonConst.alist_ColorName.get(3));
-				commonDBcolor.setDBTimeStampInContentValues(table_values_color,
-										IdeaMosaicCommonConst.MatrixButtonColor_fieldNames[10]);
-
-				CommonWhereQuerySentence where_color_query = new CommonWhereQuerySentence(
-										IdeaMosaicCommonConst.MatrixButtonColor_fieldNames[9],
-						String.valueOf(im_id));
-
-				if(commonDBcolor.isRecordUpdate(table_values_color, where_color_query)){
-					listbtn_Matrix.get(int_ClickButtonIndex).setBackgroundColor(getResources().getColor(IdeaMosaicCommonConst.alist_RColor.get(3)));
-				}
-				RS2.close();
-				onPause();
-			}
-		}
-				);
+		);
 	}
 
 
@@ -982,30 +974,30 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 	public boolean onOptionsItemSelected(MenuItem item){
 
 		switch(item.getItemId()){
-		case 0:
-			//一つ前のキーワードへ戻るメソッドを呼び出す
-			if(AL_BreadCrumb.size() > 1){
-				PreviousSatgeMatrix();
-			}
-			break;
+			case 0:
+				//一つ前のキーワードへ戻るメソッドを呼び出す
+				if(AL_BreadCrumb.size() > 1){
+					PreviousSatgeMatrix();
+				}
+				break;
 //		case 1:
 //			//アイディアのヒントを出すメソッドを呼び出す
 //			FlashIdeaHint();
 //			break;				DEL : 2013/09/28
-		case 2:
-			SearchIdeaItem();
-			break;
-		case 3:
-			setAlertConfirmOutputCSV();
-			break;
-		case 4:
-			setAlertConfirmOutputDB();
-			break;
-		case 5:
-			setBrainStormingMode();
-			break;
-		default:
-			break;
+			case 2:
+				SearchIdeaItem();
+				break;
+			case 3:
+				setAlertConfirmOutputCSV();
+				break;
+			case 4:
+				setAlertConfirmOutputDB();
+				break;
+			case 5:
+				setBrainStormingMode();
+				break;
+			default:
+				break;
 		}
 
 		return true;
@@ -1196,7 +1188,7 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 		}
 
 		BufferedWriter bw
-		= new BufferedWriter(new FileWriter(output_csv, true));
+				= new BufferedWriter(new FileWriter(output_csv, true));
 		if(RS.getCount() == 0){
 			Toast.makeText(this, this.getString(R.string.toast_messageFailToOutputCSV), Toast.LENGTH_SHORT).show();
 		}else{
@@ -1208,7 +1200,7 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 			}
 			bw.close();
 			Toast.makeText(this, this.getString(R.string.toast_messageOutputCSVForward) +
-					fileName + this.getString(R.string.toast_messageOutputCSVBackward)
+							fileName + this.getString(R.string.toast_messageOutputCSVBackward)
 					, Toast.LENGTH_SHORT).show();
 		}
 	}
@@ -1424,17 +1416,17 @@ public class IdeaMosaicMatrixButton extends Activity implements OnClickListener,
 	 */
 	private String getIMFolderPath(){
 		return new StringBuilder()
-		.append(Environment.getExternalStorageDirectory().getPath())
-		.append("/")
-		.append("IdeaMosaic")
-		.toString();
+				.append(Environment.getExternalStorageDirectory().getPath())
+				.append("/")
+				.append("IdeaMosaic")
+				.toString();
 	}
 
 	/**
 	 * ここで選択された色のインデックスを取得する
 	 */
 	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
-			long arg3) {
+							   long arg3) {
 
 		Spinner spinner = (Spinner) arg0;
 		int_selectColor = spinner.getSelectedItemPosition();

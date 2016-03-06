@@ -1,11 +1,12 @@
 package satoshi.app.ideamosaic.english;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -23,7 +24,7 @@ import common.function.sato.var2.CommonDBClass;
 import common.function.sato.var2.CommonOperateEdit;
 import common.function.sato.var2.CommonWhereQuerySentence;
 
-public class IdeaMosaicSearchListView extends Activity implements OnItemClickListener, OnClickListener {
+public class IdeaMosaicSearchListView extends AppCompatActivity implements OnItemClickListener, OnClickListener {
 
 	//ボタンの定義
 	private static ImageButton btn_Search_ideabook;
@@ -54,6 +55,10 @@ public class IdeaMosaicSearchListView extends Activity implements OnItemClickLis
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ideamosaic_searchlistview);
 
+		ActionBar abar = this.getSupportActionBar();
+		abar.setTitle("");
+		abar.show();
+
 		Layout_EditText();
 		Layout_Button();
 		Layout_ListView();
@@ -66,7 +71,7 @@ public class IdeaMosaicSearchListView extends Activity implements OnItemClickLis
 				IdeaMosaicCommonConst.str_DB_BS,
 				IdeaMosaicCommonConst.brainstroming_fieldNames,
 				IdeaMosaicCommonConst.brainstroming_fieldType
-				));
+		));
 
 		ima_searchAdapter = new IdeaMosaicSearchListAdapter(this, 0, al_items);
 	}
@@ -195,8 +200,8 @@ public class IdeaMosaicSearchListView extends Activity implements OnItemClickLis
 	private void Layout_EditText(){
 		et_searchIdea = (EditText)this.findViewById(R.id.editText_QueryKeyword);
 		et_searchIdea.setInputType(InputType.TYPE_CLASS_TEXT);
-		et_searchIdea.setHint(String.valueOf(
-				IdeaMosaicCommonConst.NameMaxLength_IdeaBookName) + "字まで");
+		et_searchIdea.setHint("only " + String.valueOf(
+				IdeaMosaicCommonConst.NameMaxLength_IdeaBookName) + "words");
 	}
 
 
@@ -226,7 +231,7 @@ public class IdeaMosaicSearchListView extends Activity implements OnItemClickLis
 		et_Input_IdeaBook = new EditText(context);
 		et_Input_IdeaBook.setInputType(InputType.TYPE_CLASS_TEXT);
 		et_Input_IdeaBook.setHint(
-				String.valueOf(IdeaMosaicCommonConst.NameMaxLength_IdeaBookName) + "字まで");
+				String.valueOf("only " + IdeaMosaicCommonConst.NameMaxLength_IdeaBookName) + " words");
 		CommonClass.Text_MaxLength(et_Input_IdeaBook, IdeaMosaicCommonConst.NameMaxLength_IdeaBookName);
 	}
 

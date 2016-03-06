@@ -1,6 +1,5 @@
 package satoshi.app.ideamosaic.english;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -10,6 +9,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -36,7 +37,7 @@ import common.function.sato.var2.CommonDeviceInfo;
 import common.function.sato.var2.CommonScrollView;
 import common.function.sato.var2.CommonWhereQuerySentence;
 
-public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener{
+public class IdeaMosaicCreateMindMap extends AppCompatActivity implements OnClickListener{
 
 	private final int WC = ViewGroup.LayoutParams.WRAP_CONTENT;
 	private String strFrontProgressMessage;
@@ -79,10 +80,13 @@ public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ideamosaic_mindmap);
+
+		ActionBar abar = this.getSupportActionBar();
+		abar.setTitle("");
+		abar.show();
 		strFrontProgressMessage = this.getString(R.string.mindmap_createmessage);
 		initMessage = this.getString(R.string.mindmap_initMessage);
 
@@ -260,7 +264,7 @@ public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener
 		debagRemoveIsolateNode();
 
 		IdeaEdge
-		= new IdeaMosaicContainUniqueItem(
+				= new IdeaMosaicContainUniqueItem(
 				db,
 				RS,
 				inner_TableName,
@@ -324,10 +328,10 @@ public class IdeaMosaicCreateMindMap extends Activity implements OnClickListener
 	 */
 	private String getIMFolderPath(){
 		return new StringBuilder()
-		.append(Environment.getExternalStorageDirectory().getPath())
-		.append("/")
-		.append("IdeaMosaic")
-		.toString();
+				.append(Environment.getExternalStorageDirectory().getPath())
+				.append("/")
+				.append("IdeaMosaic")
+				.toString();
 	}
 
 

@@ -1,7 +1,8 @@
 package satoshi.app.ideamosaic.english;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
@@ -12,7 +13,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ViewFlipper;
 
-public class IdeaMosaicTutorial extends Activity implements OnGestureListener, OnClickListener{
+public class IdeaMosaicTutorial extends AppCompatActivity implements OnGestureListener, OnClickListener{
 
 	private GestureDetector gestureDetector;
 	private ViewFlipper viewFlipper;
@@ -31,6 +32,10 @@ public class IdeaMosaicTutorial extends Activity implements OnGestureListener, O
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ideamosaic_tutorial);
+
+		ActionBar abar = this.getSupportActionBar();
+		abar.setTitle("");
+		abar.show();
 
 		Button_Layout();
 
@@ -62,20 +67,20 @@ public class IdeaMosaicTutorial extends Activity implements OnGestureListener, O
 
 	private void visibleButtonLayout(){
 		switch(slidecount){
-		case 1:
-			backButton.setVisibility(Button.GONE);
-			nextButton.setVisibility(Button.VISIBLE);
-			menuButton.setVisibility(Button.GONE);
-			break;
-		case SLIDEMAXCOUNT:
-			backButton.setVisibility(Button.VISIBLE);
-			nextButton.setVisibility(Button.GONE);
-			menuButton.setVisibility(Button.VISIBLE);
-			break;
-		default:
-			backButton.setVisibility(Button.VISIBLE);
-			nextButton.setVisibility(Button.VISIBLE);
-			menuButton.setVisibility(Button.GONE);
+			case 1:
+				backButton.setVisibility(Button.GONE);
+				nextButton.setVisibility(Button.VISIBLE);
+				menuButton.setVisibility(Button.GONE);
+				break;
+			case SLIDEMAXCOUNT:
+				backButton.setVisibility(Button.VISIBLE);
+				nextButton.setVisibility(Button.GONE);
+				menuButton.setVisibility(Button.VISIBLE);
+				break;
+			default:
+				backButton.setVisibility(Button.VISIBLE);
+				nextButton.setVisibility(Button.VISIBLE);
+				menuButton.setVisibility(Button.GONE);
 		}
 	}
 
@@ -90,7 +95,7 @@ public class IdeaMosaicTutorial extends Activity implements OnGestureListener, O
 	}
 
 	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
-			float velocityY) {
+						   float velocityY) {
 		float dx = Math.abs(e1.getX() - e2.getX());
 		float dy = Math.abs(e1.getY() - e2.getY());
 		if (dx > dy) {
@@ -121,7 +126,7 @@ public class IdeaMosaicTutorial extends Activity implements OnGestureListener, O
 	}
 
 	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
-			float distanceY) {
+							float distanceY) {
 		return false;
 	}
 
