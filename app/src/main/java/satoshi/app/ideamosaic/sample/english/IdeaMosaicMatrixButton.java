@@ -1,4 +1,4 @@
-package satoshi.app.ideamosaic.sample;
+package satoshi.app.ideamosaic.sample.english;
 
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -1353,22 +1353,22 @@ public class IdeaMosaicMatrixButton extends AppCompatActivity implements OnClick
 			case 1:
 			case 2:
 			case 3:
-				src_hintSentence = "※の価値を高めてください。";
+				src_hintSentence = "Please raise worth of ※.";
 				break;
 			case 4:
 			case 5:
-				src_hintSentence = "※をフィードバックしてください。";
+				src_hintSentence = "Please feed back ※.";
 				break;
 			case 6:
 			case 7:
-				src_hintSentence = "※を短時間で終わらせてください。";
+				src_hintSentence = "Please let me finish ※ for a short time.";
 				break;
 			case 8:
 			case 9:
-				src_hintSentence = "※を自動化してください。";
+				src_hintSentence = "Please automate ※.";
 				break;
 			default:
-				src_hintSentence = "※の価値を高めてください。";
+				src_hintSentence = "Please raise worth of ※.";
 				break;
 		}
 

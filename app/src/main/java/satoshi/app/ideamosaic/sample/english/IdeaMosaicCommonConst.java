@@ -1,7 +1,7 @@
-package satoshi.app.ideamosaic.sample;
+package satoshi.app.ideamosaic.sample.english;
 
-import java.util.List;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author KSato

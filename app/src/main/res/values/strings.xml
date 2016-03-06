@@ -2,101 +2,102 @@
 <resources>
 
     <string name="hello">Hello World, MnadalArtNetworkActivity!</string>
-    <string name="app_name">アイデアモザイク</string>
+    <string name="app_name">IdeaMosaic(Free)</string>
     <string name="buttontext_testdata">0123456789\nabcde</string>
     <string name="buttontext_testdata25">いろはにほ\nへとちるぬ\nるをわかよ\nたれそつね\nならむうい</string>
     <string name="buttontext_testdata16">いろはに\nほへとち\nるぬるを\nわかよた</string>
-    <string name="buttontext_menu_think">アイデアを考える</string>
-    <string name="buttontext_menu_search">検索</string>
-    <string name="buttontext_menu_finish">終了</string>
-    <string name="buttontext_listview_new">新規作成</string>
-    <string name="buttontext_listview_update">修正</string>
-    <string name="buttontext_listview_delete">削除</string>
-    <string name="buttontext_mosaic_previousword">ひとつ前に戻る</string>
-    <string name="buttontext_mosaic_return2listview">リスト選択へ戻る</string>
-    <string name="tutorial_click">クリック　⇒　文字入力</string>
-    <string name="tutorial_doubleclick">ダブルクリック　⇒　次のワードへ移る</string>
-    <string name="tutorial_leftflick">左フリック　⇒　前のワードへ戻る</string>
-    <string name="toast_messageNotFoundKeyword">検索したキーワードが存在しません。</string>
-    <string name="toast_messageHitKeyword">キーワードがヒットしました。</string>
-    <string name="dialog_messageSearch">検索したいワードを入力してください。</string>
-    <string name="dialog_titleSearch">検索</string>
-    <string name="dialog_titleOutputDB">DBファイル出力</string>
-    <string name="dialog_messageOutputDB">本当にDBファイルを出力しますか？</string>
-    <string name="dialog_titleOutputCSV">CSVファイル出力</string>
-    <string name="dialog_messageOutputCSV">本当にCSVファイルを出力しますか？</string>
-    <string name="dialog_titleUpdate">修正</string>
-    <string name="dialog_titleAdd">新規</string>
-    <string name="dialog_titleAddKeyword">キーワード追加</string>
-    <string name="toast_messageFailToOutputDB">DBファイルの出力に失敗しました。</string>
-    <string name="toast_messageOutputDB">SDカードの「IdeaMosaic」フォルダにDBファイルを出力しました</string>
+    <string name="buttontext_menu_think">Create Ideas</string>
+    <string name="buttontext_menu_search">Search</string>
+    <string name="buttontext_menu_finish">Exit</string>
+    <string name="buttontext_listview_new">Add</string>
+    <string name="buttontext_listview_update">Update</string>
+    <string name="buttontext_listview_delete">Delete</string>
+    <string name="buttontext_mosaic_previousword">Undo</string>
+    <string name="buttontext_mosaic_return2listview">Return to List</string>
+    <string name="tutorial_click">Click　⇒　Input Keyword</string>
+    <string name="tutorial_doubleclick">DoubleClick　⇒　Next State</string>
+    <string name="tutorial_leftflick">LeftFlick　⇒　Undo</string>
+    <string name="toast_messageNotFoundKeyword">Your searched keyword don\&apos;t exist.</string>
+    <string name="toast_messageHitKeyword">Have a Success</string>
+    <string name="dialog_messageSearch">Please Input Keyword</string>
+    <string name="dialog_titleSearch">Search</string>
+    <string name="dialog_titleOutputDB">Output Database File</string>
+    <string name="dialog_messageOutputDB">Do you output Database File, don\&apos;t you?</string>
+    <string name="dialog_titleOutputCSV">Output CSV File</string>
+    <string name="dialog_messageOutputCSV">Do you output CSV File, don\&apos;t you?</string>
+    <string name="dialog_titleUpdate">Update</string>
+    <string name="dialog_titleAdd">Add</string>
+    <string name="dialog_titleAddKeyword">Add a Keyword</string>
+    <string name="toast_messageFailToOutputDB">Failed to output Database File.</string>
+    <string name="toast_messageOutputDB">Output Database File in sdcard/IdeaMosaic Folder</string>
     <string name="dialog_positiveButton">OK</string>
-    <string name="dialog_positiveModifyButton">修正</string>
-    <string name="dialog_deleteButton">削除</string>
-    <string name="dialog_negativeButton">キャンセル</string>
-    <string name="toast_messageFailToOutputCSV">"CSVファイルの出力に失敗しました。"</string>
-    <string name="toast_messageOutputCSVForward">SDカードの「IdeaMosaic」フォルダに『</string>
-    <string name="toast_messageOutputCSVBackward">』ファイルを出力しました。</string>
-    <string name="toast_messageDoubleBookingWithCentralWord">中央のワードと重複します。</string>
-    <string name="toast_messageNotChanegeCentralWord">中央にあるワードは変更できません。</string>
-    <string name="dialog_radioBSON">ブレストモードON</string>
-    <string name="dialog_radioBSOFF">ブレストモードOFF</string>
-    <string name="optionmenu_previousCard">前へ戻る</string>
-    <string name="optionmenu_hint">ヒント</string>
-    <string name="optionmenu_searchKeyword">検索</string>
-    <string name="optionmenu_outputCSV">CSVファイルに出力</string>
-    <string name="optionmenu_saveDB">DBを保存</string>
-    <string name="optionmenu_shiftBSmode">BSモード</string>
-    <string name="toast_notInputWord">文字が入力されていません。</string>
-    <string name="toast_maxLengthOver">制限文字数をオーバーしました。</string>
-    <string name="toast_addItem">を追加しました。</string>
-    <string name="toast_falseAdd">はすでに存在しています。</string>
-    <string name="toast_updateFromItem">を</string>
-    <string name="toast_updateToItem">に修正しました。</string>
-    <string name="toast_falseUpdate">修正に失敗しました。</string>
-    <string name="toast_deleteItem">を削除しました。</string>
-    <string name="toast_falseDelete">削除に失敗しました。</string>
-    <string name="toast_notExistListItem">リストがありません。</string>
-    <string name="toast_selectListItemForPrepareToUpdate">名称変更したいリストを一つクリックしてください。</string>
-    <string name="toast_selectListItemForPrepareToDelete">削除したいリストを一つクリックしてください。</string>
-    <string name="edittext_limitLength">字まで</string>
-    <string name="txt_listviewElementCount">要素数：</string>
-    <string name="dialog_titleAddListItem">リスト追加</string>
-    <string name="dialog_titleUpdateListItem">リスト修正</string>
-    <string name="dialog_titleDeleteListItem">リスト削除</string>
-    <string name="dialog_messageDeleteListItemForward">本当に</string>
-    <string name="dialog_messageDeleteListItemBackward">を削除してもいいですか？</string>
-    <string name="tutorial_explain1">①アプリを起動し「アイディアを考える」ボタンを押します。"</string>
-    <string name="tutorial_explain2">②下部の「新規作成」ボタンを押します。</string>
-    <string name="tutorial_explain3">③リスト名を入力し、「ＯＫ」ボタンを押します。ここでは【私の趣味】と入力します。</string>
-    <string name="tutorial_explain4">④リストに追加されたら、【私の趣味】の項目を押します。"</string>
-    <string name="tutorial_explain5">⑤中央に配置するキーワードを入力し、「ＯＫ」ボタンを押します。</string>
-    <string name="tutorial_explain6">⑥入力したキーワードが中央のボタンに配置されます。</string>
-    <string name="tutorial_explain7_1">⑦周辺にあるボタンをどれか一つ押し、【趣味】に関係するワードの入力と色の選択をします。</string>
-    <string name="tutorial_explain7_2">ここでは【サイクリング】を入力し、色は【青色】を選択します。</string>
-    <string name="tutorial_explain8_1">⑧押したボタンに文字と色が入力されます。</string>
-    <string name="tutorial_explain8_2">このような要領で【趣味】に関するワードを入力していきます。</string>
-    <string name="tutorial_explain9_1">⑨ワードが入っている周辺のボタンを、ダブルクリックで押します。</string>
-    <string name="tutorial_explain9_2">ここでは右上にある「ゲーム」のボタンを、ダブルクリックで押します。</string>
-    <string name="tutorial_explain10">⑩中央のボタンに前の画面で押した文字が表示され、前の画面で中央のボタンにあった文字が周辺のボタンにランダムに表示されます。前の画面では「ゲーム」ボタンを押したので、「ゲーム」の文字が中央のボタンに印字され、前の画面で中央のボタンにあった文字は「趣味」だったので、周辺のどこかのボタンに印字されます。</string>
-    <string name="tutorial_explain11">⑪このように、中央ボタンのキーワードに関連するワードを周辺のボタンに入力していき、繰り返します。</string>
-    <string name="tutorial_explain12">⑫う～ん。。。この「ゲーム」の表示が何かとウザい。と思われた方は以下の動作を行ってください。</string>
-    <string name="tutorial_explain13">⑬メニューボタンを押し、そこから「ＢＳモード」を選択してください。</string>
-    <string name="tutorial_explain14">⑭ブレストモードOFFを選択し、「ＯＫ」ボタンを選択します。</string>
-    <string name="tutorial_explain15">⑮この状態で「Queen」ボタンをを押します。</string>
-    <string name="tutorial_explain16_1">⑯以前は「チェス」の文字が周辺のボタンに表示されていましたが、ここでは表示されません。</string>
-    <string name="tutorial_explain16_2">このように中央ボタンのキーワードを次の画面で使わないと感じた時は、メニューのBSモードで切り替えてください。</string>
-    <string name="tutorial_explain17">⑰また、メニューボタンを押し、「ヒント」を選択すると、アイディアをサポートするフレーズが表示されます。</string>
-    <string name="tutorial_explain18">⑱例えばこんな感じ。</string>
+    <string name="dialog_positiveModifyButton">Update</string>
+    <string name="dialog_deleteButton">Delete</string>
+    <string name="dialog_negativeButton">Cansel</string>
+    <string name="toast_messageFailToOutputCSV">Failed to output CSV File.</string>
+    <string name="toast_messageOutputCSVForward">Output『</string>
+    <string name="toast_messageOutputCSVBackward">』File in sdcard/IdeaMosaic Folder</string>
+    <string name="toast_messageDoubleBookingWithCentralWord">Sorry, You cannot input the central word.</string>
+    <string name="toast_messageNotChanegeCentralWord">Sorry, You cannot modify the central word.</string>
+    <string name="dialog_radioBSON">Brainstorming Mode ON</string>
+    <string name="dialog_radioBSOFF">Brainstorming Mode OFF</string>
+    <string name="optionmenu_previousCard">Undo</string>
+    <string name="optionmenu_hint">Hint</string>
+    <string name="optionmenu_searchKeyword">Search Keyword</string>
+    <string name="optionmenu_outputCSV">Output CSV</string>
+    <string name="optionmenu_saveDB">Output DB</string>
+    <string name="optionmenu_shiftBSmode">BS Mode</string>
+    <string name="toast_notInputWord">You don\&apos;t input a word.</string>
+    <string name="toast_maxLengthOver">This word is over character limit.</string>
+    <string name="toast_addItem"> is added.</string>
+    <string name="toast_falseAdd"> exsists.</string>
+    <string name="toast_updateFromItem"> is replaced with </string>
+    <string name="toast_updateToItem"></string>
+    <string name="toast_falseUpdate">Failed to be replaced.</string>
+    <string name="toast_deleteItem"> is deleted</string>
+    <string name="toast_falseDelete">Failed to be deleted.</string>
+    <string name="toast_notExistListItem">This list do not exist.</string>
+    <string name="toast_selectListItemForPrepareToUpdate">Please click the list you want to modify.</string>
+    <string name="toast_selectListItemForPrepareToDelete">Please click the list you want to delete.</string>
+    <string name="edittext_limitLength">words</string>
+    <string name="txt_listviewElementCount">Elements：</string>
+    <string name="dialog_titleAddListItem">List Add</string>
+    <string name="dialog_titleUpdateListItem">List Update</string>
+    <string name="dialog_titleDeleteListItem">List Delete</string>
+    <string name="dialog_messageDeleteListItemForward">Can I delete </string>
+    <string name="dialog_messageDeleteListItemBackward"> ？</string>
+    <string name="tutorial_explain1">①Start application and Push the button "Create Ideas". </string>
+    <string name="tutorial_explain2">②Push the button "Add" on the bottom.</string>
+    <string name="tutorial_explain3">③Input the ListName and Push the button "OK". This situation is to input "My Job".</string>
+    <string name="tutorial_explain4">④Click the Item "My job".</string>
+    <string name="tutorial_explain5">⑤Input a keyword in the central button and Push the button "OK".</string>
+    <string name="tutorial_explain6">⑥Insert a keyword in the central button</string>
+    <string name="tutorial_explain7_1">⑦Push one of some buttons which exist on the around, So that Input the word connected with "Job" and Select colors.</string>
+    <string name="tutorial_explain7_2">This situation is to input "Cycling", and select "Blue".</string>
+    <string name="tutorial_explain8_1">⑧Set the keyword and the color in clicked button.</string>
+    <string name="tutorial_explain8_2">In such the point, Input keywords connected with "Job".</string>
+    <string name="tutorial_explain9_1">⑨Doubleclick the selected button on the around.</string>
+    <string name="tutorial_explain9_2">This situation is to doubleclick the button "game" on the upper right.</string>
+    <string name="tutorial_explain10">⑩Display the selected keyword "game" in the central button, and Insert the central keyword of previous state "Job" in one of some buttons.</string>
+    <string name="tutorial_explain11">⑪In such the point, Input the connected keyword. Repeat it.</string>
+    <string name="tutorial_explain12">⑫ummmm…  It is irritate to display keyword "game"... think you. the following is operated.</string>
+    <string name="tutorial_explain13">⑬Push the menu button and Select "BS mode"</string>
+    <string name="tutorial_explain14">⑭Select "Brainstorming Mode OFF" and Push the OK button.</string>
+    <string name="tutorial_explain15">⑮Push the button "Queen" on the setteing.</string>
+    <string name="tutorial_explain16_1">⑯not-Display the keyword "Queen".</string>
+    <string name="tutorial_explain16_2">Please Switch ""BS mode" if you want not to display the central keyword on next state.</string>
+    <string name="tutorial_explain17">⑰Alse, Push the menu button and Select "hint", and display the phrase which cause you to feel easy create ideas.</string>
+    <string name="tutorial_explain18">⑱For example, such touch.</string>
+
     <string name="tutorial_explain19">And that\&apos;s the way it is.</string>
-    <string name="tutorial_btn_return">メニューへ戻る</string>
-    <string name="tutorial_btn_prev">前へ戻る</string>
-    <string name="tutorial_btn_next">次へ進む</string>
+    <string name="tutorial_btn_return">Return to Menu</string>
+    <string name="tutorial_btn_prev">Previous</string>
+    <string name="tutorial_btn_next">Next</string>
 
     <string name="pay_title">It\&apos;s free</string>
-    <string name="pay_message">この機能は有料版でお使いいただけます。</string>
-    <string name="pay_positivebutton">有料版</string>
-    <string name="pay_url">https://play.google.com/store/apps/details?id=satoshi.app.ideamosaic</string>
+    <string name="pay_message">You can use this function for the charged version.</string>
+    <string name="pay_positivebutton">Charge</string>
+    <string name="pay_url">"market://details?id=satoshi.app.ideamosaic.english"</string>
 
     <color name="TUTUJI">#CF4078</color>
     <color name="SORA">#89EDDE</color>
@@ -108,34 +109,33 @@
     <color name="EDOCHA">#BC8458</color>
     <color name="AKEBOMO">#FF9C77</color>
 
-    <string name="buttontext_menu_tutorial">操作方法</string>
+    <string name="buttontext_menu_tutorial">Tutorial</string>
 
     <!-- 2013/08/09 -->
-    <string name="buttontext_menu_mindmap">マインドマップ</string>
-    <string name="mindmap_explain">リストを選択してください</string>
-    <string name="buttontext_mindmap_save">保存</string>
-    <string name="buttontext_mindmap_cancel">キャンセル</string>
-    <string name="mindmap_createmessage">マインドマップ生成中</string>
-    <string name="toast_messageMindmap">SDカードの「IdeaMosaic」フォルダに保存しました</string>
-	<string name= "mindmap_initMessage">初期化</string>
+    <string name="buttontext_menu_mindmap">Mindmap</string>
+    <string name="mindmap_explain">Please click the list.</string>
+    <string name="buttontext_mindmap_save">Save</string>
+    <string name="buttontext_mindmap_cancel">Cancel</string>
+    <string name="mindmap_createmessage">Create a Mindmap</string>
+    <string name="toast_messageMindmap">Save a Mindmap in sdcard/IdeaMosaic Folder.</string>
+    <string name= "mindmap_initMessage">Initialize</string>
 
     <!-- 2013/09/27 -->
-	<string name = "buttontext_initHintMessage"> ボタンをクリックするとヒントが出ます </string>
-    <string name="pay_hint_message">有料版では多彩なフレーズを出力することができます。</string>
-
+    <string name = "buttontext_initHintMessage"> Output a hint if you press the button. </string>
+    <string name="pay_hint_message">  You can output a various phrase with charge.</string>
     <!-- admob -->
     <string name="banner_ad_unit_id">ca-app-pub-6828851032008732/4191400807</string>
 
     <string-array name="str_Colors">
-        <item>赤色</item>
-        <item>青色</item>
-        <item>黄色</item>
-        <item>緑色</item>
-        <item>紫色</item>
-        <item>白色</item>
-        <item>黒色</item>
-        <item>茶色</item>
-        <item>橙色</item>
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Purple</item>
+        <item>White</item>
+        <item>Black</item>
+        <item>Brown</item>
+        <item>Orange</item>
     </string-array>
 
     <!-- season color -->
