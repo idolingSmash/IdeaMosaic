@@ -4,7 +4,11 @@ android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
     defaultConfig {
+<<<<<<< b429750a55d5834ff6fa865d395aebdc0fcb8397
         applicationId "satoshi.app.ideamosaic.english"
+=======
+        applicationId "satoshi.app.ideamosaic.sample.english"
+>>>>>>> version 1.0.4 relase
         minSdkVersion 14
         targetSdkVersion 22
     }

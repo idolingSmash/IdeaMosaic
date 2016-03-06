@@ -2,7 +2,7 @@
 <resources>
 
     <string name="hello">Hello World, MnadalArtNetworkActivity!</string>
-    <string name="app_name">IdeaMosaic</string>
+    <string name="app_name">IdeaMosaic(Free)</string>
     <string name="buttontext_testdata">0123456789\nabcde</string>
     <string name="buttontext_testdata25">いろはにほ\nへとちるぬ\nるをわかよ\nたれそつね\nならむうい</string>
     <string name="buttontext_testdata16">いろはに\nほへとち\nるぬるを\nわかよた</string>
