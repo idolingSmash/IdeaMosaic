@@ -1,4 +1,4 @@
-package satoshi.app.ideamosaic.sample;
+package satoshi.app.ideamosaic;
 
 public class IdeaMosaicListViewOneCell {
 

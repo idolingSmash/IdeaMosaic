@@ -2,11 +2,19 @@
 <items version="2" >
 
     <item
+<<<<<<< 966a67cdb9bf0639382e81236a19bd31eeb10a9c
         jar="/Users/apple/StudioProjects/IdeaMosaic/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/libs/internal_impl-23.0.0.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
         <dex dex="/Users/apple/StudioProjects/IdeaMosaic/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0-4368f277093bbdfd54eeea240fcea02ca8ca8f62.jar" />
+=======
+        jar="/Users/apple/StudioProjects/IdeaMosaic/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
+        <dex dex="/Users/apple/StudioProjects/IdeaMosaic/app/build/intermediates/pre-dexed/debug/classes-0878637f8cb8d76cfd903b74412b3cf16d814195.jar" />
+>>>>>>> パッケージ名を変更
     </item>
     <item
         jar="/Users/apple/StudioProjects/IdeaMosaic/app/libs/Utils.jar"
@@ -14,6 +22,16 @@
         revision="22.0.1"
         sha1="c48d5c2204cda1cdd2d13d9cbab5760518d04316">
         <dex dex="/Users/apple/StudioProjects/IdeaMosaic/app/build/intermediates/pre-dexed/debug/Utils-51243826bb83b96db36ea460f1ad4f703c46c5d9.jar" />
+<<<<<<< 966a67cdb9bf0639382e81236a19bd31eeb10a9c
+=======
+    </item>
+    <item
+        jar="/Users/apple/StudioProjects/IdeaMosaic/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/apple/StudioProjects/IdeaMosaic/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-51b58b11e79da41ffb62b66cccaaf3d38515a5e4.jar" />
+>>>>>>> パッケージ名を変更
     </item>
     <item
         jar="/Users/apple/StudioProjects/IdeaMosaic/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
@@ -31,6 +49,7 @@
     </item>
     <item
         jar="/Users/apple/StudioProjects/IdeaMosaic/app/libs/Jama-1.0.3.jar"
+<<<<<<< 966a67cdb9bf0639382e81236a19bd31eeb10a9c
         jumboMode="false"
         revision="22.0.1"
         sha1="4e7b3b81770450a21b4295e27c2ccb802ab537e1">
@@ -42,6 +61,12 @@
         revision="22.0.1"
         sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
         <dex dex="/Users/apple/StudioProjects/IdeaMosaic/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.0-1b21a174ee66330794aacad7f00e310b2edc66bd.jar" />
+=======
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4e7b3b81770450a21b4295e27c2ccb802ab537e1">
+        <dex dex="/Users/apple/StudioProjects/IdeaMosaic/app/build/intermediates/pre-dexed/debug/Jama-1.0.3-ef6e5d1600e6fabd06f624b8d95efbc87228bdb6.jar" />
+>>>>>>> パッケージ名を変更
     </item>
     <item
         jar="/Users/apple/StudioProjects/IdeaMosaic/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/jars/classes.jar"

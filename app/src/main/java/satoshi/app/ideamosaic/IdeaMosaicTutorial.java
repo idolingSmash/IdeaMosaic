@@ -1,4 +1,4 @@
-package satoshi.app.ideamosaic.sample;
+package satoshi.app.ideamosaic;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
