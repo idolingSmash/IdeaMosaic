@@ -97,7 +97,7 @@
     <string name="pay_title">It\&apos;s free</string>
     <string name="pay_message">You can use this function for the charged version.</string>
     <string name="pay_positivebutton">Charge</string>
-    <string name="pay_url">"market://details?id=satoshi.app.ideamosaic.english"</string>
+    <string name="pay_url">https://play.google.com/store/apps/details?id=satoshi.app.ideamosaic.english</string>
 
     <color name="TUTUJI">#CF4078</color>
     <color name="SORA">#89EDDE</color>
