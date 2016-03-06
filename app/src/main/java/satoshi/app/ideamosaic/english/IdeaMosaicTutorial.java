@@ -38,7 +38,6 @@ public class IdeaMosaicTutorial extends AppCompatActivity implements OnGestureLi
 		abar.show();
 
 		Button_Layout();
-
 		viewFlipper = (ViewFlipper) findViewById(R.id.flipper);
 
 		slideInFromLeft =

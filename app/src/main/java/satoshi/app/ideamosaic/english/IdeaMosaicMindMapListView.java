@@ -44,7 +44,6 @@ public class IdeaMosaicMindMapListView extends AppCompatActivity implements OnIt
 		abar.show();
 
 		Layout_ListView();
-
 		//dbの設定
 		im_DBHelp = new IdeaMosaicDBHelper(this);
 		db = im_DBHelp.getWritableDatabase();
