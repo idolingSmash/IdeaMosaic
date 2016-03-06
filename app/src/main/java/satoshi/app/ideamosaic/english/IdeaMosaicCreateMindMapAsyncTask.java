@@ -1,4 +1,4 @@
-package satoshi.app.ideamosaic.sample.english;
+package satoshi.app.ideamosaic.english;
 
 import android.os.AsyncTask;
 import android.view.ViewGroup;

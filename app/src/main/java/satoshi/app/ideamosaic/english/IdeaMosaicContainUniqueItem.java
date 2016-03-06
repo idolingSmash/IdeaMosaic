@@ -1,4 +1,4 @@
-package satoshi.app.ideamosaic.sample.english;
+package satoshi.app.ideamosaic.english;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;

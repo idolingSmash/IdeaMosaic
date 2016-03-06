@@ -1,4 +1,4 @@
-package satoshi.app.ideamosaic.sample.english;
+package satoshi.app.ideamosaic.english;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,9 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 import java.io.File;
 import java.io.IOException;
@@ -67,7 +64,7 @@ public class IdeaMosaicMenu extends AppCompatActivity implements OnClickListener
 		if(btn_view.equals(btn_idea)){
 			startActivityForResult(Intent_idea, IdeaMosaicCommonConst.RequestCode_LISTVIEW_IDEA);
 		}else if(btn_view.equals(btn_search)){
-			CommonAlartDiagram.ToMyAppLink(this,this.getString(R.string.pay_message));
+			startActivityForResult(Intent_search, IdeaMosaicCommonConst.RequestCode_LISTVIEW_SEARCH);
 		}else if (btn_view.equals(btn_mindmap)) {
 			startActivityForResult(Intent_mindmap, IdeaMosaicCommonConst.RequestCode_LISTVIEW_MINDMAP);
 		}else if (btn_view.equals(btn_tutorial)) {

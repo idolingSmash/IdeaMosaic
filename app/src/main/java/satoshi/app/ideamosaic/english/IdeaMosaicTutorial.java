@@ -1,4 +1,4 @@
-package satoshi.app.ideamosaic.sample.english;
+package satoshi.app.ideamosaic.english;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -12,9 +12,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ViewFlipper;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 public class IdeaMosaicTutorial extends AppCompatActivity implements OnGestureListener, OnClickListener{
 
@@ -41,10 +38,6 @@ public class IdeaMosaicTutorial extends AppCompatActivity implements OnGestureLi
 		abar.show();
 
 		Button_Layout();
-
-		AdView mAdView = (AdView) findViewById(R.id.adView);
-		AdRequest adRequest = new AdRequest.Builder().build();
-		mAdView.loadAd(adRequest);
 
 		viewFlipper = (ViewFlipper) findViewById(R.id.flipper);
 
