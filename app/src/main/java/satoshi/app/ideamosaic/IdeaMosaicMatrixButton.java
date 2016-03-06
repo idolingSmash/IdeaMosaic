@@ -39,9 +39,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
@@ -145,10 +142,6 @@ public class IdeaMosaicMatrixButton extends AppCompatActivity implements OnClick
 		Layout_Text();
 		Layout_Button();
 		Layout_MatrixButton();
-
-		AdView mAdView = (AdView) findViewById(R.id.adView);
-		AdRequest adRequest = new AdRequest.Builder().build();
-		mAdView.loadAd(adRequest);
 
 		//dbの設定
 		im_DBHelp = new IdeaMosaicDBHelper(this);

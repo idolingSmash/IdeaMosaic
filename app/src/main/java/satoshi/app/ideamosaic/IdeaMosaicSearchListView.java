@@ -17,9 +17,6 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
 import java.util.ArrayList;
 
 import common.function.sato.var2.CommonClass;
@@ -65,10 +62,6 @@ public class IdeaMosaicSearchListView extends AppCompatActivity implements OnIte
 		Layout_EditText();
 		Layout_Button();
 		Layout_ListView();
-
-		AdView mAdView = (AdView) findViewById(R.id.adView);
-		AdRequest adRequest = new AdRequest.Builder().build();
-		mAdView.loadAd(adRequest);
 
 		//dbの設定
 		im_DBHelp = new IdeaMosaicDBHelper(this);

@@ -22,9 +22,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -95,10 +92,6 @@ public class IdeaMosaicCreateMindMap extends AppCompatActivity implements OnClic
 		initMessage = this.getString(R.string.mindmap_initMessage);
 
 		layoutParent = (RelativeLayout)findViewById(R.id.linear_mindmap);
-		AdView mAdView = (AdView) findViewById(R.id.adView);
-		AdRequest adRequest = new AdRequest.Builder().build();
-		mAdView.loadAd(adRequest);
-
 
 		setLayout();
 		setListName();

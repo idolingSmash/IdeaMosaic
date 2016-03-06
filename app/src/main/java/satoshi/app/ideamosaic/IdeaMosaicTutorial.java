@@ -42,10 +42,6 @@ public class IdeaMosaicTutorial extends AppCompatActivity implements OnGestureLi
 
 		Button_Layout();
 
-		AdView mAdView = (AdView) findViewById(R.id.adView);
-		AdRequest adRequest = new AdRequest.Builder().build();
-		mAdView.loadAd(adRequest);
-
 		viewFlipper = (ViewFlipper) findViewById(R.id.flipper);
 
 		slideInFromLeft =
