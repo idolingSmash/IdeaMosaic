@@ -32,7 +32,6 @@ import java.util.Random;
 
 import common.function.layout.KKLayout;
 import common.function.layout.NodeF;
-import common.function.sato.var2.CommonAlartDiagram;
 import common.function.sato.var2.CommonDBClass;
 import common.function.sato.var2.CommonDeviceInfo;
 import common.function.sato.var2.CommonScrollView;
@@ -165,7 +164,11 @@ public class IdeaMosaicCreateMindMap extends AppCompatActivity implements OnClic
 
 	public void onClick(View view) {
 		if(btn_save == view ){
-			CommonAlartDiagram.ToMyAppLink(this,this.getString(R.string.pay_message));
+			try{
+				saveBitmap();
+			}catch(IOException e){
+				Log.e("Failed to Create Bitmap", e.toString());
+			}
 		}else if(btn_cancel == view){
 			onCancel();
 		}
