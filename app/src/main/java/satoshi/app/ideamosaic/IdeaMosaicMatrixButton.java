@@ -256,6 +256,7 @@ public class IdeaMosaicMatrixButton extends AppCompatActivity implements OnClick
 				}
 			}
 		}
+
 	}
 
 

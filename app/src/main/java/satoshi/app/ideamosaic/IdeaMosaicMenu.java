@@ -11,8 +11,6 @@ import android.widget.Button;
 import java.io.File;
 import java.io.IOException;
 
-import common.function.sato.var2.CommonAlartDiagram;
-
 public class IdeaMosaicMenu extends AppCompatActivity implements OnClickListener {
 	/** Called when the activity is first created. */
 
