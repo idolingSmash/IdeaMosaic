@@ -181,13 +181,17 @@ public class IdeaMosaicCreateMindMap extends AppCompatActivity implements OnClic
 		final String fileSd = getIMFolderPath();
 		final String fileName = txt_listName.getText().toString() + "_" + System.currentTimeMillis() + ".png";
 
-		File Im_Folder = new File(fileSd);
-		File outputImageSrc = new File( fileSd , fileName);
 		FileOutputStream outputStream = null;
+		File outputImageSrc = null;
 
-		if(!Im_Folder.exists())		Im_Folder.mkdir();
+		String outPath = null;
 
-		if(outputImageSrc.exists())		outputImageSrc.delete();
+			outPath = Environment.getExternalStoragePublicDirectory(
+					Environment.DIRECTORY_DCIM).getAbsolutePath();
+			String f = outPath != null && !outPath.isEmpty() ? outPath : getFilesDir().toString();
+			outputImageSrc = new File(f, fileName);
+
+		if (outputImageSrc.exists()) outputImageSrc.delete();
 
 		try {
 			outputStream = new FileOutputStream(outputImageSrc);

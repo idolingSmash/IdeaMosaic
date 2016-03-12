@@ -116,7 +116,7 @@
     <string name="buttontext_mindmap_save">保存</string>
     <string name="buttontext_mindmap_cancel">キャンセル</string>
     <string name="mindmap_createmessage">マインドマップ生成中</string>
-    <string name="toast_messageMindmap">SDカードの「IdeaMosaic」フォルダに保存しました</string>
+    <string name="toast_messageMindmap">SDカードに保存しました</string>
 	<string name= "mindmap_initMessage">初期化</string>
 
     <!-- 2013/09/27 -->
