@@ -177,15 +177,18 @@ public class IdeaMosaicCreateMindMap extends AppCompatActivity implements OnClic
 
 
 	private void saveBitmap() throws IOException {
-		// TODO 自動生成されたメソッド・スタブ
+
 		final String fileSd = getIMFolderPath();
 		final String fileName = txt_listName.getText().toString() + "_" + System.currentTimeMillis() + ".png";
 
-		File Im_Folder = new File(fileSd);
-		File outputImageSrc = new File( fileSd , fileName);
+		File outputImageSrc = null;
+		String outPath = null;
 		FileOutputStream outputStream = null;
 
-		if(!Im_Folder.exists())		Im_Folder.mkdir();
+		outPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath();
+
+		String f = outPath != null && !outPath.isEmpty() ? outPath : getFilesDir().toString();
+		outputImageSrc = new File(f, fileName);
 
 		if(outputImageSrc.exists())		outputImageSrc.delete();
 

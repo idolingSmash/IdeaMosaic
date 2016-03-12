@@ -117,7 +117,7 @@
     <string name="buttontext_mindmap_save">Save</string>
     <string name="buttontext_mindmap_cancel">Cancel</string>
     <string name="mindmap_createmessage">Create a Mindmap</string>
-    <string name="toast_messageMindmap">Save a Mindmap in sdcard/IdeaMosaic Folder.</string>
+    <string name="toast_messageMindmap">Save a Mindmap Image.</string>
     <string name= "mindmap_initMessage">Initialize</string>
 
     <!-- 2013/09/27 -->
